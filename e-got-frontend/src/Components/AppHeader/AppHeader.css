@@ -1,0 +1,10 @@
+.appheader--container {
+    max-width: 100%;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.appheader--button {
+    color: white !important;
+    background-color: transparent !important;
+}
