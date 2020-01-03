@@ -1,13 +1,18 @@
 import React from 'react';
 import './AppHeader.css';
-import { Button, Header } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 class AppHeader extends React.Component {
     render() {
+
+        let backgroundStyle = {
+            backgroundColor: this.props.home ? 'transparent' : 'blue',
+        }
+
         return(
-            <div className="appheader--container">
+            <div style={backgroundStyle} className="appheader--container">
                 <Button className="appheader--button" icon="bars" size="massive" floated="left"/>
-                <Header>STEFAN</Header>
+                <div className="appheader--text-container">eGOT</div>
                 <Button className="appheader--button" icon="user" size="massive" floated="right"/>
             </div>
         )
