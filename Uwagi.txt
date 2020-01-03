@@ -1,0 +1,2 @@
+Imo, trzeba przerobić bazę danych.
+Usunąć przodownika, pracownika komisji, itd.., a zamiast zostawić Usera z polem rola oraz Turystę który będzie miał w sobie user_id.
