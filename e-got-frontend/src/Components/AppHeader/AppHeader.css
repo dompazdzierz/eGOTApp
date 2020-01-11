@@ -1,11 +1,16 @@
 .appheader--container {
     width: 100%;
     text-align: center;
+    height: 100px;
 }
 
 .appheader--button {
     color: white !important;
-    background-color: transparent !important;
+    background-color: transparent !important ;
+}
+
+.appheader--button :hover {
+    color: #aaa !important;
 }
 
 .appheader--text-container {

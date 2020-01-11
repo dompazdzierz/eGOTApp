@@ -1,6 +1,6 @@
 body {
-    height:100%;
-    width:100%;
+    height:100vh;
+    width:100vw;
     background-image: url("https://www.tapeciarnia.pl/tapety/normalne/121049_zakopane_tatry_czarny_staw.jpg");
     background-repeat:no-repeat;
     background-size:cover;
@@ -8,26 +8,17 @@ body {
     -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.jpg',sizingMethod='scale')";
 }
 
-.main-container {
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
 .header-container {
-    display: table-cell;
     vertical-align: middle;
 }
 
 .header {
     padding: 10px !important;
     background: rgba( 255, 255, 255, 0.05);
-    text-shadow: 3px 3px #666 !important;
+    text-shadow: 0px 3px 6px #000000 !important;
     text-align: center !important;
     font-size: 3.2em !important;
     color: #fff !important;
     font-family: 'Montserrat', sans-serif !important;
+    margin-top: 36vh !important;
 }
