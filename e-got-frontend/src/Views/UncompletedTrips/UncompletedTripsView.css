@@ -3,11 +3,19 @@
 }
 
 .uncompletedtrips--segment {
-    height: 80vh;
+    min-height: 80vh;
+    height: fit-content;
     width: 85vw;
     display: inline-block;
 }
 
 .uncompletedtrips--button {
     margin-bottom: 20px !important;
+}
+
+.uncompletedtrips--dropdown {
+    padding-top: 12px !important;
+    padding-bottom: 14px !important;
+    margin-left: 10px;
+    min-width: 70px !important;
 }

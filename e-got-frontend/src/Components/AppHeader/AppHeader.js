@@ -16,7 +16,7 @@ class AppHeader extends React.Component {
     render() {
 
         let backgroundStyle = {
-            backgroundColor: this.props.home ? 'transparent' : '#2699F8',
+            backgroundColor: this.props.home ? 'transparent' : '#2185d0',
             textAlign: 'center'
         }
 
@@ -53,7 +53,7 @@ class AppHeader extends React.Component {
                     </Dropdown>
                 </Button>
 
-                <div className="appheader--text-container">eGOT</div>
+                <div className="appheader--text-container">e-GOT</div>
 
                 <Button className="appheader--button"  size="massive" floated="right">
                     <Dropdown icon="user" direction="left">
