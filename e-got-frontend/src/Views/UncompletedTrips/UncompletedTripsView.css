@@ -1,0 +1,13 @@
+.uncompletedtrips--container {
+    text-align: center;
+}
+
+.uncompletedtrips--segment {
+    height: 80vh;
+    width: 85vw;
+    display: inline-block;
+}
+
+.uncompletedtrips--button {
+    margin-bottom: 20px !important;
+}
