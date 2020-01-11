@@ -1,6 +1,7 @@
 import React from 'react';
 import './AppHeader.css';
 import { Button, Dropdown } from 'semantic-ui-react';
+import { useHistory, Route } from "react-router-dom";
 
 class AppHeader extends React.Component {
     constructor(props) {
@@ -8,15 +9,14 @@ class AppHeader extends React.Component {
         this.state = {
         }
     }
-
     handleClick = () => {
-        console.log("XDD")
+
     }
 
     render() {
 
         let backgroundStyle = {
-            backgroundColor: this.props.home ? 'transparent' : 'blue',
+            backgroundColor: this.props.home ? 'transparent' : '#2699F8',
             textAlign: 'center'
         }
 
@@ -27,8 +27,13 @@ class AppHeader extends React.Component {
         let avatarMenu =
             <Dropdown.Menu style={menuStyle}>
                 <Dropdown.Item>
-                    Ustawienia
+                    Moja książeczka
                 </Dropdown.Item>
+                <Route render={({ history}) => (
+                    <Dropdown.Item onClick={() => history.push('/uncompleted-trips/') }>
+                        Nieprzebyte wycieczki
+                    </Dropdown.Item>
+                )} />
             </Dropdown.Menu>
 
 

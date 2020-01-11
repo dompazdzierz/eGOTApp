@@ -191,6 +191,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BadgeLevel.cs" />
+    <Compile Include="Models\CommissionWorker.cs" />
+    <Compile Include="Models\DepartmentWorker.cs" />
+    <Compile Include="Models\eGOTContext.cs" />
+    <Compile Include="Models\GpsProof.cs" />
+    <Compile Include="Models\History.cs" />
+    <Compile Include="Models\Leader.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\MountainRange.cs" />
+    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\PhotoProof.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Section.cs" />
+    <Compile Include="Models\Trip.cs" />
+    <Compile Include="Models\Turist.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
