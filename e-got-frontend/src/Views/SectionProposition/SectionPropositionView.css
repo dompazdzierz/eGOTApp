@@ -1,0 +1,32 @@
+.section-proposition--container {
+    text-align: center;
+}
+
+.section-proposition--segment {
+    min-height: 60vh;
+    height: fit-content;
+    width: 75vw;
+    display: inline-block;
+    margin-top: 5vh !important;
+}
+
+.section-proposition--segment-half {
+    width: 46%;
+    height: 60vh;
+    display: inline-block;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 0px !important;
+}
+
+.section-proposition--input-wrapper {
+    display: table;
+    width: 70%;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.section-proposition--input {
+    margin-bottom: 50px;
+    width: 100%;
+}

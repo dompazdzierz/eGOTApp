@@ -29,9 +29,14 @@ class AppHeader extends React.Component {
                 <Dropdown.Item>
                     Moja książeczka
                 </Dropdown.Item>
-                <Route render={({ history}) => (
+                <Route render={({ history }) => (
                     <Dropdown.Item onClick={() => history.push('/uncompleted-trips/') }>
                         Nieprzebyte wycieczki
+                    </Dropdown.Item>
+                )} />
+                <Route render={({ history }) => (
+                    <Dropdown.Item onClick={() => history.push('/new-section-proposition/') }>
+                        Zaproponuj odcinek
                     </Dropdown.Item>
                 )} />
             </Dropdown.Menu>

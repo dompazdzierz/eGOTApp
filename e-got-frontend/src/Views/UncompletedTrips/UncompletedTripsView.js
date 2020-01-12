@@ -71,7 +71,7 @@ class UncompletedTripsView extends React.Component {
             { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
         ]
 
-        const tripsPerPage = 6
+        const tripsPerPage = 7
         let tripsNumber = trips.length
 
         let tableContent =
@@ -90,48 +90,44 @@ class UncompletedTripsView extends React.Component {
         ))
 
         let dropdownOptions =
-        Array.from(Array(10).keys()).slice(1).map((i) => ({
-            key: i,
-            text: i,
-            value: i
-        }))
+            Array.from(Array(10).keys()).slice(1).map((i) => ({ key: i, text: i, value: i }))
 
         return(
             <div className="uncompletedtrips--container">
                 <AppHeader />
                 <Segment className="uncompletedtrips--segment">
 
-                    <Route render={({ history}) => (
-                        <Button primary content="Powrót" floated="left" className="uncompletedtrips--button"
-                            onClick={() => history.goBack()}/>
-                    )} />
+                <Route render={({ history}) => (
+                    <Button primary content="Powrót" floated="left" className="uncompletedtrips--button"
+                        onClick={() => history.goBack()}/>
+                )} />
 
-                    <Table className="uncompletedtrips--table">
-                        <Table.Header>
-                            <Table.Row>
-                                <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
-                                <Table.HeaderCell>Data</Table.HeaderCell>
-                                <Table.HeaderCell>Punktacja</Table.HeaderCell>
-                                <Table.HeaderCell></Table.HeaderCell>
-                                <Table.HeaderCell></Table.HeaderCell>
-                            </Table.Row>
-                        </Table.Header>
+                <Table className="uncompletedtrips--table">
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
+                            <Table.HeaderCell>Data</Table.HeaderCell>
+                            <Table.HeaderCell>Punktacja</Table.HeaderCell>
+                            <Table.HeaderCell></Table.HeaderCell>
+                            <Table.HeaderCell></Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
 
-                        <Table.Body>
-                            {tableContent}
-                        </Table.Body>
+                    <Table.Body>
+                        {tableContent}
+                    </Table.Body>
 
-                        <Table.Footer>
-                            <Table.Row>
-                                <Table.HeaderCell colSpan='5' style={{textAlign: 'center'}}>
-                                    <Pagination defaultActivePage={1} totalPages={Math.ceil(tripsNumber / tripsPerPage)}
-                                    boundaryRange={1} onPageChange={this.handlePaginationChange} activePage={this.state.currentPage}/>
-                                    <Dropdown className="uncompletedtrips--dropdown" selection options={dropdownOptions}
-                                     value={this.state.currentPage} onChange={(event, data) => this.setState({currentPage: data.value})} />
-                                </Table.HeaderCell>
-                            </Table.Row>
-                        </Table.Footer>
-                    </Table>
+                    <Table.Footer>
+                        <Table.Row>
+                            <Table.HeaderCell colSpan='5' style={{textAlign: 'center'}}>
+                                <Pagination defaultActivePage={1} totalPages={Math.ceil(tripsNumber / tripsPerPage)}
+                                boundaryRange={1} onPageChange={this.handlePaginationChange} activePage={this.state.currentPage}/>
+                                <Dropdown className="uncompletedtrips--dropdown" selection options={dropdownOptions}
+                                 value={this.state.currentPage} onChange={(event, data) => this.setState({currentPage: data.value})} />
+                            </Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Footer>
+                </Table>
                 </Segment>
             </div>
         )

@@ -11,9 +11,9 @@ class HomeView extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="homeview--container">
                 <AppHeader home />
-                <Header as="h1" className="header">Odkryj piękno tatr wraz z internetową książeczką PTTK</Header>
+                <Header as="h1" className="homeview--header">Odkryj piękno tatr wraz z internetową książeczką PTTK</Header>
             </div>
         )
     }
