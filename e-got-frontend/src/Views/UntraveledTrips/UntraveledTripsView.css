@@ -1,19 +1,19 @@
-.uncompletedtrips--container {
+.untraveled-trips--container {
     text-align: center;
 }
 
-.uncompletedtrips--segment {
+.untraveled-trips--segment {
     min-height: 80vh;
     height: fit-content;
     width: 85vw;
     display: inline-block;
 }
 
-.uncompletedtrips--button {
+.untraveled-trips--button {
     margin-bottom: 20px !important;
 }
 
-.uncompletedtrips--dropdown {
+.untraveled-trips--dropdown {
     padding-top: 12px !important;
     padding-bottom: 14px !important;
     margin-left: 10px;

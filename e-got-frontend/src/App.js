@@ -2,16 +2,17 @@ import React from 'react';
 import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomeView from './Views/Home/HomeView'
-import UncompletedTripsView from './Views/UncompletedTrips/UncompletedTripsView';
-import SectionPropositionView from './Views/SectionProposition/SectionPropositionView';
+import UntraveledTripsView from './Views/UntraveledTrips/UntraveledTripsView';
+import TripVerificationDataView from './Views/TripVerification/TripVerificationData/TripVerificationDataView';
+import * as paths from './Constants/paths'
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={HomeView}/>
-        <Route exact path="/uncompleted-trips/" component={UncompletedTripsView}/>
-        <Route exact path="/new-section-proposition/" component={SectionPropositionView}/>
+        <Route exact path={paths.homeView} component={HomeView}/>
+        <Route exact path={paths.untraveledTrips} component={UntraveledTripsView}/>
+        <Route exact path={paths.tripVerification + paths.data} component={TripVerificationDataView}/>
       </Switch>
     </BrowserRouter>
   );

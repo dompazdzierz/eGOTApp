@@ -1,7 +1,7 @@
 import React from 'react';
 import './AppHeader.css';
 import { Button, Dropdown } from 'semantic-ui-react';
-import { useHistory, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 class AppHeader extends React.Component {
     constructor(props) {
@@ -9,8 +9,8 @@ class AppHeader extends React.Component {
         this.state = {
         }
     }
-    handleClick = () => {
 
+    handleClick = () => {
     }
 
     render() {
@@ -24,37 +24,40 @@ class AppHeader extends React.Component {
             marginTop: '10px'
         }
 
+        let barsMenu =
+            <Dropdown.Menu style={menuStyle}>
+                <Dropdown.Item>
+                    Ustawienia
+                </Dropdown.Item>
+                <Dropdown.Item>
+                    O aplikacji
+                </Dropdown.Item>
+            </Dropdown.Menu>
+
         let avatarMenu =
             <Dropdown.Menu style={menuStyle}>
                 <Dropdown.Item>
                     Moja książeczka
                 </Dropdown.Item>
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push('/uncompleted-trips/') }>
+                    <Dropdown.Item onClick={() => history.push('/untraveled-trips/') }>
                         Nieprzebyte wycieczki
                     </Dropdown.Item>
                 )} />
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push('/new-section-proposition/') }>
-                        Zaproponuj odcinek
+                    <Dropdown.Item onClick={() => history.push('/new-trip-verification-data/') }>
+                        Weryfikacja wycieczki
                     </Dropdown.Item>
                 )} />
             </Dropdown.Menu>
 
 
-        return(
+        return (
             <div style={backgroundStyle}>
 
                 <Button className="appheader--button" size="massive" floated="left">
                     <Dropdown icon="bars" direction="right">
-                            <Dropdown.Menu style={menuStyle}>
-                                <Dropdown.Item>
-                                    Ustawienia
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    O aplikacji
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
+                        {barsMenu}
                     </Dropdown>
                 </Button>
 

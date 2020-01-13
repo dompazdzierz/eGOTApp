@@ -1,8 +1,8 @@
-.section-proposition--container {
+.trip-verification-data--container {
     text-align: center;
 }
 
-.section-proposition--segment {
+.trip-verification-data--segment {
     min-height: 60vh;
     height: fit-content;
     width: 75vw;
@@ -10,7 +10,7 @@
     margin-top: 5vh !important;
 }
 
-.section-proposition--segment-half {
+.trip-verification-data--segment-half {
     width: 46%;
     height: 60vh;
     display: inline-block;
@@ -19,14 +19,21 @@
     margin-top: 0px !important;
 }
 
-.section-proposition--input-wrapper {
+.trip-verification-data--input-wrapper {
     display: table;
-    width: 70%;
+    width: 80%;
     padding-top: 30px;
     margin: auto;
 }
 
-.section-proposition--input {
+.trip-verification-data--input {
     margin-bottom: 50px;
     width: 100%;
+    word-break: break-word;
+    max-height: fit-content;
+}
+
+.trip-verification-data--label {
+    float: left;
+    margin-bottom: 4px;
 }
