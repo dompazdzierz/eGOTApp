@@ -1,6 +1,6 @@
 import React from 'react';
 import '../TripVerification.css'
-import { Segment, Divider, Button, Header, Icon } from 'semantic-ui-react';
+import { Segment, Divider, Button, Header, Icon, Grid, Image } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
 import * as paths from "../../../Constants/paths"
 import AppHeader from '../../../Components/AppHeader/AppHeader';
@@ -36,9 +36,23 @@ class TripVerificationProofsView extends React.Component {
 
                     <Divider/>
 
-                    <div>
-
-                    </div>
+                    <Grid columns='three'>
+                        <Grid.Row>
+                            <Grid.Column width="8">
+                                <Image src="http://www.gminakoscielisko.pl/uploads/files/images/popup_5763eebe7e2c1.jpg"/>
+                            </Grid.Column>
+                            <Grid.Column width="4">
+                                <Image src="https://ocdn.eu/pulscms-transforms/1/irwk9kpTURBXy81YzFiZjYzNTZhNTAwYzNhNTAyMDM3ZmZjNzNlZmYwMy5qcGeUlQMAe80GQM0DhJMFzQMUzQG8lQfZMi9wdWxzY21zL01EQV8vMjMzN2M5ZmQ2YjkzMWVlNmNiMGQyM2RjYmEyNThhOWQucG5nAMIAkwmmYmM0NTZkBoGhMAE/najciekawsze-szlaki-w-tatrach-najpiekniejsze-widoki.jpg"/>
+                            </Grid.Column>
+                            <Grid.Column width="4">
+                                <Button style={{padding: '0px'}}>
+                                    <Image
+                                        src="https://ocdn.eu/pulscms-transforms/1/irwk9kpTURBXy81YzFiZjYzNTZhNTAwYzNhNTAyMDM3ZmZjNzNlZmYwMy5qcGeUlQMAe80GQM0DhJMFzQMUzQG8lQfZMi9wdWxzY21zL01EQV8vMjMzN2M5ZmQ2YjkzMWVlNmNiMGQyM2RjYmEyNThhOWQucG5nAMIAkwmmYmM0NTZkBoGhMAE/najciekawsze-szlaki-w-tatrach-najpiekniejsze-widoki.jpg"
+                                    />
+                                </Button>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
                 </Segment>
             </div>
         )
