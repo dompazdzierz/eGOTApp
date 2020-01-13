@@ -12,16 +12,14 @@ class UntraveledTripsView extends React.Component {
         }
     }
 
-    handlePaginationChange = (e, { activePage }) =>  {
+    handlePaginationChange = (_, { activePage }) =>  {
         this.setState({ currentPage: activePage })
-        console.log(this.state.currentPage)
     }
 
+    //TODO: przenieść dane do state'a, przenieść csski do jakichś dzielonych, dotyczących listy, będzie to kilka razy użyte jeszcze pewnie :p
+
     render() {
-        const trips = [
-            { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-            { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-            { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
+        const rows = [
             { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
             { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
             { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
@@ -31,26 +29,37 @@ class UntraveledTripsView extends React.Component {
             { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
         ]
 
-        const tripsPerPage = 6
-        let tripsNumber = trips.length
-
-        let tableContent =
-        trips.slice(0 + (this.state.currentPage - 1) * tripsPerPage, tripsPerPage + (this.state.currentPage - 1) * tripsPerPage).map((trip) => (
-            <Table.Row key={trip.id}>
-                <Table.Cell>{trip.route}</Table.Cell>
-                <Table.Cell>{trip.date}</Table.Cell>
-                <Table.Cell>{trip.points}</Table.Cell>
-                <Table.Cell>
-                    <Button circular primary icon='pencil alternate'/>
-                </Table.Cell>
-                <Table.Cell>
-                    <Button circular negative icon='trash alternate'/>
-                </Table.Cell>
-            </Table.Row>
-        ))
+        const rowsPerPage = 6
+        let rowsNumber = rows.length
 
         let dropdownOptions =
-            Array.from(Array(10).keys()).slice(1).map((i) => ({ key: i, text: i, value: i }))
+        Array.from(Array(10).keys()).slice(1, Math.ceil(rowsNumber / rowsPerPage) + 1).map((i) => ({ key: i, text: i, value: i }))
+
+        let tableHeaderContent =
+            <Table.Row>
+                <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
+                <Table.HeaderCell>Data</Table.HeaderCell>
+                <Table.HeaderCell>Punktacja</Table.HeaderCell>
+                <Table.HeaderCell></Table.HeaderCell>
+                <Table.HeaderCell></Table.HeaderCell>
+            </Table.Row>
+
+
+        let tableBodyContent =
+            rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
+                <Table.Row key={trip.id}>
+                    <Table.Cell>{trip.route}</Table.Cell>
+                    <Table.Cell>{trip.date}</Table.Cell>
+                    <Table.Cell>{trip.points}</Table.Cell>
+                    <Table.Cell>
+                        <Button circular primary icon='pencil alternate'/>
+                    </Table.Cell>
+                    <Table.Cell>
+                        <Button circular negative icon='trash alternate'/>
+                    </Table.Cell>
+                </Table.Row>
+            ))
+
 
         return(
             <div className="untraveled-trips--container">
@@ -64,26 +73,23 @@ class UntraveledTripsView extends React.Component {
 
                     <Table className="untraveled-trips--table">
                         <Table.Header>
-                            <Table.Row>
-                                <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
-                                <Table.HeaderCell>Data</Table.HeaderCell>
-                                <Table.HeaderCell>Punktacja</Table.HeaderCell>
-                                <Table.HeaderCell></Table.HeaderCell>
-                                <Table.HeaderCell></Table.HeaderCell>
-                            </Table.Row>
+                            {tableHeaderContent}
                         </Table.Header>
 
                         <Table.Body>
-                            {tableContent}
+                            {tableBodyContent}
                         </Table.Body>
 
                         <Table.Footer>
                             <Table.Row>
                                 <Table.HeaderCell colSpan='5' style={{textAlign: 'center'}}>
-                                    <Pagination defaultActivePage={1} totalPages={Math.ceil(tripsNumber / tripsPerPage)}
-                                    boundaryRange={1} onPageChange={this.handlePaginationChange} activePage={this.state.currentPage}/>
+
+                                    <Pagination defaultActivePage={1} totalPages={Math.ceil(rowsNumber / rowsPerPage)}
+                                        boundaryRange={1} onPageChange={this.handlePaginationChange} activePage={this.state.currentPage}/>
+
                                     <Dropdown className="untraveled-trips--dropdown" selection options={dropdownOptions}
-                                    value={this.state.currentPage} onChange={(event, data) => this.setState({currentPage: data.value})} />
+                                        value={this.state.currentPage} onChange={(_, {value}) => this.setState({currentPage: value})} />
+
                                 </Table.HeaderCell>
                             </Table.Row>
                         </Table.Footer>
