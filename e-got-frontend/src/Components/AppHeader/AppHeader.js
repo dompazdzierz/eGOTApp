@@ -2,6 +2,7 @@ import React from 'react';
 import './AppHeader.css';
 import { Button, Dropdown } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
+import * as paths from "../../Constants/paths"
 
 class AppHeader extends React.Component {
     constructor(props) {
@@ -40,12 +41,12 @@ class AppHeader extends React.Component {
                     Moja książeczka
                 </Dropdown.Item>
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push('/untraveled-trips/') }>
+                    <Dropdown.Item onClick={() => history.push(paths.UNTRAVELED_TRIPS) }>
                         Nieprzebyte wycieczki
                     </Dropdown.Item>
                 )} />
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push('/new-trip-verification-data/') }>
+                    <Dropdown.Item onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA) }>
                         Weryfikacja wycieczki
                     </Dropdown.Item>
                 )} />

@@ -1,0 +1,15 @@
+.trip-verification--button {
+
+}
+
+.trip-verification--container {
+    text-align: center;
+}
+
+.trip-verification--segment {
+    min-height: 60vh;
+    height: fit-content;
+    width: 75vw;
+    display: inline-block;
+    margin-top: 5vh !important;
+}
