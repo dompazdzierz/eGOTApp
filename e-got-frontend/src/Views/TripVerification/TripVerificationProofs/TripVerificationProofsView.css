@@ -1,0 +1,11 @@
+.trip-verification-data--image-button {
+    padding: 0px !important;
+    max-height: 150px;
+    height: 20vh;
+    margin-bottom: 20px !important;
+}
+
+.trip-verification-data--image-thumbnail {
+    height: 20vh !important;
+    width: 20vw !important;
+}

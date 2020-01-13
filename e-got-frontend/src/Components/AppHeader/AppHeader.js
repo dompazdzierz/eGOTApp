@@ -1,18 +1,10 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import './AppHeader.css';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button, Dropdown, Ref, Sticky } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
 import * as paths from "../../Constants/paths"
 
 class AppHeader extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-        }
-    }
-
-    handleClick = () => {
-    }
 
     render() {
 
@@ -54,23 +46,23 @@ class AppHeader extends React.Component {
 
 
         return (
-            <div style={backgroundStyle}>
+            <Sticky context={this.contextRef}>
+                <div style={backgroundStyle}>
+                    <Button className="appheader--button" size="massive" floated="left">
+                        <Dropdown icon="bars" direction="right">
+                            {barsMenu}
+                        </Dropdown>
+                    </Button>
 
-                <Button className="appheader--button" size="massive" floated="left">
-                    <Dropdown icon="bars" direction="right">
-                        {barsMenu}
-                    </Dropdown>
-                </Button>
+                    <div className="appheader--text-container">e-GOT</div>
 
-                <div className="appheader--text-container">e-GOT</div>
-
-                <Button className="appheader--button"  size="massive" floated="right">
-                    <Dropdown icon="user" direction="left">
-                        {avatarMenu}
-                    </Dropdown>
-                </Button>
-
-            </div>
+                    <Button className="appheader--button"  size="massive" floated="right">
+                        <Dropdown icon="user" direction="left">
+                            {avatarMenu}
+                        </Dropdown>
+                    </Button>
+                </div>
+            </Sticky>
         )
     }
 }
