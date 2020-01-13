@@ -1,7 +1,7 @@
 import React , { createRef } from 'react';
 import '../TripVerification.css'
 import './TripVerificationProofsView.css'
-import { Segment, Divider, Button, Header, Icon, Grid, Image, Ref } from 'semantic-ui-react';
+import { Segment, Divider, Button, Header, Icon, Grid, Image } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
 import * as paths from "../../../Constants/paths"
 import AppHeader from '../../../Components/AppHeader/AppHeader';
@@ -25,26 +25,23 @@ class TripVerificationProofsView extends React.Component {
         }
     }
 
-    contextRef = createRef()
-
     render() {
 
         let { currentPhotoIndex, photos } = this.state
 
         let leftContent =
                 photos.filter((x, i) => i % 2 == 0).map((photo, i) =>
-                    <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex: i})}>
+                    <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex:  i * 2})}>
                         <Image src={photo} className="trip-verification-data--image-thumbnail"/>
                     </Button>
                 )
 
         let rightContnent =
                 photos.filter((x, i) => i % 2 == 1).map((photo, i) =>
-                    <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex: i})}>
+                    <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex:  1 + i * 2})}>
                         <Image src={photo} className="trip-verification-data--image-thumbnail"/>
                     </Button>
                 )
-
 
         return (
             <div className="trip-verification--container">
@@ -69,21 +66,16 @@ class TripVerificationProofsView extends React.Component {
                     <Divider/>
 
                     <Grid columns='three'>
-
                         <Grid.Row>
-                                <Ref innerRef={this.contextRef}>
-
-                                <Grid.Column width="10">
-                                    <Image src={photos[currentPhotoIndex]}/>
-                                </Grid.Column>
-                                </Ref>
-
-                                <Grid.Column width="3">
-                                    {leftContent}
-                                </Grid.Column>
-                                <Grid.Column width="3">
-                                    {rightContnent}
-                                </Grid.Column>
+                            <Grid.Column width="10">
+                                    <Image src={photos[currentPhotoIndex]} className="trip-verification--picked-photo"/>
+                            </Grid.Column>
+                            <Grid.Column width="3">
+                                {leftContent}
+                            </Grid.Column>
+                            <Grid.Column width="3">
+                                {rightContnent}
+                            </Grid.Column>
                         </Grid.Row>
                     </Grid>
 

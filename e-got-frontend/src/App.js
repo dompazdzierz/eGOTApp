@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import * as paths from './Constants/paths'
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomeView from './Views/Home/HomeView'
 import UntraveledTripsView from './Views/UntraveledTrips/UntraveledTripsView';
 import TripVerificationDataView from './Views/TripVerification/TripVerificationData/TripVerificationDataView';
 import TripVerificationProofsView from './Views/TripVerification/TripVerificationProofs/TripVerificationProofsView';
-import * as paths from './Constants/paths'
+import TripVerificationDecisionView from './Views/TripVerification/TripVerificationDecision/TripVerificationDecisionView';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView}/>
         <Route exact path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView}/>
         <Route exact path={paths.TRIP_VERIFICATION + paths.PROOFS} component={TripVerificationProofsView}/>
+        <Route exact path={paths.TRIP_VERIFICATION + paths.DECISION} component={TripVerificationDecisionView}/>
       </Switch>
     </BrowserRouter>
   );

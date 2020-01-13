@@ -47,14 +47,14 @@ class TripVerificationDataView extends React.Component {
                     <div>
                         <div className="trip-verification-data--segment-half">
                             <div className="trip-verification-data--input-wrapper">
-                                <p className="trip-verification-data--label">Data rozpoczęcia</p>
+                                <p className="trip-verification--label">Data rozpoczęcia</p>
                                 <Input disabled className="trip-verification-data--input" defaultValue={startDate}/>
 
-                                <p className="trip-verification-data--label">Czas trwania</p>
+                                <p className="trip-verification--label">Czas trwania</p>
                                 <Input selection disabled className="trip-verification-data--input"
                                 placeholder={duration} label={{ basic: true, content: 'dni' }} labelPosition='right'/>
 
-                                <p className="trip-verification-data--label">Trasa wycieczki</p>
+                                <p className="trip-verification--label">Trasa wycieczki</p>
                                 <Form>
                                     <TextArea disabled className="trip-verification-data--input"
                                         placeholder={route}/>
@@ -63,15 +63,15 @@ class TripVerificationDataView extends React.Component {
                         </div>
                         <div className="trip-verification-data--segment-half">
                             <div className="trip-verification-data--input-wrapper">
-                                <p className="trip-verification-data--label">Długość</p>
+                                <p className="trip-verification--label">Długość</p>
                                 <Input disabled className="trip-verification-data--input" defaultValue={length}
                                     label={{ basic: true, content: 'm' }} labelPosition='right'/>
 
-                                <p className="trip-verification-data--label">Przewyższenie</p>
+                                <p className="trip-verification--label">Przewyższenie</p>
                                 <Input disabled className="trip-verification-data--input" defaultValue={elevationGain}
                                     label={{ basic: true, content: 'm' }} labelPosition='right'/>
 
-                                <p className="trip-verification-data--label">Punktacja</p>
+                                <p className="trip-verification--label">Punktacja</p>
                                 <Input disabled className="trip-verification-data--input" defaultValue={points}/>
 
                             </div>
