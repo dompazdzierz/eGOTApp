@@ -26,8 +26,9 @@ class TripVerificationDecisionView extends React.Component {
             content: wasPositiveClicked ? "Jesteś pewien, że chcesz pozytywnie zweryfikować tę wycieczkę?"
              : "Jesteś pewien, że chcesz negatywnie zweryfikować tę wycieczkę?"
         })
-
     }
+
+    //TODO: Do zdefiniowania są dwa onConfirmy: jeden dla pozytywnej weryfikacji, drugi dla negatywnej
 
     close = () => this.setState({ open: false })
 
