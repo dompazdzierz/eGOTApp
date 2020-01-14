@@ -13,7 +13,7 @@ class HomeView extends React.Component {
         return(
             <div className="homeview--container">
                 <AppHeader home />
-                <Header as="h1" className="homeview--header">Odkryj piękno tatr wraz z internetową książeczką PTTK</Header>
+                <Header as="h1" className="homeview--header">Odkryj piękno Tatr wraz z internetową książeczką PTTK</Header>
             </div>
         )
     }

@@ -3,7 +3,7 @@ import '../TripVerification.css'
 import './TripVerificationDecisionView.css'
 import { Segment, Divider, Button, Header, Icon, TextArea, Confirm } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
-import * as paths from "../../../Constants/paths"
+import * as paths from "../../../Common/paths"
 import AppHeader from '../../../Components/AppHeader/AppHeader';
 
 class TripVerificationDecisionView extends React.Component {
@@ -43,29 +43,31 @@ class TripVerificationDecisionView extends React.Component {
                 <Segment style={{width: "90vw"}} className="trip-verification--segment">
                     <Route render={({history}) => (
                         <Button primary content="Powrót" floated="left" className="trip-verification--button"
-                            onClick={() => history.goBack()}/>
+                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)}/>
                     )} />
 
                     <Route render={({history}) => (
                         <Button primary content="Dalej" floated="right" className="trip-verification--button"
-                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DECISION)}/>
+                            style={{visibility: 'hidden'}}/>
                     )} />
 
-                    <Icon style={{linemaxHeight: 'unset', verticalAlign: 'unset'}} name="file outline" size="big"/>
-                    <Header icon as='h2'>
-                        <Header.Content>Decyzja</Header.Content>
-                    </Header>
+                    <div>
+                        <Icon style={{linemaxHeight: 'unset', verticalAlign: 'unset'}} name="file outline" size="big"/>
+                        <Header icon as='h2'>
+                            <Header.Content>Decyzja</Header.Content>
+                        </Header>
+                    </div>
 
                     <Divider/>
 
                     <p className="trip-verification--label">Komentarz</p>
                     <TextArea className="trip-verification-decision--text-area" value={value} onChange={this.handleTextAreaChange} />
 
-                    <Button primary content="Zatwierdź" className="trip-verification-decision--button"
-                        onClick={() => this.openConfirm(true)} />
-
                     <Button primary basic content="Odrzuć" className="trip-verification-decision--button"
                        onClick={() => this.openConfirm(false)} />
+
+                    <Button primary content="Zatwierdź" className="trip-verification-decision--button"
+                        onClick={() => this.openConfirm(true)} />
 
                     <Confirm
                        open={this.state.open}

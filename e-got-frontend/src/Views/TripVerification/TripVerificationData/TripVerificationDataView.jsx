@@ -4,7 +4,7 @@ import '../TripVerification.css'
 import { Segment, Divider, Input, Button, Header, Icon, TextArea, Form } from 'semantic-ui-react';
 import AppHeader from '../../../Components/AppHeader/AppHeader';
 import { Route } from 'react-router';
-import * as paths from '../../../Constants/paths'
+import * as paths from '../../../Common/paths'
 
 class TripVerificationDataView extends React.Component {
     constructor(props) {

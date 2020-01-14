@@ -2,7 +2,7 @@ import React, {createRef} from 'react';
 import './AppHeader.css';
 import { Button, Dropdown, Ref, Sticky } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
-import * as paths from "../../Constants/paths"
+import * as paths from "../../Common/paths"
 
 class AppHeader extends React.Component {
 
@@ -29,17 +29,19 @@ class AppHeader extends React.Component {
 
         let avatarMenu =
             <Dropdown.Menu style={menuStyle}>
-                <Dropdown.Item>
-                    Moja książeczka
-                </Dropdown.Item>
+                <Route render={({ history }) => (
+                    <Dropdown.Item onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA) }>
+                        Widok weryfikacji wycieczki
+                    </Dropdown.Item>
+                )} />
                 <Route render={({ history }) => (
                     <Dropdown.Item onClick={() => history.push(paths.UNTRAVELED_TRIPS) }>
                         Nieprzebyte wycieczki
                     </Dropdown.Item>
                 )} />
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA) }>
-                        Weryfikacja wycieczki
+                    <Dropdown.Item onClick={() => history.push(paths.UNVERIFIED_TRIPS) }>
+                        Niezweryfikowane wycieczki
                     </Dropdown.Item>
                 )} />
             </Dropdown.Menu>

@@ -3,7 +3,7 @@ import '../TripVerification.css'
 import './TripVerificationProofsView.css'
 import { Segment, Divider, Button, Header, Icon, Grid, Image } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
-import * as paths from "../../../Constants/paths"
+import * as paths from "../../../Common/paths"
 import AppHeader from '../../../Components/AppHeader/AppHeader';
 
 class TripVerificationProofsView extends React.Component {
@@ -50,7 +50,7 @@ class TripVerificationProofsView extends React.Component {
                 <Segment style={{width: "90vw"}} className="trip-verification--segment">
                     <Route render={({history}) => (
                         <Button primary content="Powrót" floated="left" className="trip-verification--button"
-                            onClick={() => history.goBack()}/>
+                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA)}/>
                     )} />
 
                     <Route render={({history}) => (

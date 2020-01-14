@@ -12,10 +12,3 @@
 .untraveled-trips--button {
     margin-bottom: 20px !important;
 }
-
-.untraveled-trips--dropdown {
-    padding-top: 12px !important;
-    padding-bottom: 14px !important;
-    margin-left: 10px;
-    min-width: 70px !important;
-}
