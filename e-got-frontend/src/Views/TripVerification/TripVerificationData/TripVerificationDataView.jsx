@@ -1,10 +1,10 @@
 import React from 'react';
 import './TripVerificationDataView.css';
 import '../TripVerification.css'
-import { Segment, Divider, Input, Button, Header, Icon, TextArea, Form } from 'semantic-ui-react';
-import AppHeader from '../../../Components/AppHeader/AppHeader';
-import { Route } from 'react-router';
+import { Divider, Input, TextArea, Form } from 'semantic-ui-react';
 import * as paths from '../../../Common/paths'
+import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
+import TextInput from '../../../Components/Inputs/TextInput';
 
 class TripVerificationDataView extends React.Component {
     constructor(props) {
@@ -21,65 +21,36 @@ class TripVerificationDataView extends React.Component {
     }
 
     render() {
-
-        let { startDate, duration, route, length, elevationGain, points } = this.state
+        let { startDate, duration, route, length, elevationGain, points } = this.state;
 
         return(
-            <div className="trip-verification--container">
-                <AppHeader />
+            <SegmentContainer headerContent="Nieprzebyte wycieczki" iconName='list alternate outline'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                rightButtonContent="Dalej" rightButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)} >
 
-                <Segment className="trip-verification--segment">
-                    <Route render={({history}) => (
-                        <Button primary content="Powrót" floated="left" className="trip-verification--button"
-                            onClick={() => history.goBack()}/>
-                    )} />
-                    <Route render={({history}) => (
-                        <Button primary content="Dalej" floated="right" className="trip-verification--button"
-                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)}/>
-                    )} />
-                    <div>
-                    <Icon style={{lineHeight: 'unset', verticalAlign: 'unset'}} name="map signs" size="big"/>
-                    <Header icon as='h2'>
-                        <Header.Content>Dane wycieczki</Header.Content>
-                    </Header>
+                <Divider />
+
+                <div className="trip-verification-data--segment-half">
+                    <div className="trip-verification-data--input-wrapper">
+                        <TextInput header='Data rozpoczęcia' value={startDate} />
+                        <TextInput header='Czas trwania' label='dni' value={duration} />
+
+                        <p className="trip-verification--label">Trasa wycieczki</p>
+                        <Form>
+                            <TextArea disabled className="trip-verification-data--input"
+                                placeholder={route}/>
+                        </Form>
                     </div>
-                    <Divider/>
-                    <div>
-                        <div className="trip-verification-data--segment-half">
-                            <div className="trip-verification-data--input-wrapper">
-                                <p className="trip-verification--label">Data rozpoczęcia</p>
-                                <Input disabled className="trip-verification-data--input" defaultValue={startDate}/>
-
-                                <p className="trip-verification--label">Czas trwania</p>
-                                <Input selection disabled className="trip-verification-data--input"
-                                placeholder={duration} label={{ basic: true, content: 'dni' }} labelPosition='right'/>
-
-                                <p className="trip-verification--label">Trasa wycieczki</p>
-                                <Form>
-                                    <TextArea disabled className="trip-verification-data--input"
-                                        placeholder={route}/>
-                                </Form>
-                            </div>
-                        </div>
-                        <div className="trip-verification-data--segment-half">
-                            <div className="trip-verification-data--input-wrapper">
-                                <p className="trip-verification--label">Długość</p>
-                                <Input disabled className="trip-verification-data--input" defaultValue={length}
-                                    label={{ basic: true, content: 'm' }} labelPosition='right'/>
-
-                                <p className="trip-verification--label">Przewyższenie</p>
-                                <Input disabled className="trip-verification-data--input" defaultValue={elevationGain}
-                                    label={{ basic: true, content: 'm' }} labelPosition='right'/>
-
-                                <p className="trip-verification--label">Punktacja</p>
-                                <Input disabled className="trip-verification-data--input" defaultValue={points}/>
-
-                            </div>
-                        </div>
+                </div>
+                <div className="trip-verification-data--segment-half">
+                    <div className="trip-verification-data--input-wrapper">
+                        <TextInput header='Długość' value={length} label='m' />
+                        <TextInput header='Przewyższenie' value={elevationGain} label='m' />
+                        <TextInput header='Punktacja' value={points} />
                     </div>
-                </Segment>
+                </div>
 
-            </div>
+            </SegmentContainer>
         )
     }
 }

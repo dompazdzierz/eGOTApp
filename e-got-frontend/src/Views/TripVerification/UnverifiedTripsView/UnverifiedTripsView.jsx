@@ -1,10 +1,8 @@
 import React from 'react';
-import './UnverifiedTripsView.css';
-import { Segment, Table, Button } from 'semantic-ui-react';
-import { Route } from 'react-router';
-import AppHeader from '../../../Components/AppHeader/AppHeader';
+import * as paths from '../../../Common/paths'
+import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../../Components/ListWithPagination/ListWithPagination';
-import SegmentHeader from '../../../Components/SegmentHeader/SegmentHeader'
+import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 
 class UnverifiedTripsView extends React.Component {
     constructor(props) {
@@ -32,7 +30,7 @@ class UnverifiedTripsView extends React.Component {
     }
 
     handleBackClick = history => {
-        history.goBack();
+        history.push(paths.HOME_VIEW)
     }
 
     render() {
@@ -62,22 +60,13 @@ class UnverifiedTripsView extends React.Component {
             ))
 
         return(
-            <div className="common--container">
-                <AppHeader />
-                <Segment className="common--segment">
+            <SegmentContainer headerContent="Niezweryfikowane wycieczki" iconName='list alternate outline'
+                leftButtonContent="Powrót" leftButtonOnClick={this.handleBackClick} >
 
-                    <Route render={({ history }) => (
-                        <Button primary content="Powrót" floated="left"
-                            onClick={() => this.handleBackClick(history)}/>
-                    )} />
+                <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent} handleDropdownChange={this.handleDropdownChange}
+                    tableBodyContent={tableBodyContent} colSpan={4} handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage}/>
 
-                    <SegmentHeader headerContent="Niezweryfikowane wycieczki"/>
-
-                    <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent} handleDropdownChange={this.handleDropdownChange}
-                        tableBodyContent={tableBodyContent} colSpan={4} handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage}/>
-
-                </Segment>
-            </div>
+            </SegmentContainer>
         )
     }
 }

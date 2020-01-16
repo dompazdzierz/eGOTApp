@@ -8,12 +8,14 @@ import TripVerificationDataView from './Views/TripVerification/TripVerificationD
 import TripVerificationProofsView from './Views/TripVerification/TripVerificationProofs/TripVerificationProofsView';
 import TripVerificationDecisionView from './Views/TripVerification/TripVerificationDecision/TripVerificationDecisionView';
 import UnverifiedTripsView from './Views/TripVerification/UnverifiedTripsView/UnverifiedTripsView';
+import SectionList from './Views/SectionList/SectionList';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path={paths.HOME_VIEW} component={HomeView} />
+        <Route exact path={paths.SECTION_LIST} component={SectionList} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView} />

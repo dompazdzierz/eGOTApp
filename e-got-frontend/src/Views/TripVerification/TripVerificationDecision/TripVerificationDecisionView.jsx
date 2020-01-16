@@ -1,10 +1,9 @@
 import React from 'react';
 import '../TripVerification.css'
 import './TripVerificationDecisionView.css'
-import { Segment, Divider, Button, Header, Icon, TextArea, Confirm } from 'semantic-ui-react';
-import { Route } from "react-router-dom";
+import { Divider, Button, TextArea, Confirm } from 'semantic-ui-react';
 import * as paths from "../../../Common/paths"
-import AppHeader from '../../../Components/AppHeader/AppHeader';
+import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 
 class TripVerificationDecisionView extends React.Component {
     constructor(props) {
@@ -37,26 +36,8 @@ class TripVerificationDecisionView extends React.Component {
         let { value } = this.state
 
         return (
-            <div className="trip-verification--container">
-                <AppHeader />
-
-                <Segment style={{width: "90vw"}} className="trip-verification--segment">
-                    <Route render={({history}) => (
-                        <Button primary content="Powrót" floated="left" className="trip-verification--button"
-                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)}/>
-                    )} />
-
-                    <Route render={({history}) => (
-                        <Button primary content="Dalej" floated="right" className="trip-verification--button"
-                            style={{visibility: 'hidden'}}/>
-                    )} />
-
-                    <div>
-                        <Icon style={{linemaxHeight: 'unset', verticalAlign: 'unset'}} name="file outline" size="big"/>
-                        <Header icon as='h2'>
-                            <Header.Content>Decyzja</Header.Content>
-                        </Header>
-                    </div>
+            <SegmentContainer headerContent="Decyzja dotycząca weryfikacji" iconName='check square outline'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)} >
 
                     <Divider/>
 
@@ -75,11 +56,9 @@ class TripVerificationDecisionView extends React.Component {
                        onCancel={this.close}
                        onConfirm={this.close}
                        cancelButton='Anuluj'
-                       confirmButton='Kontynuuj'
-                     />
+                       confirmButton='Kontynuuj' />
 
-                </Segment>
-            </div>
+            </SegmentContainer>
         )
     }
 }

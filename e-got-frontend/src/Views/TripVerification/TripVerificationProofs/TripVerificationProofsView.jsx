@@ -1,10 +1,9 @@
-import React , { createRef } from 'react';
+import React from 'react';
 import '../TripVerification.css'
 import './TripVerificationProofsView.css'
-import { Segment, Divider, Button, Header, Icon, Grid, Image } from 'semantic-ui-react';
-import { Route } from "react-router-dom";
+import { Divider, Button, Grid, Image } from 'semantic-ui-react';
 import * as paths from "../../../Common/paths"
-import AppHeader from '../../../Components/AppHeader/AppHeader';
+import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 
 class TripVerificationProofsView extends React.Component {
     constructor(props) {
@@ -44,43 +43,27 @@ class TripVerificationProofsView extends React.Component {
                 )
 
         return (
-            <div className="trip-verification--container">
-                <AppHeader />
+            <SegmentContainer headerContent="Dowody przebycia wycieczki" iconName='camera retro'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.DATA)}
+                rightButtonContent="Dalej" rightButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.DECISION)} >
 
-                <Segment style={{width: "90vw"}} className="trip-verification--segment">
-                    <Route render={({history}) => (
-                        <Button primary content="Powrót" floated="left" className="trip-verification--button"
-                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA)}/>
-                    )} />
+                <Divider />
 
-                    <Route render={({history}) => (
-                        <Button primary content="Dalej" floated="right" className="trip-verification--button"
-                            onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DECISION)}/>
-                    )} />
+                <Grid columns='three'>
+                    <Grid.Row>
+                        <Grid.Column width="10">
+                                <Image src={photos[currentPhotoIndex]} className="trip-verification--picked-photo"/>
+                        </Grid.Column>
+                        <Grid.Column width="3">
+                            {leftContent}
+                        </Grid.Column>
+                        <Grid.Column width="3">
+                            {rightContnent}
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
 
-                    <Icon style={{linemaxHeight: 'unset', verticalAlign: 'unset'}} name="photo" size="big"/>
-                    <Header icon as='h2'>
-                        <Header.Content>Dowody przebycia wycieczki</Header.Content>
-                    </Header>
-
-                    <Divider/>
-
-                    <Grid columns='three'>
-                        <Grid.Row>
-                            <Grid.Column width="10">
-                                    <Image src={photos[currentPhotoIndex]} className="trip-verification--picked-photo"/>
-                            </Grid.Column>
-                            <Grid.Column width="3">
-                                {leftContent}
-                            </Grid.Column>
-                            <Grid.Column width="3">
-                                {rightContnent}
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
-
-                </Segment>
-            </div>
+            </SegmentContainer>
         )
     }
 }

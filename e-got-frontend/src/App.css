@@ -1,11 +1,15 @@
 .common--segment {
     min-height: 80vh;
     height: fit-content;
-    min-width: 85vw;
-    width: fit-content;
+    width: 85vw;
     display: inline-block;
 }
 
 .common--container {
     text-align: center;
+}
+
+.common--button {
+    min-width: 100px;
+    height: 38px;
 }

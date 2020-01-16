@@ -8,13 +8,13 @@ class ListWithPagination extends React.Component {
     render() {
         let { rowsNumber, rowsPerPage, tableHeaderContent, tableBodyContent, colSpan, currentPage, handlePaginationChange } = this.props
 
-        {console.log(this.props)}
+        console.log(this.props)
 
         let dropdownOptions =
         Array.from(Array(10).keys()).slice(1, Math.ceil(rowsNumber / rowsPerPage) + 1).map((i) => ({ key: i, text: i, value: i }))
 
         return(
-            <Table style={{margin: '0px'}}>
+            <Table style={{}}>
                 <Table.Header>
                     {tableHeaderContent}
                 </Table.Header>

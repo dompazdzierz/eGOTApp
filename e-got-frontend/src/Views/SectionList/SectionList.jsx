@@ -4,21 +4,25 @@ import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 
-class UntraveledTripsView extends React.Component {
+class SectionList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             currentPage: 1,
             rows: [
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' }
+                { id: 0, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 1, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 2, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 3, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 4, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 5, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 6, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' }
             ]
         }
+    }
+
+    componentDidMount() {
+        document.getElementById('left-btn-sec').style.width = '200px';
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -32,8 +36,8 @@ class UntraveledTripsView extends React.Component {
 
         let tableHeaderContent =
             <Table.Row>
-                <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
-                <Table.HeaderCell>Data</Table.HeaderCell>
+                <Table.HeaderCell>Punkt początkowy</Table.HeaderCell>
+                <Table.HeaderCell>Punkt końcowy</Table.HeaderCell>
                 <Table.HeaderCell>Punktacja</Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
@@ -42,8 +46,8 @@ class UntraveledTripsView extends React.Component {
         let tableBodyContent =
             rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
                 <Table.Row key={trip.id}>
-                    <Table.Cell>{trip.route}</Table.Cell>
-                    <Table.Cell>{trip.date}</Table.Cell>
+                    <Table.Cell>{trip.startPoint}</Table.Cell>
+                    <Table.Cell>{trip.endPoint}</Table.Cell>
                     <Table.Cell>{trip.points}</Table.Cell>
                     <Table.Cell>
                         <Button circular primary icon='pencil alternate'/>
@@ -55,8 +59,10 @@ class UntraveledTripsView extends React.Component {
             ))
 
         return(
-            <SegmentContainer headerContent="Nieprzebyte wycieczki" iconName='list alternate outline'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)} >
+            <SegmentContainer headerContent="Tatry Wysokie - T.01" iconName='map'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.HOME_VIEW)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                         handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={5}
@@ -66,4 +72,4 @@ class UntraveledTripsView extends React.Component {
         )
     }
 }
-export default UntraveledTripsView;
+export default SectionList;

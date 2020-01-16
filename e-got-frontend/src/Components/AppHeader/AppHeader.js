@@ -1,6 +1,6 @@
-import React, {createRef} from 'react';
+import React from 'react';
 import './AppHeader.css';
-import { Button, Dropdown, Ref, Sticky } from 'semantic-ui-react';
+import { Button, Dropdown, Sticky } from 'semantic-ui-react';
 import { Route } from "react-router-dom";
 import * as paths from "../../Common/paths"
 
@@ -42,6 +42,11 @@ class AppHeader extends React.Component {
                 <Route render={({ history }) => (
                     <Dropdown.Item onClick={() => history.push(paths.UNVERIFIED_TRIPS) }>
                         Niezweryfikowane wycieczki
+                    </Dropdown.Item>
+                )} />
+                <Route render={({ history }) => (
+                    <Dropdown.Item onClick={() => history.push(paths.SECTION_LIST) }>
+                        Spis odcinków punktowanych
                     </Dropdown.Item>
                 )} />
             </Dropdown.Menu>
