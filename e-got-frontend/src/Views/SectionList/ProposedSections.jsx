@@ -4,13 +4,13 @@ import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 
-class SectionList extends React.Component {
+class ProposedSections extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             currentPage: 1,
             rows: [
-                { id: 0, startPoint: 'Schronisko PTTK nad Morskim', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
+                { id: 0, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
                 { id: 1, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
                 { id: 2, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
                 { id: 3, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' },
@@ -19,10 +19,6 @@ class SectionList extends React.Component {
                 { id: 6, startPoint: 'Palenica Białczańska', endPoint: 'Wodogrzmoty Mickiewicza', points: '18' }
             ]
         }
-    }
-
-    componentDidMount() {
-        document.getElementById('left-btn-sec').style.width = '200px';
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -54,26 +50,24 @@ class SectionList extends React.Component {
                     <Table.Cell>{trip.points}</Table.Cell>
                     <Table.Cell>{trip.points}</Table.Cell>
                     <Table.Cell>
-                        <Button circular primary icon='pencil alternate'/>
+                        <Button circular primary icon='check'/>
                     </Table.Cell>
                     <Table.Cell>
-                        <Button circular negative icon='trash alternate'/>
+                        <Button circular negative icon='times'/>
                     </Table.Cell>
                 </Table.Row>
             ))
 
         return(
-            <SegmentContainer headerContent="Tatry Wysokie - T.01" iconName='map'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
-                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
-                rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
+            <SegmentContainer headerContent="Zaproponowane odcinki" iconName='pin'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.SECTION_LIST)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
-                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={5}
+                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
                         handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
 
             </SegmentContainer>
         )
     }
 }
-export default SectionList;
+export default ProposedSections;
