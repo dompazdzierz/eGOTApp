@@ -55,6 +55,5 @@ namespace WebApplication2.Controllers
             _todoContainer.Todos.RemoveAt(indexToDelete);
             return Ok();
         }
-
     }
 }
