@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace WebApplication2.Models
+namespace eGOTBackend.Models
 {
     public partial class eGOTContext : DbContext
     {

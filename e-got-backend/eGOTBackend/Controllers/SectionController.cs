@@ -1,14 +1,12 @@
-﻿// Dominik Paździerz 242514
-
-using System.Web.Http.Cors;
+﻿using System.Web.Http.Cors;
 using System.Web.Http;
 using System.Collections.Generic;
 using System.Linq;
-using WebApplication2.Models;
+using eGOTBackend.Models;
 
-namespace WebApplication2.Controllers
+namespace eGOTBackend.Controllers
 {
-    [RoutePrefix("section")]
+    [RoutePrefix("sections")]
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
     public class SectionController : ApiController
     {

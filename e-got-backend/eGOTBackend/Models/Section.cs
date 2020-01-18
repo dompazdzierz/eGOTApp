@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace WebApplication2.Models
+namespace eGOTBackend.Models
 {
     [DataContract]
     public partial class Section

@@ -1,7 +1,7 @@
 ﻿
 using System.Web.Http;
 
-namespace WebApplication2
+namespace eGOTBackend
 {
     public static class WebApiConfig
     {

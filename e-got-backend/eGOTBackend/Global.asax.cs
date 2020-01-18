@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace WebApplication2
+namespace eGOTBackend
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
