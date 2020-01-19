@@ -2,7 +2,7 @@
 
 namespace eGOTBackend.Models
 {
-    public partial class MountainSystem
+    public partial class MountainSystem : IEntity
     {
         public MountainSystem()
         {

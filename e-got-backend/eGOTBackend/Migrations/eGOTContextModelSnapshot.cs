@@ -8,7 +8,7 @@ using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
-    [DbContext(typeof(eGOTContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class eGOTContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class CommissionWorker
+    public partial class CommissionWorker : IEntity
     {
         public int IdUser { get; set; }
 

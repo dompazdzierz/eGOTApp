@@ -1,4 +1,5 @@
 ﻿
+using eGOTBackend.Models;
 using System.Web.Http;
 
 namespace eGOTBackend
@@ -14,6 +15,7 @@ namespace eGOTBackend
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
         }
     }
 }

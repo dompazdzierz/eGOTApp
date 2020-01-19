@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Trip
+    public partial class Trip : IEntity
     {
         public Trip()
         {
@@ -19,7 +19,7 @@ namespace eGOTBackend.Models
         public float ElevationGain { get; set; }
         public int IdTurist { get; set; }
 
-        public virtual Turist IdTuristNavigation { get; set; }
+        public virtual Tourist IdTuristNavigation { get; set; }
         public virtual GpsProof GpsProof { get; set; }
         public virtual PhotoProof PhotoProof { get; set; }
         public virtual ICollection<Route> Route { get; set; }

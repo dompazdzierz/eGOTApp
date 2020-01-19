@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace eGOTBackend.Models
 {
-    public partial class eGOTContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
-        public eGOTContext()
+        public ApplicationDbContext()
         {
         }
 
-        public eGOTContext(DbContextOptions<eGOTContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
@@ -29,7 +29,7 @@ namespace eGOTBackend.Models
         public virtual DbSet<Route> Route { get; set; }
         public virtual DbSet<Section> Section { get; set; }
         public virtual DbSet<Trip> Trip { get; set; }
-        public virtual DbSet<Turist> Turist { get; set; }
+        public virtual DbSet<Tourist> Turist { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -368,7 +368,7 @@ namespace eGOTBackend.Models
                     .HasConstraintName("FKTrip848043");
             });
 
-            modelBuilder.Entity<Turist>(entity =>
+            modelBuilder.Entity<Tourist>(entity =>
             {
                 entity.HasKey(e => e.IdUser)
                     .HasName("PK__Turist__D2D1463735CD9327");
@@ -390,14 +390,14 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.IsDisabled).HasColumnName("is_disabled");
 
                 entity.HasOne(d => d.IdBadgeLevelNavigation)
-                    .WithMany(p => p.Turist)
+                    .WithMany(p => p.Tourist)
                     .HasForeignKey(d => d.IdBadgeLevel)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKTurist324263");
 
                 entity.HasOne(d => d.IdUserNavigation)
                     .WithOne(p => p.Turist)
-                    .HasForeignKey<Turist>(d => d.IdUser)
+                    .HasForeignKey<Tourist>(d => d.IdUser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKTurist733992");
             });

@@ -9,7 +9,7 @@ using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
-    [DbContext(typeof(eGOTContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20200119131523_mountain-system-added")]
     partial class mountainsystemadded
     {

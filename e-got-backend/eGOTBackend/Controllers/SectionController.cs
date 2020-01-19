@@ -8,50 +8,42 @@ namespace eGOTBackend.Controllers
 {
     [RoutePrefix("sections")]
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
-    public class SectionController : ApiController
+    public class SectionController: ApiController
     {
-        static List<Section> sectionList = new List<Section>();
+        private readonly ApplicationDbContext _dbContext = new ApplicationDbContext();
 
         [HttpGet]
         public IEnumerable<Section> Get()
         {
-            return sectionList;
+            return _dbContext.Section;
         }
 
         [HttpPost]
-        public Section Post(Section section)
+        public IHttpActionResult Post(Section section)
         {
-            var ids = sectionList.Select(x => x.Id);
+            var ids = _dbContext.Section.Select(x => x.Id);
+
             section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
-            sectionList.Add(section);
-            return section;
+            _dbContext.Section.Add(section);
+
+            _dbContext.SaveChanges();
+            return Ok(section);
         }
 
-        [HttpPut]
-        public IHttpActionResult Put(Section section)
+        [HttpPost]
+        public IHttpActionResult Post(IEnumerable<Section> sections)
         {
-            var found = sectionList.Find(x => x.Id == section.Id);
-
-            if (found == null)
+            var ids = _dbContext.Section.Select(x => x.Id);
+            
+            foreach (var section in sections)
             {
-                return NotFound();
+                section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
+                _dbContext.Section.Add(section);
             }
 
-            return Ok(found);
+            _dbContext.SaveChanges();
+            return Ok(sections);
         }
 
-        [HttpDelete]
-        public IHttpActionResult Delete(int id)
-        {
-            var indexToDelete = sectionList.FindIndex(t => t.Id == id);
-
-            if (indexToDelete == -1)
-            {
-                return NotFound();
-            }
-
-            sectionList.RemoveAt(indexToDelete);
-            return Ok();
-        }
     }
 }

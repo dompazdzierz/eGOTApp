@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Users
+    public partial class Users : IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -15,6 +15,6 @@ namespace eGOTBackend.Models
         public virtual CommissionWorker CommissionWorker { get; set; }
         public virtual DepartmentWorker DepartmentWorker { get; set; }
         public virtual Leader Leader { get; set; }
-        public virtual Turist Turist { get; set; }
+        public virtual Tourist Turist { get; set; }
     }
 }

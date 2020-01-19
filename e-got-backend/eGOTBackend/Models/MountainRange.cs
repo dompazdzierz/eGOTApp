@@ -2,7 +2,7 @@
 
 namespace eGOTBackend.Models
 {
-    public partial class MountainRange
+    public partial class MountainRange : IEntity
     {
         public MountainRange()
         {

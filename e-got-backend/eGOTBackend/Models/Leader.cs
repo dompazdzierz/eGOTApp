@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Leader
+    public partial class Leader : IEntity
     {
         public Leader()
         {
