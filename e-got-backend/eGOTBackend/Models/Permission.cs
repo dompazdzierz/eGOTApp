@@ -5,6 +5,7 @@ namespace eGOTBackend.Models
 {
     public partial class Permission : IEntity
     {
+        public int Id { get; set; }
         public int IdUser { get; set; }
         public int IdMountainRange { get; set; }
 

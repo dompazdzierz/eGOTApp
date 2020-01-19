@@ -15,6 +15,6 @@ namespace eGOTBackend.Models
         public virtual CommissionWorker CommissionWorker { get; set; }
         public virtual DepartmentWorker DepartmentWorker { get; set; }
         public virtual Leader Leader { get; set; }
-        public virtual Tourist Turist { get; set; }
+        public virtual Tourist Tourist { get; set; }
     }
 }

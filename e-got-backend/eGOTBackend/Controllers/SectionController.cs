@@ -6,7 +6,6 @@ using eGOTBackend.Models;
 
 namespace eGOTBackend.Controllers
 {
-    [RoutePrefix("sections")]
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
     public class SectionController: ApiController
     {

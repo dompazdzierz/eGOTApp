@@ -5,6 +5,7 @@ namespace eGOTBackend.Models
 {
     public partial class GpsProof : IEntity
     {
+        public int Id { get; set; }
         public int IdTrip { get; set; }
         public byte[] GpsData { get; set; }
 

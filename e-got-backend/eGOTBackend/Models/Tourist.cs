@@ -11,6 +11,7 @@ namespace eGOTBackend.Models
             Trip = new HashSet<Trip>();
         }
 
+        public int Id { get; set; }
         public int IdUser { get; set; }
         public DateTime DateOfBirth { get; set; }
         public bool IsDisabled { get; set; }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace eGOTBackend.Models
 {
-    interface IEntity
+    public interface IEntity
     {
+        int Id { get; set; }
     }
 }

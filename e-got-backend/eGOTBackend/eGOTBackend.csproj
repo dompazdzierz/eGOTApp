@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseCrudController.cs" />
     <Compile Include="Controllers\MountainRangeController.cs" />
     <Compile Include="Controllers\MountainSystemController.cs" />
     <Compile Include="Controllers\SectionController.cs" />
@@ -202,6 +203,10 @@
     <Compile Include="Migrations\20200119131523_mountain-system-added.designer.cs">
       <DependentUpon>20200119131523_mountain-system-added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200119172903_id_added.cs" />
+    <Compile Include="Migrations\20200119172903_id_added.designer.cs">
+      <DependentUpon>20200119172903_id_added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />
     <Compile Include="Models\CommissionWorker.cs" />
@@ -209,6 +214,7 @@
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\GpsProof.cs" />
     <Compile Include="Models\History.cs" />
+    <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\Leader.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\MountainRange.cs" />
@@ -218,7 +224,7 @@
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\Trip.cs" />
-    <Compile Include="Models\Turist.cs" />
+    <Compile Include="Models\Tourist.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
