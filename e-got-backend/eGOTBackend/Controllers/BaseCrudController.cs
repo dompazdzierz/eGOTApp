@@ -11,35 +11,29 @@ namespace eGOTBackend.Controllers
         protected readonly ApplicationDbContext _dbContext = new ApplicationDbContext();
 
         [HttpGet]
+        [ActionName("getAll")]
         public virtual IEnumerable<TEntity> Get()
         {
             return _dbContext.Set<TEntity>();
         }
 
         [HttpPost]
+        [ActionName("addElement")]
         public virtual IHttpActionResult Post(TEntity entity)
         {
-            var ids = _dbContext.Set<TEntity>().Select(x => x.Id);
-
-            entity.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
             _dbContext.Set<TEntity>().Add(entity);
-
             _dbContext.SaveChanges();
+
             return Ok(entity);
         }
 
         [HttpPost]
+        [ActionName("addElements")]
         public virtual IHttpActionResult Post(IEnumerable<TEntity> entities)
         {
-            var ids = _dbContext.Set<TEntity>().Select(x => x.Id);
-
-            foreach (var entity in entities)
-            {
-                entity.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
-                _dbContext.Set<TEntity>().Add(entity);
-            }
-
+            _dbContext.Set<TEntity>().AddRange(entities);
             _dbContext.SaveChanges();
+
             return Ok(entities);
         }
 

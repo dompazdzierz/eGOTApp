@@ -11,8 +11,8 @@ namespace eGOTBackend
             config.EnableCors();
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                name: "eGOTApi",
+                routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 
