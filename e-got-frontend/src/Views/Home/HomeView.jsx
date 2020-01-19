@@ -5,10 +5,6 @@ import AppHeader from '../../Components/AppHeader/AppHeader';
 
 class HomeView extends React.Component {
 
-    handleClick = () => {
-        console.log("XD")
-    }
-
     render() {
         return(
             <div className="homeview--container">

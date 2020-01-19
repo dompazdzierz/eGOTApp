@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace eGOTBackend.Models
 {
-    public partial class eGOTContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
-        public eGOTContext()
+        public ApplicationDbContext()
         {
         }
 
-        public eGOTContext(DbContextOptions<eGOTContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
@@ -23,19 +23,19 @@ namespace eGOTBackend.Models
         public virtual DbSet<Leader> Leader { get; set; }
         public virtual DbSet<Location> Location { get; set; }
         public virtual DbSet<MountainRange> MountainRange { get; set; }
+        public virtual DbSet<MountainSystem> MountainSystem { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<PhotoProof> PhotoProof { get; set; }
         public virtual DbSet<Route> Route { get; set; }
         public virtual DbSet<Section> Section { get; set; }
         public virtual DbSet<Trip> Trip { get; set; }
-        public virtual DbSet<Turist> Turist { get; set; }
+        public virtual DbSet<Tourist> Tourist { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=localhost;Database=eGOT;Trusted_Connection=True;");
             }
         }
@@ -128,10 +128,10 @@ namespace eGOTBackend.Models
 
             modelBuilder.Entity<History>(entity =>
             {
-                entity.HasKey(e => new { e.IdTurist, e.IdBadgeLevel })
+                entity.HasKey(e => new { e.IdTourist, e.IdBadgeLevel })
                     .HasName("PK__History__2A509D270486FE06");
 
-                entity.Property(e => e.IdTurist).HasColumnName("id_turist");
+                entity.Property(e => e.IdTourist).HasColumnName("id_tourist");
 
                 entity.Property(e => e.IdBadgeLevel).HasColumnName("id_badge_level");
 
@@ -145,9 +145,9 @@ namespace eGOTBackend.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKHistory256828");
 
-                entity.HasOne(d => d.IdTuristNavigation)
+                entity.HasOne(d => d.IdTouristNavigation)
                     .WithMany(p => p.History)
-                    .HasForeignKey(d => d.IdTurist)
+                    .HasForeignKey(d => d.IdTourist)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKHistory784901");
             });
@@ -186,7 +186,7 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(50)
+                    .HasMaxLength(80)
                     .IsUnicode(false);
             });
 
@@ -206,8 +206,25 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(10)
+                    .HasMaxLength(80)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<MountainSystem>(entity =>
+            {
+                entity.ToTable("Mountain_system");
+
+                entity.HasIndex(e => e.Id)
+                    .HasName("Mountain_system_id");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasColumnName("name")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
             });
 
             modelBuilder.Entity<Permission>(entity =>
@@ -332,7 +349,7 @@ namespace eGOTBackend.Models
                     .HasColumnName("end_date")
                     .HasColumnType("datetime");
 
-                entity.Property(e => e.IdTurist).HasColumnName("id_turist");
+                entity.Property(e => e.IdTourist).HasColumnName("id_tourist");
 
                 entity.Property(e => e.Length).HasColumnName("length");
 
@@ -344,17 +361,17 @@ namespace eGOTBackend.Models
 
                 entity.Property(e => e.Status).HasColumnName("status");
 
-                entity.HasOne(d => d.IdTuristNavigation)
+                entity.HasOne(d => d.IdTouristNavigation)
                     .WithMany(p => p.Trip)
-                    .HasForeignKey(d => d.IdTurist)
+                    .HasForeignKey(d => d.IdTourist)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKTrip848043");
             });
 
-            modelBuilder.Entity<Turist>(entity =>
+            modelBuilder.Entity<Tourist>(entity =>
             {
                 entity.HasKey(e => e.IdUser)
-                    .HasName("PK__Turist__D2D1463735CD9327");
+                    .HasName("PK__Tourist__D2D1463735CD9327");
 
                 entity.Property(e => e.IdUser)
                     .HasColumnName("id_user")
@@ -373,16 +390,16 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.IsDisabled).HasColumnName("is_disabled");
 
                 entity.HasOne(d => d.IdBadgeLevelNavigation)
-                    .WithMany(p => p.Turist)
+                    .WithMany(p => p.Tourist)
                     .HasForeignKey(d => d.IdBadgeLevel)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FKTurist324263");
+                    .HasConstraintName("FKTourist324263");
 
                 entity.HasOne(d => d.IdUserNavigation)
-                    .WithOne(p => p.Turist)
-                    .HasForeignKey<Turist>(d => d.IdUser)
+                    .WithOne(p => p.Tourist)
+                    .HasForeignKey<Tourist>(d => d.IdUser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FKTurist733992");
+                    .HasConstraintName("FKTourist733992");
             });
 
             modelBuilder.Entity<Users>(entity =>

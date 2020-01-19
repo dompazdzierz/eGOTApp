@@ -3,14 +3,15 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Turist
+    public partial class Tourist : IEntity
     {
-        public Turist()
+        public Tourist()
         {
             History = new HashSet<History>();
             Trip = new HashSet<Trip>();
         }
 
+        public int Id { get; set; }
         public int IdUser { get; set; }
         public DateTime DateOfBirth { get; set; }
         public bool IsDisabled { get; set; }

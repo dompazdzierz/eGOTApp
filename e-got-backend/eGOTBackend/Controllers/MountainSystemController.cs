@@ -4,8 +4,8 @@ using eGOTBackend.Models;
 namespace eGOTBackend.Controllers
 {
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
-    public class SectionController: BaseCrudController<Section>
+    public class MountainSystemController: BaseCrudController<MountainSystem>
     {
-
+      
     }
 }

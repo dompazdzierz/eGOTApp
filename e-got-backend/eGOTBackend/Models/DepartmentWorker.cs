@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class DepartmentWorker
+    public partial class DepartmentWorker : IEntity
     {
+        public int Id { get; set; }
         public int IdUser { get; set; }
 
         public virtual Users IdUserNavigation { get; set; }

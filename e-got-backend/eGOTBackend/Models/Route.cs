@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Route
+    public partial class Route : IEntity
     {
+        public int Id { get; set; }
         public int IdTrip { get; set; }
         public int IdSection { get; set; }
         public int PositionInTrip { get; set; }

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace eGOTBackend.Models
 {
     [DataContract]
-    public partial class Section
+    public partial class Section : IEntity
     {
         public Section()
         {

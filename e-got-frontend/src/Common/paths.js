@@ -6,6 +6,7 @@ export const UNVERIFIED_TRIPS = "/niezweryfikowane-wcycieczki";
 export const SECTION_LIST = "/pasmo-górskie/";
 export const PROPOSED_SECTIONS = "/zaproponowane-odcinki";
 export const MOUNTAIN_SYSTEMS = '/spis-odcinków-punktowanych';
+export const PREPOPULATE_DATABASE = '/dev'
 
 // Add-ons:
 export const DATA = "/dane";

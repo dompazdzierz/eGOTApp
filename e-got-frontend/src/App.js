@@ -11,11 +11,14 @@ import UnverifiedTripsView from './Views/TripVerification/UnverifiedTripsView/Un
 import SectionList from './Views/SectionList/SectionList';
 import ProposedSections from './Views/SectionList/ProposedSections';
 import MountainSystems from './Views/SectionList/MountainSystems';
+import PrepopulateDatabaseView from './Views/PrepopulateDatabase/PrepopulateDatabaseView';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Route exact path={paths.PREPOPULATE_DATABASE} component={PrepopulateDatabaseView} />
+
         <Route exact path={paths.HOME_VIEW} component={HomeView} />
         <Route exact path={paths.SECTION_LIST} component={SectionList} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />

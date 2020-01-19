@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class MountainRange
+    public partial class MountainRange : IEntity
     {
         public MountainRange()
         {
