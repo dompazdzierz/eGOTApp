@@ -1,0 +1,7850 @@
+[
+    {
+        "id": 0,
+        "name": "Rusinowa Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1,
+        "name": "Łysa Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 2,
+        "name": "Gęsia Szyja",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 3,
+        "name": "Rówień Waksmundzka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 4,
+        "name": "Psia Trawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 5,
+        "name": "Wodogrzmoty Mickiewicza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 6,
+        "name": "Schronisko PTTK nad Morskim Okiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 7,
+        "name": "Czarny Staw nad Morskim Okiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 8,
+        "name": "Dolina za Mnichem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 9,
+        "name": "Szpiglasowa Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 10,
+        "name": "Schronisko PTTK w Dolinie Pięciu Stawów Polskich",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 11,
+        "name": "Siklawa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 12,
+        "name": "Kozi Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 13,
+        "name": "Kozia Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 14,
+        "name": "Przełęcz Zawrat",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 15,
+        "name": "Świnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 16,
+        "name": "Świnicka Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 17,
+        "name": "Kozia Dolinka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 18,
+        "name": "Żleb Kulczyńskiego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 19,
+        "name": "Skrajny Granat",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 20,
+        "name": "Przełęcz Krzyżne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 21,
+        "name": "Przełęcz Krab",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 22,
+        "name": "Dwoiśniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 23,
+        "name": "Schronisko PTTK na Hali Gąsienicowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 24,
+        "name": "Droga \"Pod Reglami\"",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 25,
+        "name": "Polana Biały Potok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 26,
+        "name": "Polana Huciska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 27,
+        "name": "Niżnia Kominiarska Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 28,
+        "name": "Schronisko PTTK na Polanie Chochołowskiej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 29,
+        "name": "Trzydniowiański Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 30,
+        "name": "Jarząbczy Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 31,
+        "name": "Wołowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 32,
+        "name": "Grześ",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 33,
+        "name": "Starorobociański Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 34,
+        "name": "Siwa Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 35,
+        "name": "Starorobociańska Rówień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 36,
+        "name": "Iwaniacka Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 37,
+        "name": "Wyżnia Kira Miętusia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 38,
+        "name": "Lodowe Źródło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 39,
+        "name": "Polana Pisana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 40,
+        "name": "Schronisko PTTK na Hali Ornak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 41,
+        "name": "Wyżnia Tomanowa Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 42,
+        "name": "Chuda Przełączka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 43,
+        "name": "Krzesanica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 44,
+        "name": "Przełęcz Przysłop Miętusi",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 45,
+        "name": "Kobylarz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 46,
+        "name": "Wielka Polana w Dolinie Małej Łąki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 47,
+        "name": "Kopa Kondracka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 48,
+        "name": "Przełęcz Kondracka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 49,
+        "name": "Przełęcz w Grzybowcu",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 50,
+        "name": "Polana Strążyska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 51,
+        "name": "Czerwona Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 52,
+        "name": "Przełęcz Białego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 53,
+        "name": "Schronisko PTTK na Hali Kondratowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 54,
+        "name": "Kasprowy Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 55,
+        "name": "Schronisko PTTK na Hali Gąsienicowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 56,
+        "name": "Klasztor",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 57,
+        "name": "Kużnice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 58,
+        "name": "Nosal",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 59,
+        "name": "Olczyska Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 60,
+        "name": "Toporowa Cyrhla",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 61,
+        "name": "Magura Witowska TPG",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 62,
+        "name": "Palenica Kościeliska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 63,
+        "name": "Butorowy Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 64,
+        "name": "Gubałówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 65,
+        "name": "Eliaszówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 66,
+        "name": "Szaflary",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 67,
+        "name": "Rafaczyńska Grapa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 68,
+        "name": "Poronin",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 69,
+        "name": "Galicowa Grapa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 70,
+        "name": "Bukowina Tatrzańska - Klin",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 71,
+        "name": "Głodówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 72,
+        "name": "Bukowina Tatrzańska Dolna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 73,
+        "name": "Dzięgielów - Zamek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 74,
+        "name": "Jasieniowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 75,
+        "name": "Schronisko PTTK Tuł",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 76,
+        "name": "Ostry",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 77,
+        "name": "Mała Czantoria",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 78,
+        "name": "Czantoria Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 79,
+        "name": "Wisła - Jawornik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 80,
+        "name": "Soszów Wielki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 81,
+        "name": "Schronisko PTTK Stożek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 82,
+        "name": "Wisła - Jurzyków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 83,
+        "name": "Wisła - Gościejów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 84,
+        "name": "Wisła Nowa Osada",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 85,
+        "name": "Kozińce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 86,
+        "name": "Przełęcz Kubalonka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 87,
+        "name": "Mraźnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 88,
+        "name": "Kiczory",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 89,
+        "name": "Jaworzynka - Trzycatek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 90,
+        "name": "Wierch Czadeczka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 91,
+        "name": "Wielka Zabawa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 92,
+        "name": "Przełęcz Koniakowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 93,
+        "name": "Koniaków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 94,
+        "name": "Łączyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 95,
+        "name": "Kamesznica Dolna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 96,
+        "name": "Kamesznica Złatna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 97,
+        "name": "Schronisko PTTK Przysłop",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 98,
+        "name": "Wisła Czarne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 99,
+        "name": "Wisła Czarne DW PTTK",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 100,
+        "name": "Barania Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 101,
+        "name": "Magurka Wiślańska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 102,
+        "name": "Magurka Radziechowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 103,
+        "name": "Grojec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 104,
+        "name": "Zielony Kopiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 105,
+        "name": "Malinowska Skala",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 106,
+        "name": "Smerekowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 107,
+        "name": "Trzy Kopce Wiślańskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 108,
+        "name": "Orłowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 109,
+        "name": "Schronisko PTTK Równica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 110,
+        "name": "Górki Wielkie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 111,
+        "name": "Łazek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 112,
+        "name": "Schronisko PTTK Błatnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 113,
+        "name": "Jezioro w dolinie Wapiennicy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 114,
+        "name": "Stary Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 115,
+        "name": "Przełęcz Salmopolska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 116,
+        "name": "Kotarz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 117,
+        "name": "Schronisko PTTK Skrzyczne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 118,
+        "name": "Przełęcz Karkoszonka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 119,
+        "name": "Klimczok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 120,
+        "name": "Schronisko PTTK Klimczok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 121,
+        "name": "Meszna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 122,
+        "name": "Schronisko PTTK Szyndzielnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 123,
+        "name": "Mikuszowice Śląskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 124,
+        "name": "Kozia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 125,
+        "name": "Przełęcz Kołowrót",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 126,
+        "name": "Rachowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 127,
+        "name": "Bór",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 128,
+        "name": "Ożna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 129,
+        "name": "Łysica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 130,
+        "name": "Magura",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 131,
+        "name": "Schronisko PTTK Wielka Racza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 132,
+        "name": "Schronisko PTTK na Przełęczy Przegibek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 133,
+        "name": "Rycerki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 134,
+        "name": "Młada Hora",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 135,
+        "name": "Urówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 136,
+        "name": "Wielka Rycerzowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 137,
+        "name": "Bacówka PTTK na Rycerzowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 138,
+        "name": "Muńcuł",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 139,
+        "name": "&nbsp;Bednarów Beskid",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 140,
+        "name": "Jaworzyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 141,
+        "name": "Soblówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 142,
+        "name": "Glinka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 143,
+        "name": "Bacówka PTTK Krawców Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 144,
+        "name": "Hala Redykalna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 145,
+        "name": "Sucha Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 146,
+        "name": "Schronisko PTTK na Hali Boraczej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 147,
+        "name": "Schronisko PTTK Hala Lipowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 148,
+        "name": "Schronisko PTTK Hala Rysianka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 149,
+        "name": "Romanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 150,
+        "name": "Sopotnia Wielka - Kolonia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 151,
+        "name": "Słowianka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 152,
+        "name": "Kiczora",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 153,
+        "name": "Grojec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 154,
+        "name": "Jastrzębica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 155,
+        "name": "Pilsko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 156,
+        "name": "Schronisko PTTK na Hali Miziowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 157,
+        "name": "Kamienna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 158,
+        "name": "Przełęcz Przysłopy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 159,
+        "name": "Przełęcz Glinne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 160,
+        "name": "Beskid Korbielowski",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 161,
+        "name": "Przełęcz pomiędzy Beskidem Korbielowskim i Beskidem Krzyżanowskim",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 162,
+        "name": "Przyborowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 163,
+        "name": "Jaworzyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 164,
+        "name": "Moczarki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 165,
+        "name": "Mędralowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 166,
+        "name": "Hala Kamińskiego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 167,
+        "name": "Przełęcz Jałowiecka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 168,
+        "name": "Przełęcz Klekociny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 169,
+        "name": "Lachów Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 170,
+        "name": "Czerniawa Sucha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 171,
+        "name": "Jałowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 172,
+        "name": "Przełęcz Kolędówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 173,
+        "name": "Magurka nad Suchą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 174,
+        "name": "Czatoża",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 175,
+        "name": "Wilczna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 176,
+        "name": "Markowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 177,
+        "name": "Schronisko PTTK Markowe Szczawiny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 178,
+        "name": "Mała Babia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 179,
+        "name": "Babia Góra -",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 180,
+        "name": "Sokolica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 181,
+        "name": "Sulowa Cyrhla",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 182,
+        "name": "Lajkonik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 183,
+        "name": "Przełęcz Krowiarki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 184,
+        "name": "Cyl Hala Śmietanowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 185,
+        "name": "Polica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 186,
+        "name": "Schronisko PTTK Hala Krupowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 187,
+        "name": "Kiełek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 188,
+        "name": "Cupel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 189,
+        "name": "Bujakowski Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 190,
+        "name": "Hrobacza Łąka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 191,
+        "name": "Przełęcz między Gaikami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 192,
+        "name": "Przełęcz Przegibek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 193,
+        "name": "Magurka Wilkowicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 194,
+        "name": "Czupel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 195,
+        "name": "Przyszop",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 196,
+        "name": "Przełęcz Przysłop Cisowy ",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 197,
+        "name": "Przełęcz Kocierska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 198,
+        "name": "Złota Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 199,
+        "name": "Bukowski Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 200,
+        "name": "Wielka Puszcza - leśniczówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 201,
+        "name": "Potrójna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 202,
+        "name": "Na Płonnem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 203,
+        "name": "Łamana Skała",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 204,
+        "name": "Groń Jana Pawła II",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 205,
+        "name": "Skrzyżowanie Panienka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 206,
+        "name": "Przełęcz Biadoszowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 207,
+        "name": "Łysa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 208,
+        "name": "Iłowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 209,
+        "name": "Łyska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 210,
+        "name": "Barutka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 211,
+        "name": "Bąków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 212,
+        "name": "Gachowizna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 213,
+        "name": "Ślemień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 214,
+        "name": "Wajdów Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 215,
+        "name": "Zagrodzki Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 216,
+        "name": "Schronisko \"Lasek\"",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 217,
+        "name": "Hucisko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 218,
+        "name": "Solniska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 219,
+        "name": "Żurawnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 220,
+        "name": "Lipska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 221,
+        "name": "Mioduszyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 222,
+        "name": "Osiedle Piątkowa - Maków Podhalański",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 223,
+        "name": "Ostrysz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 224,
+        "name": "Jaroszowicka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 225,
+        "name": "Żar",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 226,
+        "name": "Lanckorońska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 227,
+        "name": "Chełm 603 m)",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 228,
+        "name": "Chełm Wschodni",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 229,
+        "name": "Babica Zachodnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 230,
+        "name": "Cisy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 231,
+        "name": "Harbutowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 232,
+        "name": "Babica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 233,
+        "name": "Sularzowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 234,
+        "name": "Barnasiówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 235,
+        "name": "Koskowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 236,
+        "name": "Polana Gronie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 237,
+        "name": "Przykrzec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 238,
+        "name": "Kotoń Zachodni",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 239,
+        "name": "Kotoń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 240,
+        "name": "Pcim",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 241,
+        "name": "Chełm",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 242,
+        "name": "Śliwnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 243,
+        "name": "Myślenice Zarabie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 244,
+        "name": "Działek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 245,
+        "name": "Schronisko PTTK na Kudłaczach",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 246,
+        "name": "Łysina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 247,
+        "name": "Lubomir",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 248,
+        "name": "Przełęcz Wierzbanowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 249,
+        "name": "Przełęcz Sucha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 250,
+        "name": "Kamiennik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 251,
+        "name": "Ostrysz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 252,
+        "name": "Trupielec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 253,
+        "name": "Krowia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 254,
+        "name": "Piątkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 255,
+        "name": "Rabska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 256,
+        "name": "Obidowa - PKS Rdzawka II",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 257,
+        "name": "Ponice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 258,
+        "name": "Bacówka PTTK Maciejowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 259,
+        "name": "Schronisko PTTK Stare Wierchy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 260,
+        "name": "Bukowina Obidowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 261,
+        "name": "Obidowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 262,
+        "name": "Turbacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 263,
+        "name": "Schronisko PTTK na Turbaczu",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 264,
+        "name": "Przełęcz Borek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 265,
+        "name": "Kudłoń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 266,
+        "name": "Kiczora",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 267,
+        "name": "Przełęcz Knurowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 268,
+        "name": "Przełęcz pod Przysłopem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 269,
+        "name": "Runek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 270,
+        "name": "Lubań",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 271,
+        "name": "Gorc",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 272,
+        "name": "Przełęcz Wierch Młynne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 273,
+        "name": "Tworogi",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 274,
+        "name": "Wielki Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 275,
+        "name": "Nowa Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 276,
+        "name": "Potaczkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 277,
+        "name": "Poręba Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 278,
+        "name": "Olszówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 279,
+        "name": "Przełęcz pod Grzebieniem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 280,
+        "name": "Zębalowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 281,
+        "name": "Schronisko PTTK Luboń Wielki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 282,
+        "name": "Luboń Mały przystanek PKS",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 283,
+        "name": "Przełęcz Glisne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 284,
+        "name": "Szczebel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 285,
+        "name": "Zapadliska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 286,
+        "name": "Lubogoszcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 287,
+        "name": "Przełęcz Jaworzyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 288,
+        "name": "Kasina Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 289,
+        "name": "Ciecień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 290,
+        "name": "Grodzisko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 291,
+        "name": "Szczyrzyc",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 292,
+        "name": "Kostrza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 293,
+        "name": "Śnieżnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 294,
+        "name": "Ćwilin",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 295,
+        "name": "Ostra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 296,
+        "name": "Jasień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 297,
+        "name": "Polana Wały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 298,
+        "name": "Mogielnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 299,
+        "name": "Łopień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 300,
+        "name": "Przełęcz między Cichoniem a Ostrą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 301,
+        "name": "Przełęcz Słopnicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 302,
+        "name": "Modyń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 303,
+        "name": "Wyżka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 304,
+        "name": "Litacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 305,
+        "name": "Białowodzka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 306,
+        "name": "Przełęcz św. Justa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 307,
+        "name": "Ostra Góra Płn.",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 308,
+        "name": "Paproć",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 309,
+        "name": "Kamionna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 310,
+        "name": "Łopusze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 311,
+        "name": "Kobyła",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 312,
+        "name": "Sałasz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 313,
+        "name": "Jaworz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 314,
+        "name": "Lipnica Wielka - Kaczory",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 315,
+        "name": "Zubrzyca Górna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 316,
+        "name": "Przełęcz między Sidziną a Zubrzycą Górną",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 317,
+        "name": "Kiełek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 318,
+        "name": "Beskidy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 319,
+        "name": "Góra Ludwiki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 320,
+        "name": "Jordanów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 321,
+        "name": "Skawa PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 322,
+        "name": "Łysa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 323,
+        "name": "Żeleźnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 324,
+        "name": "Janiłówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 325,
+        "name": "Wielki Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 326,
+        "name": "Pająków Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 327,
+        "name": "Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 328,
+        "name": "Cisowa Skała",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 329,
+        "name": "Nowa Biała",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 330,
+        "name": "Białka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 331,
+        "name": "Jurgów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 332,
+        "name": "Krempachy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 333,
+        "name": "Frydman",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 334,
+        "name": "Dursztyn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 335,
+        "name": "Łapsze Wyżne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 336,
+        "name": "Rzepiska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 337,
+        "name": "Kopylec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 338,
+        "name": "Pieskowy Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 339,
+        "name": "Żar",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 340,
+        "name": "Cisówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 341,
+        "name": "Nidzica Zamek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 342,
+        "name": "Frankowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 343,
+        "name": "Kacwin",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 344,
+        "name": "Czorsztyn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 345,
+        "name": "Macelak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 346,
+        "name": "Przełęcz Szopka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 347,
+        "name": "Sromowce Niżne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 348,
+        "name": "Trzy Korony",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 349,
+        "name": "Czertezik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 350,
+        "name": "Sokolica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 351,
+        "name": "Schronisko PTTK Orlica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 352,
+        "name": "Szafranówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 353,
+        "name": "Jarmuta",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 354,
+        "name": "Wysoki Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 355,
+        "name": "Durbaszka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 356,
+        "name": "Wysoka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 357,
+        "name": "Jaworki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 358,
+        "name": "Wąwóz Homole",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 359,
+        "name": "Szczawnica PKS",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 360,
+        "name": "Jaworzynka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 361,
+        "name": "Dzwonkówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 362,
+        "name": "Schronisko na Bereśniku",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 363,
+        "name": "Bryjarka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 364,
+        "name": "Schronisko PTTK Prehyba",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 365,
+        "name": "Szlachtowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 366,
+        "name": "Radziejowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 367,
+        "name": "Wielki Rogacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 368,
+        "name": "Przełęcz Obidza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 369,
+        "name": "Eliaszówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 370,
+        "name": "Kosarzyska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 371,
+        "name": "Niemcowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 372,
+        "name": "Ostra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 373,
+        "name": "Makowica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 374,
+        "name": "Pisana Hala",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 375,
+        "name": "Łomnica Zdrój",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 376,
+        "name": "Schronisko PTTK na Hali Łabowskiej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 377,
+        "name": "Runek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 378,
+        "name": "Pusta Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 379,
+        "name": "Żegiestów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 380,
+        "name": "Wierchomla Wielka-wodospad",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 381,
+        "name": "Bacówka PTTK nad Wierchomlą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 382,
+        "name": "Schronisko PTTK Jaworzyna Krynicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 383,
+        "name": "Muszyna-Złockie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 384,
+        "name": "Wielka Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 385,
+        "name": "Dubne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 386,
+        "name": "Kidałki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 387,
+        "name": "Wysokie Bereście",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 388,
+        "name": "Przełęcz Tylicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 389,
+        "name": "Tylicz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 390,
+        "name": "Przysłop",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 391,
+        "name": "Bukowinka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 392,
+        "name": "Kopciowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 393,
+        "name": "Przełęcz Krzyżowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 394,
+        "name": "Huzary",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 395,
+        "name": "Góra Parkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 396,
+        "name": "Szalone",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 397,
+        "name": "Trawna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 398,
+        "name": "Draboż",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 399,
+        "name": "Kalwaria Lanckorona",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 400,
+        "name": "Bukowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 401,
+        "name": "Wiśnicz Nowy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 402,
+        "name": "Dominiczna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 403,
+        "name": "Rogozowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 404,
+        "name": "Szpilówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 405,
+        "name": "Łysa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 406,
+        "name": "Panieńska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 407,
+        "name": "Przełęcz Pod Kobylnicą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 408,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 409,
+        "name": "Majdan",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 410,
+        "name": "Jodłowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 411,
+        "name": "Rosochatka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 412,
+        "name": "Bukowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 413,
+        "name": "Bruśnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 414,
+        "name": "Bacówka na Jamnej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 415,
+        "name": "Styr",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 416,
+        "name": "Mogiła",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 417,
+        "name": "Sucha Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 418,
+        "name": "Sucha Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 419,
+        "name": "Wał",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 420,
+        "name": "Góra św. Marcina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 421,
+        "name": "Słona Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 422,
+        "name": "Trzemeska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 423,
+        "name": "Kokocz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 424,
+        "name": "Gilowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 425,
+        "name": "Liwocz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 426,
+        "name": "Ostry Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 427,
+        "name": "Bacówka Brzanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 428,
+        "name": "Polana Morgi",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 429,
+        "name": "Nosalowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 430,
+        "name": "Rzepiennik Biskupi",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 431,
+        "name": "Skamieniałe Miasto",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 432,
+        "name": "Staszkówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 433,
+        "name": "Pustki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 434,
+        "name": "Łysa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 435,
+        "name": "Bucze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 436,
+        "name": "Maślana Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 437,
+        "name": "Margoń Wyżna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 438,
+        "name": "Tokarnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 439,
+        "name": "Czerszla",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 440,
+        "name": "Jaworze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 441,
+        "name": "Przełęcz pod Uboczem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 442,
+        "name": "Jaworynki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 443,
+        "name": "Hłocza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 444,
+        "name": "Kiczera Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 445,
+        "name": "Chłopski Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 446,
+        "name": "Harniaków Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 447,
+        "name": "Banica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 448,
+        "name": "Izby",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 449,
+        "name": "Dzielec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 450,
+        "name": "Muszynka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 451,
+        "name": "Lackowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 452,
+        "name": "Ostry Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 453,
+        "name": "Ropki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 454,
+        "name": "Bordiów Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 455,
+        "name": "Sucha Homola",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 456,
+        "name": "Flasza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 457,
+        "name": "Chełm nad Grybowem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 458,
+        "name": "Wawrzka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 459,
+        "name": "TPG Cigelka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 460,
+        "name": "Wysota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 461,
+        "name": "Obycz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 462,
+        "name": "Jaworzynka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 463,
+        "name": "Kozie Żebro",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 464,
+        "name": "Regetów Niżny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 465,
+        "name": "Regetów Wyżny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 466,
+        "name": "Rotunda",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 467,
+        "name": "Jaworzyna Konieczniańska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 468,
+        "name": "Przełęcz Dujawa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 469,
+        "name": "Miejska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 470,
+        "name": "Przełęcz Zdżar",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 471,
+        "name": "Leszczyny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 472,
+        "name": "Magura Małastowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 473,
+        "name": "Dziamera",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 474,
+        "name": "Łysula",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 475,
+        "name": "Ferdel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 476,
+        "name": "Męcińska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 477,
+        "name": "Kornuty",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 478,
+        "name": "Magura Wątkowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 479,
+        "name": "Bartne - Bacówka PTTK",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 480,
+        "name": "Banica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 481,
+        "name": "Popowe Wierchy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 482,
+        "name": "Dębi Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 483,
+        "name": "Radocyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 484,
+        "name": "Grab",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 485,
+        "name": "Wołowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 486,
+        "name": "Mareszka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 487,
+        "name": "Nieznajowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 488,
+        "name": "Uherec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 489,
+        "name": "Rozstajne - Osada",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 490,
+        "name": "Ożenna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 491,
+        "name": "Nad Tysowym",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 492,
+        "name": "Filipowski Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 493,
+        "name": "Ciechania",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 494,
+        "name": "Krempna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 495,
+        "name": "Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 496,
+        "name": "Ostrysz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 497,
+        "name": "Przełęcz Smyczka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 498,
+        "name": "Nowy Żmigród",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 499,
+        "name": "Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 500,
+        "name": "Myscowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 501,
+        "name": "Olchowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 502,
+        "name": "Huta Polańska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 503,
+        "name": "Baranie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 504,
+        "name": "Grzbiet Hyrowej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 505,
+        "name": "Mszana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 506,
+        "name": "Cergowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 507,
+        "name": "Osiecznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 508,
+        "name": "Przymiarki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 509,
+        "name": "Sucha Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 510,
+        "name": "Piotruś",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 511,
+        "name": "Tylawa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 512,
+        "name": "Tokarnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 513,
+        "name": "Jałowa Kiczera",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 514,
+        "name": "Lipowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 515,
+        "name": "Barwinek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 516,
+        "name": "Przełęcz Dukielska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 517,
+        "name": "Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 518,
+        "name": "Jasiel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 519,
+        "name": "Kanasiówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 520,
+        "name": "Pasika",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 521,
+        "name": "Danowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 522,
+        "name": "Garb Średni",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 523,
+        "name": "Dołżyca",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 524,
+        "name": "Siwakowska Dolina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 525,
+        "name": "Terpiak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 526,
+        "name": "Radoszyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 527,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 528,
+        "name": "Sieniawa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 529,
+        "name": "Tarnawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 530,
+        "name": "Jawornik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 531,
+        "name": "Puławy Górne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 532,
+        "name": "Rozdroże pod Zrubaniem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 533,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 534,
+        "name": "Wernejówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 535,
+        "name": "Polany Surowiczne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 536,
+        "name": "Przełęcz pod Tokarnią",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 537,
+        "name": "Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 538,
+        "name": "Schronisko PTTK Komańcza-Letnisko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 539,
+        "name": "Jasienina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 540,
+        "name": "Dziady",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 541,
+        "name": "Wiecha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 542,
+        "name": "Dyszowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 543,
+        "name": "Prełuki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 544,
+        "name": "Mików",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 545,
+        "name": "Krasna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 546,
+        "name": "Nowy Łupków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 547,
+        "name": "Wysoki Groń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 548,
+        "name": "Radoszowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 549,
+        "name": "Maguryczne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 550,
+        "name": "Przełęcz Żebrak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 551,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 552,
+        "name": "Suliła",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 553,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 554,
+        "name": "Jeziorka Duszatyńskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 555,
+        "name": "Chryszczata",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 556,
+        "name": "Kalnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 557,
+        "name": "Gabrów Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 558,
+        "name": "Gruszka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 559,
+        "name": "Hoczew",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 560,
+        "name": "Biały Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 561,
+        "name": "Horbek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 562,
+        "name": "Wierchy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 563,
+        "name": "Markowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 564,
+        "name": "Berdo",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 565,
+        "name": "Rabe",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 566,
+        "name": "Radziejowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 567,
+        "name": "Durna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 568,
+        "name": "Korbania",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 569,
+        "name": "Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 570,
+        "name": "Tołsta",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 571,
+        "name": "Połoma",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 572,
+        "name": "Polanki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 573,
+        "name": "Łopiennik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 574,
+        "name": "Jaworne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 575,
+        "name": "Krąglica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 576,
+        "name": "Wołosań",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 577,
+        "name": "Przysłup",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 578,
+        "name": "Matragona",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 579,
+        "name": "Balnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 580,
+        "name": "Berdo",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 581,
+        "name": "Hyrlata",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 582,
+        "name": "Przełęcz pod Kiczerką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 583,
+        "name": "Stryb",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 584,
+        "name": "Roztoki Górne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 585,
+        "name": "Okrąglik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 586,
+        "name": "Jasło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 587,
+        "name": "Bacówka PTTK Hon w Cisnej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 588,
+        "name": "Krzemienna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 589,
+        "name": "Falowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 590,
+        "name": "Bacówka PTTK Jaworzec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 591,
+        "name": "Smerek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 592,
+        "name": "Szpickiery",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 593,
+        "name": "Płasza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 594,
+        "name": "Rabia Skala",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 595,
+        "name": "Krysowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 596,
+        "name": "Żołobina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 597,
+        "name": "Przełęcz Orłowicza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 598,
+        "name": "Połonina Wetlińska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 599,
+        "name": "Schronisko PTTK na Połoninie Wetlińskiej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 600,
+        "name": "Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 601,
+        "name": "Nad Wetliną",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 602,
+        "name": "Mała Rawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 603,
+        "name": "Moczarne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 604,
+        "name": "Wielka Rawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 605,
+        "name": "Krzemieniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 606,
+        "name": "Połonina Caryńska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 607,
+        "name": "Przełęcz Przysłup Caryński",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 608,
+        "name": "Magura Stuposiańska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 609,
+        "name": "Widełki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 610,
+        "name": "Jeleniowaty",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 611,
+        "name": "Bukowe Berdo",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 612,
+        "name": "Tarnawa Wyżna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 613,
+        "name": "Szeroki Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 614,
+        "name": "Przełęcz Siodło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 615,
+        "name": "Chresty",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 616,
+        "name": "Przełęcz Beskid",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 617,
+        "name": "Przełęcz Bukowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 618,
+        "name": "Halicz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 619,
+        "name": "Kinczyk Bukowski",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 620,
+        "name": "Bukowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 621,
+        "name": "Dwernik-Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 622,
+        "name": "Nasiczne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 623,
+        "name": "Zatwarnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 624,
+        "name": "Hulskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 625,
+        "name": "Chmiel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 626,
+        "name": "Trohaniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 627,
+        "name": "Grzbiet Otrytu",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 628,
+        "name": "Ostre",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 629,
+        "name": "Skorodne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 630,
+        "name": "Hulskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 631,
+        "name": "Tworylczyk",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 632,
+        "name": "Moklik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 633,
+        "name": "Kota nad Paniszczowem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 634,
+        "name": "Łabiska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 635,
+        "name": "Stożek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 636,
+        "name": "Jaworniki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 637,
+        "name": "Żuków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 638,
+        "name": "Holnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 639,
+        "name": "Jawor",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 640,
+        "name": "Równia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 641,
+        "name": "Kałużówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 642,
+        "name": "Babia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 643,
+        "name": "Kota nad Gogołowem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 644,
+        "name": "Klonowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 645,
+        "name": "Kamieniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 646,
+        "name": "Czarnówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 647,
+        "name": "Królewska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 648,
+        "name": "Prządki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 649,
+        "name": "Sucha Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 650,
+        "name": "Brzeżanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 651,
+        "name": "Chełmanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 652,
+        "name": "Kota nad Gwoździanką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 653,
+        "name": "Czudec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 654,
+        "name": "Kamienna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 655,
+        "name": "Wilcze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 656,
+        "name": "Rokitna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 657,
+        "name": "Magierów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 658,
+        "name": "Na Gratach",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 659,
+        "name": "Nowa Wieś",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 660,
+        "name": "Domaradz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 661,
+        "name": "Bucznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 662,
+        "name": "Wierzchowina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 663,
+        "name": "Czarna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 664,
+        "name": "kota nad Wydrną",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 665,
+        "name": "Grabówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 666,
+        "name": "Wincentówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 667,
+        "name": "Kopacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 668,
+        "name": "Wroczeń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 669,
+        "name": "Jasmanice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 670,
+        "name": "Wapienica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 671,
+        "name": "Żurawica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 672,
+        "name": "Kaczmarowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 673,
+        "name": "Bukowy Garb",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 674,
+        "name": "kota nad Nienadową",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 675,
+        "name": "Kopce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 676,
+        "name": "kota nad Kosztową i Laskówką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 677,
+        "name": "Dynów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 678,
+        "name": "Bosaczka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 679,
+        "name": "Olszany",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 680,
+        "name": "Czerteż",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 681,
+        "name": "Gródek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 682,
+        "name": "Ostry Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 683,
+        "name": "Orli Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 684,
+        "name": "Słonny Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 685,
+        "name": "Słonny Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 686,
+        "name": "Czarny Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 687,
+        "name": "Czulnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 688,
+        "name": "Poręba Wysoka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 689,
+        "name": "Roztoka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 690,
+        "name": "Szybenica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 691,
+        "name": "Kopystańka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 692,
+        "name": "Kopystańka Zachodnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 693,
+        "name": "Suchy Obycz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 694,
+        "name": "Na Opalonym",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 695,
+        "name": "Truszowskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 696,
+        "name": "Brańcowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 697,
+        "name": "Kamienna Laworta",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 698,
+        "name": "Ostry Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 699,
+        "name": "Smrek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 700,
+        "name": "Czerniawska Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 701,
+        "name": "Łącznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 702,
+        "name": "Stóg Izerski",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 703,
+        "name": "Zajęcznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 704,
+        "name": "Sępia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 705,
+        "name": "Wysoka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 706,
+        "name": "Dłużec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 707,
+        "name": "Rozdroże pod Kamienicą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 708,
+        "name": "Stara Jodła",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 709,
+        "name": "Rozdroże pod Świerkowcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 710,
+        "name": "Rozdroże pod Kozią Szyją",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 711,
+        "name": "Babia Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 712,
+        "name": "Bobrowe Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 713,
+        "name": "Polana Izerska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 714,
+        "name": "Rozdroże pod Kopą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 715,
+        "name": "Rozdroże pod Cichą Równią",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 716,
+        "name": "Orle",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 717,
+        "name": "Rozdroże pod Działem Izerskim",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 718,
+        "name": "Przełęcz Sklarska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 719,
+        "name": "Rozdroże pod Zwaliskiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 720,
+        "name": "Wysoki Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 721,
+        "name": "Zakręt Śmierci",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 722,
+        "name": "Szklarska Poręba Dolna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 723,
+        "name": "Sowiniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 724,
+        "name": "Witka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 725,
+        "name": "Grodziszcze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 726,
+        "name": "Wysoka Stóża",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 727,
+        "name": "Kozub",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 728,
+        "name": "Wojkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 729,
+        "name": "Świecie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 730,
+        "name": "Pobiedna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 731,
+        "name": "Lubań",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 732,
+        "name": "Bożkowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 733,
+        "name": "Zamek Czocha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 734,
+        "name": "Jezioro Złotnickie - ośrodek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 735,
+        "name": "Złoty Stok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 736,
+        "name": "Biedrzychowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 737,
+        "name": "Giebułtów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 738,
+        "name": "Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 739,
+        "name": "Las Kaoliński",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 740,
+        "name": "Zamek Gryf",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 741,
+        "name": "Rębiszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 742,
+        "name": "Gęsia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 743,
+        "name": "Lubomierz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 744,
+        "name": "Oleszna Podgórska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 745,
+        "name": "Maciejowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 746,
+        "name": "Wietrznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 747,
+        "name": "Marczów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 748,
+        "name": "Kołodziej",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 749,
+        "name": "Kopka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 750,
+        "name": "Podskale",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 751,
+        "name": "Płóczki Dolne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 752,
+        "name": "Radłówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 753,
+        "name": "Lwówek Śląski",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 754,
+        "name": "Schronisko PTTK Hala Szrenicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 755,
+        "name": "Szrenica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 756,
+        "name": "Przełęcz Mokra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 757,
+        "name": "Wysoki Most",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 758,
+        "name": "Schronisko PTTK Hala pod Łabskim Szczytem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 759,
+        "name": "Czarcia Ambona",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 760,
+        "name": "Przełęcz pod Śmielcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 761,
+        "name": "Trzy Jawory",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 762,
+        "name": "Schronisko PTTK Kochanówka Wodospad Szklarki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 763,
+        "name": "Michałowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 764,
+        "name": "Rozdroże pod Grzybowcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 765,
+        "name": "Rozdroże pod Śmielcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 766,
+        "name": "Hutniczy Grzbiet",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 767,
+        "name": "Petrovka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 768,
+        "name": "Schronisko PTTK Odrodzenie Przełęcz Karkonoska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 769,
+        "name": "Słonecznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 770,
+        "name": "Spalona Strażnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 771,
+        "name": "Schronisko PTTK Strzecha Akademicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 772,
+        "name": "Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 773,
+        "name": "Przełęcz pod Śnieżką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 774,
+        "name": "Śnieżka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 775,
+        "name": "Schronisko PTTK Nad Łomniczką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 776,
+        "name": "Karpacz Górny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 777,
+        "name": "Przełączka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 778,
+        "name": "Kapliczka św. Anny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 779,
+        "name": "Przełęcz 590 m",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 780,
+        "name": "Borowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 781,
+        "name": "Przesieka - Złoty Widok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 782,
+        "name": "Przełęcz L. Różyciego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 783,
+        "name": "Zachełmie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 784,
+        "name": "Żelazny Mostek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 785,
+        "name": "Schronisko PTTK Chojnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 786,
+        "name": "Jagniątków- pn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 787,
+        "name": "Wilcza Poręba",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 788,
+        "name": "TPG Sowia Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 789,
+        "name": "Skalny Stół",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 790,
+        "name": "Leśniczówka Jedlinki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 791,
+        "name": "Żółta Droga",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 792,
+        "name": "Schronisko PTTK Przełęcz Okraj",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 793,
+        "name": "Łysocina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 794,
+        "name": "Rozdroże pod Łysociną",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 795,
+        "name": "Przełęcz Kowarska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 796,
+        "name": "Klatka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 797,
+        "name": "Dolina Białej Wody",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 798,
+        "name": "kota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 799,
+        "name": "kota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 800,
+        "name": "Czepiel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 801,
+        "name": "Stara Kamienica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 802,
+        "name": "Rybnica ruiny zamku",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 803,
+        "name": "Wrzeszczyn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 804,
+        "name": "Siedlecin-Bóbr",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 805,
+        "name": "Jeżów Sudecki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 806,
+        "name": "Dziwiszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 807,
+        "name": "Schronisko Perła Zachodu",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 808,
+        "name": "Góra Gapa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 809,
+        "name": "Rozdroże pod Rozłogiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 810,
+        "name": "Góra Skalica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 811,
+        "name": "Góra Godzisz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 812,
+        "name": "Cieplice Zdrój",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 813,
+        "name": "Góra Grodna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 814,
+        "name": "Głębock",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 815,
+        "name": "Krzyżowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 816,
+        "name": "Mrowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 817,
+        "name": "Karpniki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 818,
+        "name": "Witosza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 819,
+        "name": "Kopki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 820,
+        "name": "Zamkowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 821,
+        "name": "Wzgórze Kościuszki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 822,
+        "name": "Jelenia Góra PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 823,
+        "name": "Jelenia Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 824,
+        "name": "Góra Skowron",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 825,
+        "name": "Góra Koziniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 826,
+        "name": "Radomierz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 827,
+        "name": "Sokolik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 828,
+        "name": "Przełęcz Przełączka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 829,
+        "name": "Schronisko PTTK Szwajcarka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 830,
+        "name": "Rozdroże pod Jańską Górą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 831,
+        "name": "Strużnickie Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 832,
+        "name": "Starościńskie Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 833,
+        "name": "Krowiarka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 834,
+        "name": "Zamek Bolczów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 835,
+        "name": "Głaziska Janowickie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 836,
+        "name": "Polana Mniszkowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 837,
+        "name": "Przełęcz pod Brzeźnikiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 838,
+        "name": "Przełęcz pod Średnicą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 839,
+        "name": "Skalnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 840,
+        "name": "Przełęcz pod Bobrzakiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 841,
+        "name": "Przełęcz Kowarska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 842,
+        "name": "Rozdroże pod Bobrzakiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 843,
+        "name": "Przełęcz pod Wilkowyją",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 844,
+        "name": "Schronisko Czartak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 845,
+        "name": "Przełęcz Rudawska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 846,
+        "name": "Rozdroże pod Bielcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 847,
+        "name": "Wołek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 848,
+        "name": "Przełęcz Rędzińska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 849,
+        "name": "Purpurowe Jeziorko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 850,
+        "name": "Ciechanowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 851,
+        "name": "Wielka Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 852,
+        "name": "Pisarzowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 853,
+        "name": "Góry Lisie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 854,
+        "name": "Bucza Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 855,
+        "name": "Strzyżowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 856,
+        "name": "Płoszczynka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 857,
+        "name": "Stromiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 858,
+        "name": "Szybowisko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 859,
+        "name": "Tarczynka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 860,
+        "name": "Czernica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 861,
+        "name": "Rogatka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 862,
+        "name": "Okole",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 863,
+        "name": "Chrośnickie Kopy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 864,
+        "name": "Przełęcz Chrośnicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 865,
+        "name": "Łysa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 866,
+        "name": "Przełęcz pod Świerkami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 867,
+        "name": "Góra Świerki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 868,
+        "name": "Przełęcz Widok",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 869,
+        "name": "Przełęcz pod Kobyłą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 870,
+        "name": "Przełęcz Komarnicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 871,
+        "name": "Baraniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 872,
+        "name": "Straconka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 873,
+        "name": "Różanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 874,
+        "name": "Turzec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 875,
+        "name": "Marciszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 876,
+        "name": "Miłek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 877,
+        "name": "Rozdroże pod Marcińcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 878,
+        "name": "Żelaźniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 879,
+        "name": "Radzimowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 880,
+        "name": "Lubrza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 881,
+        "name": "Wapniki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 882,
+        "name": "Czerwona Skała",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 883,
+        "name": "Pastewnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 884,
+        "name": "Poręba",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 885,
+        "name": "Bolesławiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 886,
+        "name": "Kraszowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 887,
+        "name": "Nowe Jaroszowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 888,
+        "name": "Wartowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 889,
+        "name": "Włodzice Wielkie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 890,
+        "name": "Dworek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 891,
+        "name": "Wał Okmiański",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 892,
+        "name": "Grodziec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 893,
+        "name": "Grodziec Kościół",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 894,
+        "name": "Kopki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 895,
+        "name": "Świątek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 896,
+        "name": "Rochów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 897,
+        "name": "Rozdroże pod Ostrzycą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 898,
+        "name": "Bucze Małe",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 899,
+        "name": "Sokołowiec Dolny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 900,
+        "name": "Rozdroże pod Zawadą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 901,
+        "name": "Gruchacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 902,
+        "name": "Wilkołak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 903,
+        "name": "Krucza Ściana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 904,
+        "name": "Prusicka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 905,
+        "name": "Rosocha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 906,
+        "name": "Kondratów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 907,
+        "name": "Złotoryja",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 908,
+        "name": "Prusice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 909,
+        "name": "Sichowskie Wzgórza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 910,
+        "name": "Górzec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 911,
+        "name": "Bogaczów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 912,
+        "name": "Czartowska Skała",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 913,
+        "name": "Raczyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 914,
+        "name": "Młynik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 915,
+        "name": "Mszana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 916,
+        "name": "Wąwóz Myśliborski - zachód",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 917,
+        "name": "Myślibórz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 918,
+        "name": "Rataj",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 919,
+        "name": "Jakuszowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 920,
+        "name": "Wąwóz Siedmicy - zachód",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 921,
+        "name": "Wąwóz Lipa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 922,
+        "name": "Radogost",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 923,
+        "name": "Grobla",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 924,
+        "name": "Świny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 925,
+        "name": "Pogwizdów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 926,
+        "name": "Szczepanowski Grzbiet",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 927,
+        "name": "Niewiadów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 928,
+        "name": "Zameczek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 929,
+        "name": "Lubawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 930,
+        "name": "Zadzierna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 931,
+        "name": "Świerczyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 932,
+        "name": "Paczyn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 933,
+        "name": "Rozdroże Kowarskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 934,
+        "name": "Kamienna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 935,
+        "name": "Bukowina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 936,
+        "name": "Betlejem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 937,
+        "name": "Krzeszowskie Wzgórza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 938,
+        "name": "Przełęcz Żłób",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 939,
+        "name": "Krzeszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 940,
+        "name": "Gorzeszowskie Skałki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 941,
+        "name": "Drogosz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 942,
+        "name": "Róg",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 943,
+        "name": "Przełęcz Strażnicze Naroże",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 944,
+        "name": "Góra Zielonka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 945,
+        "name": "Góra Dziób",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 946,
+        "name": "Różana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 947,
+        "name": "Mieroszowskie Ściany",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 948,
+        "name": "TPG Łączna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 949,
+        "name": "Przełęcz Chełmska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 950,
+        "name": "Skałka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 951,
+        "name": "Bijakowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 952,
+        "name": "Okrzeszyn",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 953,
+        "name": "Jański Wierch",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 954,
+        "name": "Bogaria",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 955,
+        "name": "Końska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 956,
+        "name": "Szeroka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 957,
+        "name": "Krzyżówka BHP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 958,
+        "name": "Rozdroże Trzech Buków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 959,
+        "name": "Święta Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 960,
+        "name": "Przełęcz Pośródka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 961,
+        "name": "Miejska Górka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 962,
+        "name": "Lubawka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 963,
+        "name": "Młynarz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 964,
+        "name": "Kurek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 965,
+        "name": "Długosz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 966,
+        "name": "Chojniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 967,
+        "name": "Czuba",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 968,
+        "name": "Dzikowiec Mały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 969,
+        "name": "Przełęcz Polanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 970,
+        "name": "Lesista Wielka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 971,
+        "name": "Mieroszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 972,
+        "name": "Garbatka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 973,
+        "name": "Średniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 974,
+        "name": "Golińsk",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 975,
+        "name": "Wielki Stożek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 976,
+        "name": "Bukowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 977,
+        "name": "Unisław Śląski",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 978,
+        "name": "Schronisko PTTK Andrzejówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 979,
+        "name": "Waligóra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 980,
+        "name": "Rozdroże pod Suchawą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 981,
+        "name": "Granicznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 982,
+        "name": "Sokołowsko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 983,
+        "name": "Płoniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 984,
+        "name": "Słodna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 985,
+        "name": "Rogowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 986,
+        "name": "Głuszyca PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 987,
+        "name": "Łomnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 988,
+        "name": "Leszczyniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 989,
+        "name": "Słoneczna Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 990,
+        "name": "Ptasi Szczyt",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 991,
+        "name": "Długa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 992,
+        "name": "Młynarka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 993,
+        "name": "Góra Truskolas",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 994,
+        "name": "Wierzchosławice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 995,
+        "name": "Bolków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 996,
+        "name": "Krąglak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 997,
+        "name": "Łysica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 998,
+        "name": "Jagodnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 999,
+        "name": "Trójgarb",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1000,
+        "name": "Boracza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1001,
+        "name": "Chełmiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1002,
+        "name": "Mniszek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1003,
+        "name": "Boguszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1004,
+        "name": "Kamienna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1005,
+        "name": "Twardota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1006,
+        "name": "Wieżyca",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1007,
+        "name": "Zamek Cisy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1008,
+        "name": "Czerwone Wzgórze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1009,
+        "name": "Szczawno Zdrój",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1010,
+        "name": "Stróżek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1011,
+        "name": "Wzgórze Gedymina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1012,
+        "name": "Lisi Kamień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1013,
+        "name": "Niedźwiadki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1014,
+        "name": "Wołowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1015,
+        "name": "Przełęcz Kozia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1016,
+        "name": "Borowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1017,
+        "name": "Rozdroże nad Glinikiem Starym",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1018,
+        "name": "Gliniczek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1019,
+        "name": "Przełęcz pod Borową",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1020,
+        "name": "Przełęcz między Jałowcami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1021,
+        "name": "Przełęcz pod Wawrzyniakiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1022,
+        "name": "Jedlina Zdrój PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1023,
+        "name": "Gaik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1024,
+        "name": "Podlesie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1025,
+        "name": "Klasztorzysko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1026,
+        "name": "Zagórze Śląskie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1027,
+        "name": "Złoty Las",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1028,
+        "name": "Widna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1029,
+        "name": "Modliszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1030,
+        "name": "Chłodnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1031,
+        "name": "Kończyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1032,
+        "name": "Jeziorko Daisy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1033,
+        "name": "Zamek Książ",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1034,
+        "name": "Stary Książ",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1035,
+        "name": "Borowiec Mały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1036,
+        "name": "Wąwóz Szczawienka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1037,
+        "name": "Góra Lipiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1038,
+        "name": "Cerekwica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1039,
+        "name": "Bojanicka Struga",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1040,
+        "name": "Michałkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1041,
+        "name": "Glinno",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1042,
+        "name": "Kroacka Studzienka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1043,
+        "name": "Rozdroże pod Kokotem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1044,
+        "name": "Przełęcz Walimska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1045,
+        "name": "Przełęcz Marcowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1046,
+        "name": "Moszna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1047,
+        "name": "Rozdroże pod Osówką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1048,
+        "name": "Wielka Sowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1049,
+        "name": "Młyńsko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1050,
+        "name": "Kamionki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1051,
+        "name": "Przełęcz Kozie Siodło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1052,
+        "name": "Gontowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1053,
+        "name": "Włodzicka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1054,
+        "name": "Krępiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1055,
+        "name": "Góra św. Anny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1056,
+        "name": "Góra Wszystkich Świętych",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1057,
+        "name": "Przykrzec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1058,
+        "name": "Przełęcz Trzy Buki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1059,
+        "name": "Przełęcz Jugowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1060,
+        "name": "Jugów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1061,
+        "name": "Kalenica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1062,
+        "name": "Bielawska Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1063,
+        "name": "Wigancicka Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1064,
+        "name": "Przełęcz Woliborska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1065,
+        "name": "Szeroka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1066,
+        "name": "Przełęcz pod Szeroką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1067,
+        "name": "Przełęcz pod Gołębią",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1068,
+        "name": "Rozdroże pod Chochołem Małym",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1069,
+        "name": "Przełęcz Srebrna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1070,
+        "name": "Stróża",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1071,
+        "name": "Kortunał",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1072,
+        "name": "Słup",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1073,
+        "name": "Przełęcz Wilcza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1074,
+        "name": "Ostróg",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1075,
+        "name": "Żdanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1076,
+        "name": "Wilczak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1077,
+        "name": "Goliniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1078,
+        "name": "Leszek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1079,
+        "name": "Różańcowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1080,
+        "name": "Kalwaria",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1081,
+        "name": "Przełęcz Łaszczowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1082,
+        "name": "Kłodzka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1083,
+        "name": "Laskówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1084,
+        "name": "Zielona Dolina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1085,
+        "name": "Ptasznica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1086,
+        "name": "Borowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1087,
+        "name": "Taszów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1088,
+        "name": "Miejski Lasek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1089,
+        "name": "Błonie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1090,
+        "name": "Przełęcz Lewińska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1091,
+        "name": "Pstrążna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1092,
+        "name": "Jakubowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1093,
+        "name": "Krucza Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1094,
+        "name": "Błędne Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1095,
+        "name": "Rozdroże pod Lelkową",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1096,
+        "name": "Golaczów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1097,
+        "name": "Grodziec skrzyżowanie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1098,
+        "name": "Grodziec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1099,
+        "name": "Gomoła",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1100,
+        "name": "Łężyckie Skałki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1101,
+        "name": "Łężyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1102,
+        "name": "Narożnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1103,
+        "name": "Lisia Przełęcz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1104,
+        "name": "Skalniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1105,
+        "name": "Schronisko PTTK Pasterka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1106,
+        "name": "Szczeliniec Wielki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1107,
+        "name": "Karłówek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1108,
+        "name": "Karłów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1109,
+        "name": "Rozdroże nad Skalnymi Wrotami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1110,
+        "name": "Skalna Furta",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1111,
+        "name": "Skały Puchacza",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1112,
+        "name": "Ceglana Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1113,
+        "name": "Skała Józefa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1114,
+        "name": "Zamek Leśna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1115,
+        "name": "Piekielna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1116,
+        "name": "Rozdroże pod Bukówką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1117,
+        "name": "Batorów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1118,
+        "name": "Batorówek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1119,
+        "name": "Rogacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1120,
+        "name": "Adam i Ewa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1121,
+        "name": "Pielgrzym",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1122,
+        "name": "Słoneczne Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1123,
+        "name": "Wambierzyce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1124,
+        "name": "Rozdroże pod Basztami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1125,
+        "name": "Rozdroże nad Skalnymi Wrotami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1126,
+        "name": "Przełęcz Polskie Wrota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1127,
+        "name": "Miejski Lasek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1128,
+        "name": "Pańska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1129,
+        "name": "TPG Duszniki Zdrój",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1130,
+        "name": "Kozia Hala",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1131,
+        "name": "Sołtysia Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1132,
+        "name": "Orlica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1133,
+        "name": "TPG Zieleniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1134,
+        "name": "Schronisko PTTK Zieleniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1135,
+        "name": "Rozdroże pod Bieścem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1136,
+        "name": "Rozdroże pod Hutniczą Kopą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1137,
+        "name": "Schronisko PTTK pod Muflonem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1138,
+        "name": "Wolarz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1139,
+        "name": "Przełęcz Sokołowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1140,
+        "name": "Łomnicka Równia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1141,
+        "name": "Huta",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1142,
+        "name": "Rozdroże pod Uboczem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1143,
+        "name": "Przełęcz Spalona Schronisko PTTK",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1144,
+        "name": "Jagodna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1145,
+        "name": "Przełęcz pod Porębą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1146,
+        "name": "Czerniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1147,
+        "name": "Solna Jama",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1148,
+        "name": "Leśniczówka Kolonia Lesica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1149,
+        "name": "Różanka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1150,
+        "name": "Kamieńczyk",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1151,
+        "name": "Kłodzko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1152,
+        "name": "Jaszkowa Dolna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1153,
+        "name": "Sarnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1154,
+        "name": "Stara Łomnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1155,
+        "name": "Bystrzyca Kłodzka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1156,
+        "name": "Marianówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1157,
+        "name": "Domaszków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1158,
+        "name": "Międzylesie",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1159,
+        "name": "Wapniarka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1160,
+        "name": "Przełęcz Mielnicka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1161,
+        "name": "Romanowo",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1162,
+        "name": "Mrówczyniec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1163,
+        "name": "Sędzisz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1164,
+        "name": "Romanowo Górne",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1165,
+        "name": "Krzyżowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1166,
+        "name": "Pasikoń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1167,
+        "name": "Kwaśniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1168,
+        "name": "Radochów PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1169,
+        "name": "Marcinków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1170,
+        "name": "Suchoń",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1171,
+        "name": "Pasterskie Skały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1172,
+        "name": "Przełęcz Puchaczówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1173,
+        "name": "Przełęcz Pod Chłopkiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1174,
+        "name": "Czarna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1175,
+        "name": "Przełęcz pod Jaworową Kopą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1176,
+        "name": "Rozdroże pod Lesieńcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1177,
+        "name": "Marianówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1178,
+        "name": "Igliczna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1179,
+        "name": "Żmijowa Polana",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1180,
+        "name": "Janowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1181,
+        "name": "Jaworek Górny",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1182,
+        "name": "Hala Pod Śnieżnikiem Schronisko PTTK",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1183,
+        "name": "Śnieżnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1184,
+        "name": "Mały Śnieżnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1185,
+        "name": "Rozdroże pod Żmijowcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1186,
+        "name": "Dzikie Zbocze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1187,
+        "name": "Przełęcz pod Puchaczem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1188,
+        "name": "Jasień",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1189,
+        "name": "Opacz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1190,
+        "name": "Rozdroże pod Kamiennym Garbem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1191,
+        "name": "Jaskinia Niedźwiedzia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1192,
+        "name": "Rozdroże pod Porębkiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1193,
+        "name": "Młyńsko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1194,
+        "name": "Przełęcz Staromorawska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1195,
+        "name": "Kamienica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1196,
+        "name": "Rykowisko",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1197,
+        "name": "Przełęcz Płaszczyna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1198,
+        "name": "Rude Krzyże",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1199,
+        "name": "Przełęcz Sucha",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1200,
+        "name": "Rudawiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1201,
+        "name": "Działowe Siodło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1202,
+        "name": "Postawna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1203,
+        "name": "Przełęcz u Trzech Granic",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1204,
+        "name": "Wielkie Rozdroże",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1205,
+        "name": "Czernica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1206,
+        "name": "Przełęcz Dział",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1207,
+        "name": "Pośrednica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1208,
+        "name": "Rozdroże pod Kierzną",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1209,
+        "name": "Dzielec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1210,
+        "name": "Lądek Zdrój",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1211,
+        "name": "Olchówka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1212,
+        "name": "Pustelnia",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1213,
+        "name": "Haniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1214,
+        "name": "Jawornik Mały",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1215,
+        "name": "Jawornik Wielki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1216,
+        "name": "Przełęcz pod Trzeboniem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1217,
+        "name": "Ptasznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1218,
+        "name": "Przełęcz Leszczynowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1219,
+        "name": "Przełęcz Jaworowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1220,
+        "name": "Gomoła Jesionowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1221,
+        "name": "Jaskinia Radochowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1222,
+        "name": "Cierniak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1223,
+        "name": "Przełęcz pod Konikiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1224,
+        "name": "Borówkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1225,
+        "name": "Mała Borówkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1226,
+        "name": "Przełęcz Lądecka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1227,
+        "name": "Szwedzkie Szańce",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1228,
+        "name": "Kobyla Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1229,
+        "name": "Trojak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1230,
+        "name": "Rozdroże Zamkowe",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1231,
+        "name": "Czernik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1232,
+        "name": "Karpiak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1233,
+        "name": "Przełęcz Gierałtowska",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1234,
+        "name": "Kowadło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1235,
+        "name": "Smrek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1236,
+        "name": "Przełęcz Trzech Granic",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1237,
+        "name": "Przednia Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1238,
+        "name": "Przełęcz Siodło",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1239,
+        "name": "Biskupia Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1240,
+        "name": "Przełęcz pod Kopą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1241,
+        "name": "Schronisko pod Biskupią Kopą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1242,
+        "name": "Rozdroże pod Piekiełkiem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1243,
+        "name": "Jarnołtówek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1244,
+        "name": "Olszak",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1245,
+        "name": "Przełęcz pod Zamkową Górą",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1246,
+        "name": "Dolina Bystrego Potoku",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1247,
+        "name": "Długota",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1248,
+        "name": "Kobylica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1249,
+        "name": "Zbylut",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1250,
+        "name": "Sępik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1251,
+        "name": "Klasztorne Wzgórze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1252,
+        "name": "Lipowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1253,
+        "name": "Paszowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1254,
+        "name": "Czernicka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1255,
+        "name": "Czeska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1256,
+        "name": "Góra św. Jerzego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1257,
+        "name": "Paszowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1258,
+        "name": "Czernicka Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1259,
+        "name": "Czeska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1260,
+        "name": "Góra św. Jerzego",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1261,
+        "name": "Przełęcz Dębowe Góry",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1262,
+        "name": "Zamkowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1263,
+        "name": "Gontowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1264,
+        "name": "Gilów",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1265,
+        "name": "Ostra Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1266,
+        "name": "Tylnia Dębowa Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1267,
+        "name": "Bednarz",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1268,
+        "name": "Kamieńczyk",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1269,
+        "name": "Twardziel",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1270,
+        "name": "Nieszkowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1271,
+        "name": "Skrzyżowania pod Grzybowcem",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1272,
+        "name": "Piława Dolna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1273,
+        "name": "Bukowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1274,
+        "name": "Kluczowska Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1275,
+        "name": "Suchań",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1276,
+        "name": "Góra Parkowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1277,
+        "name": "Grodziszcze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1278,
+        "name": "Brzeźnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1279,
+        "name": "Grochowiec",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1280,
+        "name": "Przełęcz Grochowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1281,
+        "name": "Góra Wapienna",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1282,
+        "name": "Cierniowa Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1283,
+        "name": "Rezerwat Muszkowicki Las Bukowy",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1284,
+        "name": "Rososznica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1285,
+        "name": "Kamieniec Ząbkowski PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1286,
+        "name": "Ożary",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1287,
+        "name": "Błotnica",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1288,
+        "name": "Pełkowe Wzgórze",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1289,
+        "name": "Kościelna Góra",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1290,
+        "name": "Kalków",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1291,
+        "name": "Łąka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1292,
+        "name": "Siestrzochowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1293,
+        "name": "Góra Apla",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1294,
+        "name": "Marmurowa Dolina",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1295,
+        "name": "Uroczysko pod Czechami",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1296,
+        "name": "Starczówek",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1297,
+        "name": "Ziębice PKP",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1298,
+        "name": "Skrzyżowanie pod Zuzanką",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1299,
+        "name": "Mlecznik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1300,
+        "name": "Kalinka",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1301,
+        "name": "Gromnik",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1302,
+        "name": "Kryształowa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1303,
+        "name": "Przeworno",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1304,
+        "name": "Nowoleska Kopa",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1305,
+        "name": "Witostowice",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1306,
+        "name": "Wąwóz Pogródki",
+        "longitude": 0,
+        "latitude": 0
+    },
+    {
+        "id": 1307,
+        "name": "Rozdroże pod Dębem",
+        "longitude": 0,
+        "latitude": 0
+    }
+]

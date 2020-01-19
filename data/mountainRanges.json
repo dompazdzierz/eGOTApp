@@ -1,0 +1,212 @@
+[
+    {
+        "id": 0,
+        "name": "Tatry Wysokie",
+        "mountainSystem": 0
+    },
+    {
+        "id": 1,
+        "name": "Tatry Zachodnie",
+        "mountainSystem": 0
+    },
+    {
+        "id": 2,
+        "name": "Podtatrze",
+        "mountainSystem": 0
+    },
+    {
+        "id": 8,
+        "name": "Beskid Śląski",
+        "mountainSystem": 1
+    },
+    {
+        "id": 9,
+        "name": "Beskid Żywiecki",
+        "mountainSystem": 1
+    },
+    {
+        "id": 10,
+        "name": "Beskid Mały",
+        "mountainSystem": 1
+    },
+    {
+        "id": 11,
+        "name": "Beskid Średni",
+        "mountainSystem": 1
+    },
+    {
+        "id": 12,
+        "name": "Gorce",
+        "mountainSystem": 1
+    },
+    {
+        "id": 13,
+        "name": "Beskid Wyspowy",
+        "mountainSystem": 1
+    },
+    {
+        "id": 14,
+        "name": "Orawa",
+        "mountainSystem": 1
+    },
+    {
+        "id": 15,
+        "name": "Spisz i Pieniny",
+        "mountainSystem": 1
+    },
+    {
+        "id": 16,
+        "name": "Beskid Sądecki",
+        "mountainSystem": 1
+    },
+    {
+        "id": 17,
+        "name": "Pogórze Wielickie",
+        "mountainSystem": 1
+    },
+    {
+        "id": 18,
+        "name": "Pogórze Wiśnickie",
+        "mountainSystem": 1
+    },
+    {
+        "id": 19,
+        "name": "Pogórze Rożnowskie",
+        "mountainSystem": 1
+    },
+    {
+        "id": 20,
+        "name": "Pogórze Ciężkowickie",
+        "mountainSystem": 2
+    },
+    {
+        "id": 21,
+        "name": "Beskid Niski część zachodnia",
+        "mountainSystem": 2
+    },
+    {
+        "id": 22,
+        "name": "Beskid Niski część wschodnia",
+        "mountainSystem": 2
+    },
+    {
+        "id": 23,
+        "name": "Bieszczady",
+        "mountainSystem": 2
+    },
+    {
+        "id": 24,
+        "name": "Pogórze Strzyżowsko-Dynowskie",
+        "mountainSystem": 2
+    },
+    {
+        "id": 25,
+        "name": "Pogórze Przemyskie",
+        "mountainSystem": 2
+    },
+    {
+        "id": 26,
+        "name": "Góry Izerskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 27,
+        "name": "Pogórze Izerskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 28,
+        "name": "Karkonosze",
+        "mountainSystem": 3
+    },
+    {
+        "id": 29,
+        "name": "Kotlina Jeleniogórska",
+        "mountainSystem": 3
+    },
+    {
+        "id": 30,
+        "name": "Rudawy Janowickie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 31,
+        "name": "Góry Kaczawskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 32,
+        "name": "Pogórze Kaczawskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 33,
+        "name": "Kotlina Kamiennogórska",
+        "mountainSystem": 3
+    },
+    {
+        "id": 34,
+        "name": "Góry Kamienne",
+        "mountainSystem": 3
+    },
+    {
+        "id": 35,
+        "name": "Góry Wałbrzyskie, Pogórze Bolkowsko-Wałbrzyskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 36,
+        "name": "Góry Sowie, Wzgórza Włodzickie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 37,
+        "name": "Góry Bardzkie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 38,
+        "name": "Góry Stołowe, Wzgórza Lewińskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 39,
+        "name": "Góry Orlickie, Góry Bystrzyckie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 40,
+        "name": "Kotlina Kłodzka, Rów Górnej Nysy",
+        "mountainSystem": 3
+    },
+    {
+        "id": 41,
+        "name": "Masyw Śnieżnika, Góry Bialskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 42,
+        "name": "Góry Złote",
+        "mountainSystem": 3
+    },
+    {
+        "id": 43,
+        "name": "Góry Opawskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 44,
+        "name": "Wzgórza Strzegomskie",
+        "mountainSystem": 3
+    },
+    {
+        "id": 45,
+        "name": "Masyw Ślęży, Równina Świdnicka, Kotlina Dzierżoniowska",
+        "mountainSystem": 3
+    },
+    {
+        "id": 46,
+        "name": "Wzgórza Niemczańsko-Strzelińskie, Przedgórze Paczkowskie",
+        "mountainSystem": 3
+    }
+]
