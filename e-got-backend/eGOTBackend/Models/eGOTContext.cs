@@ -23,6 +23,7 @@ namespace eGOTBackend.Models
         public virtual DbSet<Leader> Leader { get; set; }
         public virtual DbSet<Location> Location { get; set; }
         public virtual DbSet<MountainRange> MountainRange { get; set; }
+        public virtual DbSet<MountainSystem> MountainSystem { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<PhotoProof> PhotoProof { get; set; }
         public virtual DbSet<Route> Route { get; set; }
@@ -35,7 +36,6 @@ namespace eGOTBackend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=localhost;Database=eGOT;Trusted_Connection=True;");
             }
         }
@@ -206,8 +206,25 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(10)
+                    .HasMaxLength(20)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<MountainSystem>(entity =>
+            {
+                entity.ToTable("Mountain_system");
+
+                entity.HasIndex(e => e.Id)
+                    .HasName("Mountain_system_id");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasColumnName("name")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
             });
 
             modelBuilder.Entity<Permission>(entity =>
