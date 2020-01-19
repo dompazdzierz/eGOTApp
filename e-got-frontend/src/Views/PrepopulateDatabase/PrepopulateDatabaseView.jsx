@@ -5,6 +5,10 @@ import { Header, Button } from 'semantic-ui-react';
 class PrepopulateDatabaseView extends React.Component {
     render() {
 
+        handlePrepopulateClick = () => {
+            
+        }
+
         const mountainSystemsJson =
         [
             {
