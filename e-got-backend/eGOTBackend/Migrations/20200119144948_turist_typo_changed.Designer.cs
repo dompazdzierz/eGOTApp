@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
     [DbContext(typeof(eGOTContext))]
-    partial class eGOTContextModelSnapshot : ModelSnapshot
+    [Migration("20200119144948_turist_typo_changed")]
+    partial class turist_typo_changed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

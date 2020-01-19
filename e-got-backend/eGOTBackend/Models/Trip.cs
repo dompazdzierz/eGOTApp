@@ -17,9 +17,9 @@ namespace eGOTBackend.Models
         public int Score { get; set; }
         public float Length { get; set; }
         public float ElevationGain { get; set; }
-        public int IdTurist { get; set; }
+        public int IdTourist { get; set; }
 
-        public virtual Turist IdTuristNavigation { get; set; }
+        public virtual Tourist IdTouristNavigation { get; set; }
         public virtual GpsProof GpsProof { get; set; }
         public virtual PhotoProof PhotoProof { get; set; }
         public virtual ICollection<Route> Route { get; set; }

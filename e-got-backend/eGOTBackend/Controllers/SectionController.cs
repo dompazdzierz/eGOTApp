@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Collections.Generic;
 using System.Linq;
 using eGOTBackend.Models;
+using Newtonsoft.Json;
 
 namespace eGOTBackend.Controllers
 {
@@ -10,48 +11,54 @@ namespace eGOTBackend.Controllers
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
     public class SectionController : ApiController
     {
-        static List<Section> sectionList = new List<Section>();
-
         [HttpGet]
         public IEnumerable<Section> Get()
         {
-            return sectionList;
+            using (var dbContext = new eGOTContext())
+            {
+                return dbContext.Section;
+            }
         }
 
         [HttpPost]
-        public Section Post(Section section)
+        public IHttpActionResult Post(Section section)
         {
-            var ids = sectionList.Select(x => x.Id);
-            section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
-            sectionList.Add(section);
-            return section;
-        }
-
-        [HttpPut]
-        public IHttpActionResult Put(Section section)
-        {
-            var found = sectionList.Find(x => x.Id == section.Id);
-
-            if (found == null)
+            using (var dbContex = new eGOTContext())
             {
-                return NotFound();
-            }
+                var ids = dbContex.Section.Select(x => x.Id);
+                section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
+                dbContex.Section.Add(section);
+                dbContex.SaveChanges();
 
-            return Ok(found);
+                return Ok(section);
+            }
         }
 
-        [HttpDelete]
-        public IHttpActionResult Delete(int id)
-        {
-            var indexToDelete = sectionList.FindIndex(t => t.Id == id);
+        //[HttpPut]
+        //public IHttpActionResult Put(Section section)
+        //{
+        //    var found = sectionList.Find(x => x.Id == section.Id);
 
-            if (indexToDelete == -1)
-            {
-                return NotFound();
-            }
+        //    if (found == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            sectionList.RemoveAt(indexToDelete);
-            return Ok();
-        }
+        //    return Ok(found);
+        //}
+
+        //[HttpDelete]
+        //public IHttpActionResult Delete(int id)
+        //{
+        //    var indexToDelete = sectionList.FindIndex(t => t.Id == id);
+
+        //    if (indexToDelete == -1)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    sectionList.RemoveAt(indexToDelete);
+        //    return Ok();
+        //}
     }
 }
