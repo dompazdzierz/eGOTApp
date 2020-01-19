@@ -186,7 +186,7 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(50)
+                    .HasMaxLength(80)
                     .IsUnicode(false);
             });
 
@@ -206,7 +206,7 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(20)
+                    .HasMaxLength(80)
                     .IsUnicode(false);
             });
 
@@ -222,7 +222,7 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnName("name")
-                    .HasMaxLength(20)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
             });

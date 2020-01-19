@@ -207,6 +207,14 @@
     <Compile Include="Migrations\20200119172903_id_added.designer.cs">
       <DependentUpon>20200119172903_id_added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200119210520_mountain_range_and_system_name_max_length_is_now_50.cs" />
+    <Compile Include="Migrations\20200119210520_mountain_range_and_system_name_max_length_is_now_50.designer.cs">
+      <DependentUpon>20200119210520_mountain_range_and_system_name_max_length_is_now_50.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200119211021_mountain_range_and_system_name_max_len_80.cs" />
+    <Compile Include="Migrations\20200119211021_mountain_range_and_system_name_max_len_80.designer.cs">
+      <DependentUpon>20200119211021_mountain_range_and_system_name_max_len_80.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />
     <Compile Include="Models\CommissionWorker.cs" />

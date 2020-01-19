@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class eGOTContextModelSnapshot : ModelSnapshot
+    [Migration("20200119210520_mountain_range_and_system_name_max_length_is_now_50")]
+    partial class mountain_range_and_system_name_max_length_is_now_50
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,8 +164,8 @@ namespace eGOTBackend.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnName("name")
-                        .HasColumnType("varchar(80)")
-                        .HasMaxLength(80)
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
                         .IsUnicode(false);
 
                     b.HasKey("Id");
@@ -192,8 +194,8 @@ namespace eGOTBackend.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnName("name")
-                        .HasColumnType("varchar(80)")
-                        .HasMaxLength(80)
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
                         .IsUnicode(false);
 
                     b.HasKey("Id");
