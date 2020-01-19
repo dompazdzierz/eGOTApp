@@ -3,7 +3,6 @@ using System.Web.Http;
 using System.Collections.Generic;
 using System.Linq;
 using eGOTBackend.Models;
-using Newtonsoft.Json;
 
 namespace eGOTBackend.Controllers
 {
@@ -11,54 +10,48 @@ namespace eGOTBackend.Controllers
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
     public class SectionController : ApiController
     {
+        static List<Section> sectionList = new List<Section>();
+
         [HttpGet]
         public IEnumerable<Section> Get()
         {
-            using (var dbContext = new eGOTContext())
-            {
-                return dbContext.Section;
-            }
+            return sectionList;
         }
 
         [HttpPost]
-        public IHttpActionResult Post(Section section)
+        public Section Post(Section section)
         {
-            using (var dbContex = new eGOTContext())
-            {
-                var ids = dbContex.Section.Select(x => x.Id);
-                section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
-                dbContex.Section.Add(section);
-                dbContex.SaveChanges();
-
-                return Ok(section);
-            }
+            var ids = sectionList.Select(x => x.Id);
+            section.Id = ids.Count() == 0 ? 0 : ids.Max() + 1;
+            sectionList.Add(section);
+            return section;
         }
 
-        //[HttpPut]
-        //public IHttpActionResult Put(Section section)
-        //{
-        //    var found = sectionList.Find(x => x.Id == section.Id);
+        [HttpPut]
+        public IHttpActionResult Put(Section section)
+        {
+            var found = sectionList.Find(x => x.Id == section.Id);
 
-        //    if (found == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (found == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(found);
-        //}
+            return Ok(found);
+        }
 
-        //[HttpDelete]
-        //public IHttpActionResult Delete(int id)
-        //{
-        //    var indexToDelete = sectionList.FindIndex(t => t.Id == id);
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var indexToDelete = sectionList.FindIndex(t => t.Id == id);
 
-        //    if (indexToDelete == -1)
-        //    {
-        //        return NotFound();
-        //    }
+            if (indexToDelete == -1)
+            {
+                return NotFound();
+            }
 
-        //    sectionList.RemoveAt(indexToDelete);
-        //    return Ok();
-        //}
+            sectionList.RemoveAt(indexToDelete);
+            return Ok();
+        }
     }
 }

@@ -96,8 +96,8 @@ namespace eGOTBackend.Migrations
 
             modelBuilder.Entity("eGOTBackend.Models.History", b =>
                 {
-                    b.Property<int>("IdTourist")
-                        .HasColumnName("id_tourist")
+                    b.Property<int>("IdTurist")
+                        .HasColumnName("id_turist")
                         .HasColumnType("int");
 
                     b.Property<int>("IdBadgeLevel")
@@ -108,7 +108,7 @@ namespace eGOTBackend.Migrations
                         .HasColumnName("date")
                         .HasColumnType("datetime");
 
-                    b.HasKey("IdTourist", "IdBadgeLevel")
+                    b.HasKey("IdTurist", "IdBadgeLevel")
                         .HasName("PK__History__2A509D270486FE06");
 
                     b.HasIndex("IdBadgeLevel");
@@ -325,7 +325,53 @@ namespace eGOTBackend.Migrations
                     b.ToTable("Section");
                 });
 
-            modelBuilder.Entity("eGOTBackend.Models.Tourist", b =>
+            modelBuilder.Entity("eGOTBackend.Models.Trip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("ElevationGain")
+                        .HasColumnName("elevation_gain")
+                        .HasColumnType("real");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnName("end_date")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("IdTurist")
+                        .HasColumnName("id_turist")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Length")
+                        .HasColumnName("length")
+                        .HasColumnType("real");
+
+                    b.Property<int>("Score")
+                        .HasColumnName("score")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnName("start_date")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("Status")
+                        .HasColumnName("status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .HasName("Trip_id");
+
+                    b.HasIndex("IdTurist");
+
+                    b.ToTable("Trip");
+                });
+
+            modelBuilder.Entity("eGOTBackend.Models.Turist", b =>
                 {
                     b.Property<int>("IdUser")
                         .HasColumnName("id_user")
@@ -352,57 +398,11 @@ namespace eGOTBackend.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("IdUser")
-                        .HasName("PK__Tourist__D2D1463735CD9327");
+                        .HasName("PK__Turist__D2D1463735CD9327");
 
                     b.HasIndex("IdBadgeLevel");
 
-                    b.ToTable("Tourist");
-                });
-
-            modelBuilder.Entity("eGOTBackend.Models.Trip", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<float>("ElevationGain")
-                        .HasColumnName("elevation_gain")
-                        .HasColumnType("real");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnName("end_date")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("IdTourist")
-                        .HasColumnName("id_tourist")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Length")
-                        .HasColumnName("length")
-                        .HasColumnType("real");
-
-                    b.Property<int>("Score")
-                        .HasColumnName("score")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnName("start_date")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("Status")
-                        .HasColumnName("status")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Id")
-                        .HasName("Trip_id");
-
-                    b.HasIndex("IdTourist");
-
-                    b.ToTable("Trip");
+                    b.ToTable("Turist");
                 });
 
             modelBuilder.Entity("eGOTBackend.Models.Users", b =>
@@ -492,9 +492,9 @@ namespace eGOTBackend.Migrations
                         .HasConstraintName("FKHistory256828")
                         .IsRequired();
 
-                    b.HasOne("eGOTBackend.Models.Tourist", "IdTouristNavigation")
+                    b.HasOne("eGOTBackend.Models.Turist", "IdTuristNavigation")
                         .WithMany("History")
-                        .HasForeignKey("IdTourist")
+                        .HasForeignKey("IdTurist")
                         .HasConstraintName("FKHistory784901")
                         .IsRequired();
                 });
@@ -575,27 +575,27 @@ namespace eGOTBackend.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eGOTBackend.Models.Tourist", b =>
+            modelBuilder.Entity("eGOTBackend.Models.Trip", b =>
                 {
-                    b.HasOne("eGOTBackend.Models.BadgeLevel", "IdBadgeLevelNavigation")
-                        .WithMany("Tourist")
-                        .HasForeignKey("IdBadgeLevel")
-                        .HasConstraintName("FKTourist324263")
-                        .IsRequired();
-
-                    b.HasOne("eGOTBackend.Models.Users", "IdUserNavigation")
-                        .WithOne("Tourist")
-                        .HasForeignKey("eGOTBackend.Models.Tourist", "IdUser")
-                        .HasConstraintName("FKTourist733992")
+                    b.HasOne("eGOTBackend.Models.Turist", "IdTuristNavigation")
+                        .WithMany("Trip")
+                        .HasForeignKey("IdTurist")
+                        .HasConstraintName("FKTrip848043")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eGOTBackend.Models.Trip", b =>
+            modelBuilder.Entity("eGOTBackend.Models.Turist", b =>
                 {
-                    b.HasOne("eGOTBackend.Models.Tourist", "IdTouristNavigation")
-                        .WithMany("Trip")
-                        .HasForeignKey("IdTourist")
-                        .HasConstraintName("FKTrip848043")
+                    b.HasOne("eGOTBackend.Models.BadgeLevel", "IdBadgeLevelNavigation")
+                        .WithMany("Turist")
+                        .HasForeignKey("IdBadgeLevel")
+                        .HasConstraintName("FKTurist324263")
+                        .IsRequired();
+
+                    b.HasOne("eGOTBackend.Models.Users", "IdUserNavigation")
+                        .WithOne("Turist")
+                        .HasForeignKey("eGOTBackend.Models.Turist", "IdUser")
+                        .HasConstraintName("FKTurist733992")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

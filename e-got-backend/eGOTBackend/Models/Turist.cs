@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
-    public partial class Tourist
+    public partial class Turist
     {
-        public Tourist()
+        public Turist()
         {
             History = new HashSet<History>();
             Trip = new HashSet<Trip>();

@@ -8,7 +8,7 @@ namespace eGOTBackend.Models
         public BadgeLevel()
         {
             History = new HashSet<History>();
-            Tourist = new HashSet<Tourist>();
+            Turist = new HashSet<Turist>();
         }
 
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace eGOTBackend.Models
         public byte[] Icon { get; set; }
 
         public virtual ICollection<History> History { get; set; }
-        public virtual ICollection<Tourist> Tourist { get; set; }
+        public virtual ICollection<Turist> Turist { get; set; }
     }
 }
