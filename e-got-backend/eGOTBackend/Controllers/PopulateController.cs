@@ -56,63 +56,63 @@ namespace eGOTBackend.Controllers
             {
                 new MountainRange {
                     Name="Tatry Wysokie",
-                    MountainSystem=id0
+                    MountainSystemId=id0
                 },
                 new MountainRange {
                     Name="Tatry Zachodnie",
-                    MountainSystem=id0
+                    MountainSystemId=id0
                 },
                 new MountainRange {
                     Name="Podtatrze",
-                    MountainSystem=id0
+                    MountainSystemId=id0
                 },
                 new MountainRange {
                     Name="Beskid Śląski",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Beskid Żywiecki",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Beskid Mały",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Beskid Średni",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Gorce",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Beskid Wyspowy",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Orawa",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Spisz i Pieniny",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Beskid Sądecki",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Pogórze Wielickie",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Pogórze Wiśnickie",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
                 new MountainRange {
                     Name="Pogórze Rożnowskie",
-                    MountainSystem=id1
+                    MountainSystemId=id1
                 },
             };
 

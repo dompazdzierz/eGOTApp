@@ -17,7 +17,8 @@ class MountainSystems extends React.Component {
         super(props)
         this.state = {
             currentPage: 1,
-            rows: []
+            rows: [],
+            data: null
         }
     }
 
@@ -27,8 +28,19 @@ class MountainSystems extends React.Component {
             url: apiPaths.MOUNTAIN_RANGE + apiPaths.GET_ALL
         })
         .then(response => {
-            console.log(response.data)
             this.setState({rows: response.data});
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        axiosInstance({
+            method: 'get',
+            url: apiPaths.MOUNTAIN_SYSTEM + apiPaths.GET_ALL_WITH
+        })
+        .then(response => {
+            console.log(response.data)
+            this.setState({data: response.data});
         })
         .catch(error => {
             console.log(error);

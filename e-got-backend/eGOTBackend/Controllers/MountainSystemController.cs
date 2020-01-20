@@ -9,11 +9,6 @@ namespace eGOTBackend.Controllers
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
     public class MountainSystemController: BaseCrudController<MountainSystem>
     {
-        [HttpGet]
-        [ActionName("getAllWithRanges")]
-        public virtual IEnumerable<MountainSystem> GetWithRanges()
-        {
-            return _dbContext.MountainSystem.Include(x => x.MountainRanges);
-        }
+
     }
 }

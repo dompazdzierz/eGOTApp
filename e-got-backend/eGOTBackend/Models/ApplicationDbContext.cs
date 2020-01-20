@@ -203,11 +203,11 @@ namespace eGOTBackend.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.MountainSystem).HasColumnName("mountain_system");
+                entity.Property(e => e.MountainSystemId).HasColumnName("mountain_system");
 
-                entity.HasOne(d => d.MountainSystemNavigation)
+                entity.HasOne(d => d.MountainSystem)
                     .WithMany(p => p.MountainRanges)
-                    .HasForeignKey(d => d.MountainSystem)
+                    .HasForeignKey(d => d.MountainSystemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKSection521451");
 

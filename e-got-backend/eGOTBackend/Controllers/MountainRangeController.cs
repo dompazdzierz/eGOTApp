@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using eGOTBackend.Models;
+using eGOTBackend.Repostiories;
 
 namespace eGOTBackend.Controllers
 {
@@ -30,7 +31,7 @@ namespace eGOTBackend.Controllers
                 {
                     name = entity.Name,
                     mountain_system = _dbContext.MountainSystem
-                        .Where(x => x.Id == entity.MountainSystem)
+                        .Where(x => x.Id == entity.MountainSystemId)
                         .Select(x => x.Name)
                         .FirstOrDefault()
                 });
@@ -47,7 +48,7 @@ namespace eGOTBackend.Controllers
             {
                 Id = 0,
                 Name = api_entity.name,
-                MountainSystem = _dbContext.MountainSystem
+                MountainSystemId = _dbContext.MountainSystem
                     .Where(x => x.Name == api_entity.mountain_system)
                     .Select(x => x.Id)
                     .FirstOrDefault()
@@ -71,7 +72,7 @@ namespace eGOTBackend.Controllers
                 {
                     Id = 0,
                     Name = api_entity.name,
-                    MountainSystem = _dbContext.MountainSystem
+                    MountainSystemId = _dbContext.MountainSystem
                         .Where(x => x.Name == api_entity.mountain_system)
                         .Select(x => x.Id)
                         .FirstOrDefault()
@@ -83,6 +84,15 @@ namespace eGOTBackend.Controllers
             _dbContext.SaveChanges();
 
             return Ok(entities);
+        }
+
+        [HttpGet]
+        [ActionName("test")]
+        public  IHttpActionResult Test()
+        {
+            var repo = new MountainRangeRepostiory();
+            var mountainRanges = repo.GetMountainRanges();
+            return Ok(mountainRanges);
         }
     }
 }
