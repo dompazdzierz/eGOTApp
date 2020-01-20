@@ -224,6 +224,10 @@
     <Compile Include="Migrations\20200120025658_rename_mountain_system_fk.designer.cs">
       <DependentUpon>20200120025658_rename_mountain_system_fk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200120103150_night_changes.cs" />
+    <Compile Include="Migrations\20200120103150_night_changes.designer.cs">
+      <DependentUpon>20200120103150_night_changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />
     <Compile Include="Models\CommissionWorker.cs" />

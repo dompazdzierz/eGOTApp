@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
     baseURL: apiPaths.API_ADRESS
 });
 
-class SectionList extends React.Component {
+class MountainRange extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -80,11 +80,11 @@ class SectionList extends React.Component {
                 rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
-                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={5}
+                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
                         handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
 
             </SegmentContainer>
         )
     }
 }
-export default SectionList;
+export default MountainRange;

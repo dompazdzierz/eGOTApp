@@ -19,7 +19,7 @@ class PrepopulateDatabaseView extends React.Component {
             console.log(response);
         })
         .catch(error => {
-            console.log(error.response.data);
+            console.log(error);
         })
     }
 
@@ -32,7 +32,7 @@ class PrepopulateDatabaseView extends React.Component {
             console.log(response);
         })
         .catch(error => {
-            console.log(error.response.data);
+            console.log(error);
         })
     }
 
@@ -45,7 +45,7 @@ class PrepopulateDatabaseView extends React.Component {
             console.log(response);
         })
         .catch(error => {
-            console.log(error.response.data);
+            console.log(error);
         })
     }
 
@@ -58,14 +58,14 @@ class PrepopulateDatabaseView extends React.Component {
             console.log(response);
         })
         .catch(error => {
-            console.log(error.response.data);
+            console.log(error);
         })
     }
 
     populateDatabase = () => {
         // this.populateMountainSystems();
         // this.populateMountainRanges();
-        // this.populateLocations();
+        //this.populateLocations();
         this.populateSections();
     }
 
