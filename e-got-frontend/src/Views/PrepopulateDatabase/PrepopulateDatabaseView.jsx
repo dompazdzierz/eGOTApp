@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
 import * as apiPaths from '../../Common/apiPaths'
-import { MOUNTAIN_RANGES_JSON, MOUNTAIN_SYSTEMS_JSON } from '../../Common/values'
 
 const axios = require('axios');
 
@@ -14,41 +13,39 @@ class PrepopulateDatabaseView extends React.Component {
     populateMountainSystems = () => {
         axiosInstance({
             method: 'post',
-            url: apiPaths.MOUNTAIN_SYSTEM + apiPaths.ADD_ELEMENTS,
-            data: MOUNTAIN_SYSTEMS_JSON
+            url: apiPaths.POPULATE + apiPaths.MOUNTAIN_SYSTEM
         })
         .then(response => {
             console.log(response);
         })
-        .catch(response => {
-            console.log(response);
+        .catch(error => {
+            console.log(error.response.data);
         })
     }
 
     populateMountainRanges = () => {
-        console.log('Start');
-
         axiosInstance({
             method: 'post',
-            url: apiPaths.MOUNTAIN_RANGE + apiPaths.ADD_ELEMENTS,
-            data: MOUNTAIN_RANGES_JSON
+            url: apiPaths.POPULATE + apiPaths.MOUNTAIN_RANGE
         })
         .then(response => {
             console.log(response);
         })
-        .catch(response => {
-            console.log(response);
+        .catch(error => {
+            console.log(error.response.data);
         })
+    }
+
+    populateDatabase = () => {
+        this.populateMountainSystems();
+        this.populateMountainRanges();
     }
 
     render() {
         return(
             <div className="homeview--container">
-                <Button onClick={this.populateMountainSystems}>
-                    Załaduj systemy.
-                </Button>
-                <Button onClick={this.populateMountainRanges}>
-                    Załaduj range.
+                <Button onClick={this.populateDatabase}>
+                    Załaduj przykładowe dane.
                 </Button>
             </div>
         )

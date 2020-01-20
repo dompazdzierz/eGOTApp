@@ -195,6 +195,7 @@
     <Compile Include="Controllers\BaseCrudController.cs" />
     <Compile Include="Controllers\MountainRangeController.cs" />
     <Compile Include="Controllers\MountainSystemController.cs" />
+    <Compile Include="Controllers\PopulateController.cs" />
     <Compile Include="Controllers\SectionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

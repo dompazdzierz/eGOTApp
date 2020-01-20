@@ -1,25 +1,38 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
+import * as apiPaths from '../../Common/apiPaths';
 import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import { Route } from 'react-router';
+
+const axios = require('axios');
+
+const axiosInstance = axios.create({
+    baseURL: apiPaths.API_ADRESS
+});
 
 class MountainSystems extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             currentPage: 1,
-            rows: [
-                { id: 0, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 1, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 2, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 3, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 4, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 5, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' },
-                { id: 6, mountainSystem: 'Tatry i Podtatrze', mountainRange: 'Tatry Wysokie' }
-            ]
+            rows: []
         }
+    }
+
+    componentDidMount() {
+        axiosInstance({
+            method: 'get',
+            url: apiPaths.MOUNTAIN_SYSTEM + apiPaths.GET_ALL
+        })
+        .then(response => {
+            console.log(response.data)
+            this.setState({rows: response.data});
+        })
+        .catch(error => {
+            console.log(error.response.data);
+        })
     }
 
     handlePaginationChange = (_, data) =>  {
