@@ -4,6 +4,7 @@ export const API_ADRESS = "https://localhost:44323/api";
 export const MOUNTAIN_RANGE = "/mountainrange";
 export const MOUNTAIN_SYSTEM = "/mountainsystem";
 export const SECTION = "/section";
+export const LOCATION = "/location";
 export const POPULATE = "/populate"
 
 // Actions paths
