@@ -18,170 +18,170 @@ export const MOUNTAIN_RANGES_JSON =
 [
     {
         "name": "Tatry Wysokie",
-        "mountainRange": 0
+        "mountain_system": "Tatry i Podtatrze"
     },
     {
         "name": "Tatry Zachodnie",
-        "mountainRange": 0
+        "mountain_system": "Tatry i Podtatrze"
     },
     {
         "name": "Podtatrze",
-        "mountainRange": 0
+        "mountain_system": "Tatry i Podtatrze"
     },
     {
         "name": "Beskid Śląski",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Beskid Żywiecki",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Beskid Mały",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Beskid Średni",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Gorce",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Beskid Wyspowy",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Orawa",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Spisz i Pieniny",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Beskid Sądecki",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Pogórze Wielickie",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Pogórze Wiśnickie",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Pogórze Rożnowskie",
-        "mountainRange": 1
+        "mountain_system": "Beskidy Zachodnie"
     },
     {
         "name": "Pogórze Ciężkowickie",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Beskid Niski część zachodnia",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Beskid Niski część wschodnia",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Bieszczady",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Pogórze Strzyżowsko-Dynowskie",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Pogórze Przemyskie",
-        "mountainRange": 2
+        "mountain_system": "Beskidy Wschodnie"
     },
     {
         "name": "Góry Izerskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Pogórze Izerskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Karkonosze",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Kotlina Jeleniogórska",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Rudawy Janowickie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Kaczawskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Pogórze Kaczawskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Kotlina Kamiennogórska",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Kamienne",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Wałbrzyskie, Pogórze Bolkowsko-Wałbrzyskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Sowie, Wzgórza Włodzickie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Bardzkie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Stołowe, Wzgórza Lewińskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Orlickie, Góry Bystrzyckie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Kotlina Kłodzka, Rów Górnej Nysy",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Masyw Śnieżnika, Góry Bialskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Złote",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Góry Opawskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Wzgórza Strzegomskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Masyw Ślęży, Równina Świdnicka, Kotlina Dzierżoniowska",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     },
     {
         "name": "Wzgórza Niemczańsko-Strzelińskie, Przedgórze Paczkowskie",
-        "mountainRange": 3
+        "mountain_system": "Sudety"
     }
 ]

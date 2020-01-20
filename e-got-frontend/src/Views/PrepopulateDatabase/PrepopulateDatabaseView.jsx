@@ -44,8 +44,11 @@ class PrepopulateDatabaseView extends React.Component {
     render() {
         return(
             <div className="homeview--container">
+                <Button onClick={this.populateMountainSystems}>
+                    Załaduj systemy.
+                </Button>
                 <Button onClick={this.populateMountainRanges}>
-                    Załaduj przykładowe dane.
+                    Załaduj range.
                 </Button>
             </div>
         )

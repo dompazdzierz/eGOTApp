@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using eGOTBackend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace eGOTBackend.Controllers
 {

@@ -12,7 +12,10 @@ namespace eGOTBackend.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public int MountainSystem { get; set; }
 
+
+        public virtual MountainSystem MountainSystemNavigation { get; set; }
         public virtual ICollection<Permission> Permission { get; set; }
         public virtual ICollection<Section> Section { get; set; }
     }
