@@ -36,7 +36,7 @@ namespace eGOTBackend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost;Database=eGOT;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost;Database=eGOT;Trusted_Connection=True;MultipleActiveResultSets=true;");
             }
         }
 
@@ -202,6 +202,14 @@ namespace eGOTBackend.Models
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.MountainSystem).HasColumnName("mountain_system");
+
+                entity.HasOne(d => d.MountainSystemNavigation)
+                    .WithMany(p => p.MountainRanges)
+                    .HasForeignKey(d => d.MountainSystem)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FKSection521451");
 
                 entity.Property(e => e.Name)
                     .IsRequired()

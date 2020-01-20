@@ -24,7 +24,7 @@ class MountainSystems extends React.Component {
     componentDidMount() {
         axiosInstance({
             method: 'get',
-            url: apiPaths.MOUNTAIN_SYSTEM + apiPaths.GET_ALL
+            url: apiPaths.MOUNTAIN_RANGE + apiPaths.GET_ALL
         })
         .then(response => {
             console.log(response.data)
@@ -46,19 +46,19 @@ class MountainSystems extends React.Component {
 
         let tableHeaderContent =
             <Table.Row>
-                <Table.HeaderCell>Punkt początkowy</Table.HeaderCell>
-                <Table.HeaderCell>Punkt końcowy</Table.HeaderCell>
+                <Table.HeaderCell>Łańcuch górski</Table.HeaderCell>
+                <Table.HeaderCell>Pasmo górskie</Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
             </Table.Row>
 
         let tableBodyContent =
             rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
                 <Table.Row key={trip.id}>
-                    <Table.Cell>{trip.mountainSystem}</Table.Cell>
-                    <Table.Cell>{trip.mountainRange}</Table.Cell>
+                    <Table.Cell>{trip.mountain_system}</Table.Cell>
+                    <Table.Cell>{trip.name}</Table.Cell>
                     <Table.Cell>
                         <Route render={({ history }) => (
-                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.SECTION_LIST)}/>
+                            <Button circular primary icon='arrow right' onClick={() => history.push({pathname: paths.SECTION_LIST, data: trip.name})}/>
                         )} />
                     </Table.Cell>
                 </Table.Row>

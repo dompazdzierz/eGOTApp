@@ -36,9 +36,37 @@ class PrepopulateDatabaseView extends React.Component {
         })
     }
 
+    populateLocations = () => {
+        axiosInstance({
+            method: 'post',
+            url: apiPaths.POPULATE + apiPaths.LOCATION
+        })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error.response.data);
+        })
+    }
+
+    populateSections = () => {
+        axiosInstance({
+            method: 'post',
+            url: apiPaths.POPULATE + apiPaths.SECTION
+        })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error.response.data);
+        })
+    }
+
     populateDatabase = () => {
-        this.populateMountainSystems();
-        this.populateMountainRanges();
+        // this.populateMountainSystems();
+        // this.populateMountainRanges();
+        // this.populateLocations();
+        this.populateSections();
     }
 
     render() {

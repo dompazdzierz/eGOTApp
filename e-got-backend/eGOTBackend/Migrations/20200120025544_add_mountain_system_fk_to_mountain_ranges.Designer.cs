@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class eGOTContextModelSnapshot : ModelSnapshot
+    [Migration("20200120025544_add_mountain_system_fk_to_mountain_ranges")]
+    partial class add_mountain_system_fk_to_mountain_ranges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -187,7 +189,7 @@ namespace eGOTBackend.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("MountainSystem")
-                        .HasColumnName("mountain_system")
+                        .HasColumnName("MountainSystemId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
