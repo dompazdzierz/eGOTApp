@@ -18,9 +18,8 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path={paths.PREPOPULATE_DATABASE} component={PrepopulateDatabaseView} />
-
         <Route exact path={paths.HOME_VIEW} component={HomeView} />
-        <Route exact path={paths.SECTION_LIST} component={MountainRange} />
+        <Route path={paths.MOUNTAIN_RANGE} component={MountainRange} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />
         <Route exact path={paths.PROPOSED_SECTIONS} component={ProposedSections} />

@@ -18,27 +18,27 @@ namespace eGOTBackend.Controllers
 
         protected readonly ApplicationDbContext _dbContext = new ApplicationDbContext();
 
-        [HttpGet]
-        [ActionName("getAll")]
-        public virtual IEnumerable<ApiMountainRange> Get()
-        {
-            IEnumerable<MountainRange> entities = _dbContext.Set<MountainRange>();
-            IEnumerable<ApiMountainRange> api_entities = new List<ApiMountainRange>();
+        //[HttpGet]
+        //[ActionName("getAll")]
+        //public virtual IEnumerable<ApiMountainRange> Get()
+        //{
+        //    IEnumerable<MountainRange> entities = _dbContext.Set<MountainRange>();
+        //    IEnumerable<ApiMountainRange> api_entities = new List<ApiMountainRange>();
 
-            foreach (MountainRange entity in entities)
-            {
-                api_entities = api_entities.Append(new ApiMountainRange
-                {
-                    name = entity.Name,
-                    mountain_system = _dbContext.MountainSystem
-                        .Where(x => x.Id == entity.MountainSystemId)
-                        .Select(x => x.Name)
-                        .FirstOrDefault()
-                });
-            }
+        //    foreach (MountainRange entity in entities)
+        //    {
+        //        api_entities = api_entities.Append(new ApiMountainRange
+        //        {
+        //            name = entity.Name,
+        //            mountain_system = _dbContext.MountainSystem
+        //                .Where(x => x.Id == entity.MountainSystemId)
+        //                .Select(x => x.Name)
+        //                .FirstOrDefault()
+        //        });
+        //    }
 
-            return api_entities;
-        }
+        //    return api_entities;
+        //}
 
         [HttpPost]
         [ActionName("addElement")]
@@ -87,12 +87,12 @@ namespace eGOTBackend.Controllers
         }
 
         [HttpGet]
-        [ActionName("test")]
-        public  IHttpActionResult Test()
+        [ActionName("getAll")]
+        public List<MountainRangeViewModel> Test()
         {
             var repo = new MountainRangeRepostiory();
             var mountainRanges = repo.GetMountainRanges();
-            return Ok(mountainRanges);
+            return mountainRanges;
         }
     }
 }

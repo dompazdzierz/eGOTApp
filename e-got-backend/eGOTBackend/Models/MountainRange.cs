@@ -14,7 +14,6 @@ namespace eGOTBackend.Models
         public string Name { get; set; }
         public int MountainSystemId { get; set; }
 
-
         public virtual MountainSystem MountainSystem { get; set; }
         public virtual ICollection<Permission> Permission { get; set; }
         public virtual ICollection<Section> Section { get; set; }

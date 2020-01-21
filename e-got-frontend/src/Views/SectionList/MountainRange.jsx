@@ -1,9 +1,10 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button } from 'semantic-ui-react';
+import { Table, Button, Header, Icon, Segment } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import * as apiPaths from '../../Common/apiPaths';
+import NoDataSegment from '../../Components/NoDataSegment/NoDataSegment';
 
 const axios = require('axios');
 
@@ -28,7 +29,6 @@ class MountainRange extends React.Component {
             url: apiPaths.SECTION + apiPaths.GET_ALL + "?mountain_range=" + this.props.location.data
         })
         .then(response => {
-            console.log(response.data)
             this.setState({rows: response.data});
         })
         .catch(error => {
@@ -73,15 +73,23 @@ class MountainRange extends React.Component {
                 </Table.Row>
             ))
 
+            let content =
+            rows.length > 0 ?
+            <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
+                handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
+                handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
+            :
+            <NoDataSegment noDataMessage="Nie ma jeszcze dodanych odcinków dla tego pasma górskiego." />
+
+
         return(
+
             <SegmentContainer headerContent={this.props.location.data} iconName='map'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
                 rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
                 rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
 
-                    <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
-                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
-                        handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
+                {content}
 
             </SegmentContainer>
         )

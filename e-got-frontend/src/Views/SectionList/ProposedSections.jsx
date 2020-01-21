@@ -60,7 +60,7 @@ class ProposedSections extends React.Component {
 
         return(
             <SegmentContainer headerContent="Zaproponowane odcinki" iconName='pin'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.SECTION_LIST)} >
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.MOUNTAIN_RANGE)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                         handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}

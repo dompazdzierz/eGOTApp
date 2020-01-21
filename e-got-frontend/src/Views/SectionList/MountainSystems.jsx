@@ -17,8 +17,7 @@ class MountainSystems extends React.Component {
         super(props)
         this.state = {
             currentPage: 1,
-            rows: [],
-            data: null
+            rows: []
         }
     }
 
@@ -28,19 +27,8 @@ class MountainSystems extends React.Component {
             url: apiPaths.MOUNTAIN_RANGE + apiPaths.GET_ALL
         })
         .then(response => {
+            console.log(response);
             this.setState({rows: response.data});
-        })
-        .catch(error => {
-            console.log(error);
-        })
-
-        axiosInstance({
-            method: 'get',
-            url: apiPaths.MOUNTAIN_SYSTEM + apiPaths.GET_ALL_WITH
-        })
-        .then(response => {
-            console.log(response.data)
-            this.setState({data: response.data});
         })
         .catch(error => {
             console.log(error);
@@ -66,11 +54,11 @@ class MountainSystems extends React.Component {
         let tableBodyContent =
             rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
                 <Table.Row key={trip.id}>
-                    <Table.Cell>{trip.mountain_system}</Table.Cell>
+                    <Table.Cell>{trip.mountainSystemName}</Table.Cell>
                     <Table.Cell>{trip.name}</Table.Cell>
                     <Table.Cell>
                         <Route render={({ history }) => (
-                            <Button circular primary icon='arrow right' onClick={() => history.push({pathname: paths.SECTION_LIST, data: trip.name})}/>
+                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.MOUNTAIN_RANGE + '/' + trip.id)}/>
                         )} />
                     </Table.Cell>
                 </Table.Row>
@@ -78,7 +66,7 @@ class MountainSystems extends React.Component {
 
         return(
             <SegmentContainer headerContent="Spis odcinków punktowanych" iconName='map'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.SECTION_LIST)} >
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.MOUNTAIN_RANGE)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                         handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={3}
