@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
     baseURL: apiPaths.API_ADRESS
 });
 
-class MountainSystems extends React.Component {
+class MountainRanges extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -24,7 +24,7 @@ class MountainSystems extends React.Component {
     componentDidMount() {
         axiosInstance({
             method: 'get',
-            url: apiPaths.MOUNTAIN_RANGE + apiPaths.GET_ALL
+            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET_ALL
         })
         .then(response => {
             console.log(response);
@@ -76,4 +76,5 @@ class MountainSystems extends React.Component {
         )
     }
 }
-export default MountainSystems;
+
+export default MountainRanges;

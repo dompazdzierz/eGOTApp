@@ -63,7 +63,7 @@ namespace eGOTBackend.Models
                     .IsRequired()
                     .HasColumnName("name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.RequiredPoints).HasColumnName("required_points");
             });
@@ -187,7 +187,7 @@ namespace eGOTBackend.Models
                     .IsRequired()
                     .HasColumnName("name")
                     .HasMaxLength(80)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             modelBuilder.Entity<MountainRange>(entity =>
@@ -215,7 +215,7 @@ namespace eGOTBackend.Models
                     .IsRequired()
                     .HasColumnName("name")
                     .HasMaxLength(80)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             modelBuilder.Entity<MountainSystem>(entity =>
@@ -231,7 +231,7 @@ namespace eGOTBackend.Models
                     .IsRequired()
                     .HasColumnName("name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
             });
 
@@ -431,13 +431,13 @@ namespace eGOTBackend.Models
                     .IsRequired()
                     .HasColumnName("first_name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.LastName)
                     .IsRequired()
                     .HasColumnName("last_name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.LastSeen)
                     .HasColumnName("last_seen")

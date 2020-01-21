@@ -10,7 +10,7 @@ import TripVerificationDecisionView from './Views/TripVerification/TripVerificat
 import UnverifiedTripsView from './Views/TripVerification/UnverifiedTripsView/UnverifiedTripsView';
 import MountainRange from './Views/SectionList/MountainRange';
 import ProposedSections from './Views/SectionList/ProposedSections';
-import MountainSystems from './Views/SectionList/MountainSystems';
+import MountainRanges from './Views/SectionList/MountainRanges';
 import PrepopulateDatabaseView from './Views/PrepopulateDatabase/PrepopulateDatabaseView';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />
         <Route exact path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
-        <Route exact path={paths.MOUNTAIN_SYSTEMS} component={MountainSystems} />
+        <Route exact path={paths.MOUNTAIN_SYSTEMS} component={MountainRanges} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.PROOFS} component={TripVerificationProofsView} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.DECISION} component={TripVerificationDecisionView} />

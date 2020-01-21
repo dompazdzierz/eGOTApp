@@ -56,18 +56,15 @@ mountains = {
 
 
 global_msystems = []
-for i, msystem in enumerate(mountains.keys()):
-    global_msystems.append((i, msystem))
+for msystem in mountains.keys():
+    global_msystems.append(msystem)
 
 global_mranges = []
-index = 0
 for msystem, mranges in mountains.items():
     for mrange in mranges:
-        global_mranges.append((index, mrange, [i for i, ms in global_msystems if ms == msystem][0]))
-        index += 1
+        global_mranges.append((mrange, msystem))
 
 locations_for_mrange = {}
-index = 0
 for msystem, mranges in mountains.items():
     for mrange, url in mranges.items():
         locations_for_mrange[mrange] = []
@@ -89,46 +86,43 @@ for msystem, mranges in mountains.items():
                     location = location.strip()
                     location = location.replace('"', '\\"')
 
-                    longitude = round(random.uniform(49.541157, 50.779619), 6)
-                    latitude = round(random.uniform(16.210728, 22.367053), 6)
-
-                    locations_for_mrange[mrange].append((index, location, longitude, latitude))
-                    
-                    index += 1
+                    locations_for_mrange[mrange].append(location)
 
 global_locations = []
+all_locations = []
 for mrange, locations in locations_for_mrange.items():
     for location in locations:
-        global_locations.append(location)
+        all_locations.append(location)
+
+for location in list(set(all_locations)):
+    longitude = round(random.uniform(49.541157, 50.779619), 6)
+    latitude = round(random.uniform(16.210728, 22.367053), 6)
+
+    global_locations.append((location, longitude, latitude))
 
 global_sections = []
-index = 0
 for mrange, locations in locations_for_mrange.items():
     for i in range(len(locations) * 3):
-        indexxx = i // 5
-        choice = random.choice(locations)
-        start_location = [i for i, loc, lat, lon in global_locations if loc == locations[indexxx][1]][0]
-        end_location = [i for i, loc, lat, lon in global_locations if loc == choice[1]][0]
+        start_location = locations[i // 5]
+        end_location = random.choice(locations)
         length = int(random.uniform(500, 5000))
         elevation_gain = int(random.uniform(50, 500))
         reverse_elevation_gain = max(0, elevation_gain + random.uniform(-100, 100))
         score = int(length // 1000 + elevation_gain // 100)
         reverse_score = int(length // 1000 + reverse_elevation_gain // 100)
         status = True
-        mountain_range = [i for i, mr, ms in global_mranges if mr == mrange][0]
+        mountain_range = mrange
 
-        global_sections.append((index, start_location, end_location, length, elevation_gain, score, status, mountain_range))
-        global_sections.append((index + 1, end_location, start_location, length, elevation_gain, reverse_score, status, mountain_range))
-
-        index += 2
+        global_sections.append((start_location, end_location, length, elevation_gain, score, status, mountain_range))
+        global_sections.append((end_location, start_location, length, elevation_gain, reverse_score, status, mountain_range))
 
 
 with open('mountainSystems.json', 'w') as file:
     file.write('[')
     separator = ''
 
-    for i, msystem in global_msystems:
-        file.write('{0}\n    {{\n        "id": {1},\n        "name": "{2}"\n    }}'.format(separator, i, msystem))
+    for msystem in global_msystems:
+        file.write('{0}\n    {{\n        "name": "{1}"\n    }}'.format(separator, msystem))
         separator = ','
     
     file.write('\n]\n')
@@ -138,8 +132,8 @@ with open('mountainRanges.json', 'w') as file:
     file.write('[')
     separator = ''
 
-    for i, mrange, msystem in global_mranges:
-        file.write('{0}\n    {{\n        "id": {1},\n        "name": "{2}",\n        "mountainRange": {3}\n    }}'.format(separator, i, mrange, msystem))
+    for mrange, msystem in global_mranges:
+        file.write('{0}\n    {{\n        "name": "{1}",\n        "mountainRange": "{2}"\n    }}'.format(separator, mrange, msystem))
         separator = ','
     
     file.write('\n]\n')
@@ -149,8 +143,8 @@ with open('locations.json', 'w') as file:
     file.write('[')
     separator = ''
 
-    for index, location, longitude, latitude in global_locations:
-        file.write('{0}\n    {{\n        "id": {1},\n        "name": "{2}",\n        "longitude": {3},\n        "latitude": {4}\n    }}'.format(separator, index, location, longitude, latitude))
+    for location, longitude, latitude in global_locations:
+        file.write('{0}\n    {{\n        "name": "{1}",\n        "longitude": {2},\n        "latitude": {3}\n    }}'.format(separator, location, longitude, latitude))
         separator = ','
     
     file.write('\n]\n')
@@ -160,8 +154,8 @@ with open('sections.json', 'w') as file:
     file.write('[')
     separator = ''
 
-    for index, start_location, end_location, length, elevation_gain, score, status, mountain_range in global_sections:
-        file.write('{0}\n    {{\n        "id": {1},\n        "startLocation": {2},\n        "endLocation": {3},\n        "length": {4},\n        "elevationGain": {5},\n        "score": {6},\n        "status": {7},\n        "mountainRange": {8}\n    }}'.format(separator, index, start_location, end_location, length, elevation_gain, score, "true" if status else "false", mountain_range))
+    for start_location, end_location, length, elevation_gain, score, status, mountain_range in global_sections:
+        file.write('{0}\n    {{\n        "startLocation": "{1}",\n        "endLocation": "{2}",\n        "length": {3},\n        "elevationGain": {4},\n        "score": {5},\n        "status": {6},\n        "mountainRange": "{7}"\n    }}'.format(separator, start_location, end_location, length, elevation_gain, score, "true" if status else "false", mountain_range))
         separator = ','
     
     file.write('\n]\n')
