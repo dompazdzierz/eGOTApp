@@ -1,16 +1,12 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button, Header, Icon, Segment } from 'semantic-ui-react';
+import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import * as apiPaths from '../../Common/apiPaths';
 import NoDataSegment from '../../Components/NoDataSegment/NoDataSegment';
-
-const axios = require('axios');
-
-const axiosInstance = axios.create({
-    baseURL: apiPaths.API_ADRESS
-});
+import axios from '../../Common/axios';
+import { Route } from 'react-router';
 
 class MountainRange extends React.Component {
     constructor(props) {
@@ -22,10 +18,10 @@ class MountainRange extends React.Component {
         }
     }
 
-    componentWillMount() {
-        axiosInstance({
+    componentDidMount() {
+        axios() ({
             method: 'get',
-            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + this.getRangeId()
+            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + '/' + this.getRangeId()
         })
         .then(response => {
             this.setState({rangeName: response.data.name});
@@ -34,9 +30,9 @@ class MountainRange extends React.Component {
             console.log(error);
         })
 
-        axiosInstance({
+        axios() ({
             method: 'get',
-            url: apiPaths.SECTION + apiPaths.GET_ALL + this.getRangeId()
+            url: apiPaths.SECTIONS + apiPaths.GET_ALL + '?mountainRangeId=' + this.getRangeId() + '&status=' + true
         })
         .then(response => {
             this.setState({sectionsData: response.data});
@@ -44,15 +40,13 @@ class MountainRange extends React.Component {
         .catch(error => {
             console.log(error);
         })
-    }
 
-    componentDidMount() {
         document.getElementById('left-btn-sec').style.width = '200px';
     }
 
     getRangeId = () => {
         var url = window.location.pathname;
-        return url.substring(url.lastIndexOf('/'));
+        return url.substring(url.lastIndexOf('/') + 1);
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -78,13 +72,15 @@ class MountainRange extends React.Component {
         let tableBodyContent =
             sectionsData.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((section) => (
                 <Table.Row key={section.id}>
-                    <Table.Cell>{section.start_location}</Table.Cell>
-                    <Table.Cell>{section.end_location}</Table.Cell>
+                    <Table.Cell>{section.startLocation}</Table.Cell>
+                    <Table.Cell>{section.endLocation}</Table.Cell>
                     <Table.Cell>{section.score}</Table.Cell>
                     <Table.Cell>{section.length}</Table.Cell>
-                    <Table.Cell>{section.elevation_gain}</Table.Cell>
+                    <Table.Cell>{section.elevationGain}</Table.Cell>
                     <Table.Cell>
-                        <Button circular primary icon='pencil alternate'/>
+                        <Route render={({ history }) => (
+                            <Button onClick={() => history.push(paths.SECTION_EDIT + '/' + section.id)} circular primary icon='pencil alternate'/>
+                        )} />
                     </Table.Cell>
                     <Table.Cell>
                         <Button circular negative icon='trash alternate'/>

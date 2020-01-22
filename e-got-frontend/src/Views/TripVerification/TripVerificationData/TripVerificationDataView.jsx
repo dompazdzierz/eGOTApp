@@ -1,7 +1,7 @@
 import React from 'react';
 import './TripVerificationDataView.css';
 import '../TripVerification.css'
-import { Divider, Input, TextArea, Form } from 'semantic-ui-react';
+import { Divider, TextArea, Form } from 'semantic-ui-react';
 import * as paths from '../../../Common/paths'
 import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 import TextInput from '../../../Components/Inputs/TextInput';

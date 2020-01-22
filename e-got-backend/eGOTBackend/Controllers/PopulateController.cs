@@ -111,11 +111,11 @@ namespace eGOTBackend.Controllers
                 {
                     sections.Add(new Section
                     {
-                        StartLocation = _dbContext.Location.AsNoTracking()
+                        StartLocationId = _dbContext.Location.AsNoTracking()
                             .Where(x => x.Name == value["startLocation"])
                             .Select(x => x.Id)
                             .FirstOrDefault(),
-                        EndLocation = _dbContext.Location.AsNoTracking()
+                        EndLocationId = _dbContext.Location.AsNoTracking()
                             .Where(x => x.Name == value["endLocation"])
                             .Select(x => x.Id)
                             .FirstOrDefault(),
@@ -123,7 +123,7 @@ namespace eGOTBackend.Controllers
                         ElevationGain = value["elevationGain"],
                         Score = value["score"],
                         Status = value["status"],
-                        MountainRange = _dbContext.MountainRange.AsNoTracking()
+                        MountainRangeId = _dbContext.MountainRange.AsNoTracking()
                             .Where(x => x.Name == value["mountainRange"])
                             .Select(x => x.Id)
                             .FirstOrDefault()
