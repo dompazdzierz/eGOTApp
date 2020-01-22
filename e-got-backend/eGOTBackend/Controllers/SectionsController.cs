@@ -18,5 +18,12 @@ namespace eGOTBackend.Controllers
         {
             return _sectionsRangeRepository.GetAll(mountainRangeId, status);
         }
+
+        [HttpGet]
+        [ActionName("get")]
+        public virtual SectionViewModel Get(int id)
+        {
+            return _sectionsRangeRepository.Get(id);
+        }
     }
 }

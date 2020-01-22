@@ -6,6 +6,7 @@ import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer
 import * as apiPaths from '../../Common/apiPaths';
 import NoDataSegment from '../../Components/NoDataSegment/NoDataSegment';
 import axios from '../../Common/axios';
+import { Route } from 'react-router';
 
 class MountainRange extends React.Component {
     constructor(props) {
@@ -77,7 +78,9 @@ class MountainRange extends React.Component {
                     <Table.Cell>{section.length}</Table.Cell>
                     <Table.Cell>{section.elevationGain}</Table.Cell>
                     <Table.Cell>
-                        <Button circular primary icon='pencil alternate'/>
+                        <Route render={({ history }) => (
+                            <Button onClick={() => history.push(paths.SECTION_EDIT + '/' + section.id)} circular primary icon='pencil alternate'/>
+                        )} />
                     </Table.Cell>
                     <Table.Cell>
                         <Button circular negative icon='trash alternate'/>
