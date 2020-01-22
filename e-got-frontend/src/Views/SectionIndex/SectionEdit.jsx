@@ -52,9 +52,9 @@ class SectionEdit extends React.Component {
     render() {
 
         return(
-            <SegmentContainer headerContent="Nieprzebyte wycieczki" iconName='list alternate outline'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
-                rightButtonContent="Dalej" rightButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)} >
+            <SegmentContainer headerContent="Edycja wycieczki" iconName='edit'
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
+                 >
 
                 <Divider />
 
