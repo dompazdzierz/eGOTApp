@@ -1,16 +1,11 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button, Header, Icon, Segment } from 'semantic-ui-react';
+import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import * as apiPaths from '../../Common/apiPaths';
 import NoDataSegment from '../../Components/NoDataSegment/NoDataSegment';
-
-const axios = require('axios');
-
-const axiosInstance = axios.create({
-    baseURL: apiPaths.API_ADRESS
-});
+import axios from '../../Common/axios';
 
 class MountainRange extends React.Component {
     constructor(props) {
@@ -23,7 +18,7 @@ class MountainRange extends React.Component {
     }
 
     componentDidMount() {
-        axiosInstance({
+        axios() ({
             method: 'get',
             url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + '/' + this.getRangeId()
         })
@@ -34,7 +29,7 @@ class MountainRange extends React.Component {
             console.log(error);
         })
 
-        axiosInstance({
+        axios() ({
             method: 'get',
             url: apiPaths.SECTIONS + apiPaths.GET_ALL + '?mountainRangeId=' + this.getRangeId() + '&status=' + true
         })

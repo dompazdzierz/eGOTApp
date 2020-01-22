@@ -6,7 +6,7 @@ import * as paths from '../../../Common/paths'
 import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 import TextInput from '../../../Components/Inputs/TextInput';
 
-class TripVerificationDataView extends React.Component {
+class SectionEdit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -54,4 +54,4 @@ class TripVerificationDataView extends React.Component {
         )
     }
 }
-export default TripVerificationDataView;
+export default SectionEdit;

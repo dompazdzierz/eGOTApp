@@ -5,12 +5,7 @@ import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import { Route } from 'react-router';
-
-const axios = require('axios');
-
-const axiosInstance = axios.create({
-    baseURL: apiPaths.API_ADRESS
-});
+import axios from '../../Common/axios';
 
 class MountainRanges extends React.Component {
     constructor(props) {
@@ -22,7 +17,7 @@ class MountainRanges extends React.Component {
     }
 
     componentDidMount() {
-        axiosInstance({
+        axios() ({
             method: 'get',
             url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET_ALL
         })
