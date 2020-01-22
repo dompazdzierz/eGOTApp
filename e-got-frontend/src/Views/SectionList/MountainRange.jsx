@@ -57,13 +57,13 @@ class MountainRange extends React.Component {
             </Table.Row>
 
         let tableBodyContent =
-            rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
-                <Table.Row key={trip.id}>
-                    <Table.Cell>{trip.start_location}</Table.Cell>
-                    <Table.Cell>{trip.end_location}</Table.Cell>
-                    <Table.Cell>{trip.score}</Table.Cell>
-                    <Table.Cell>{trip.length}</Table.Cell>
-                    <Table.Cell>{trip.elevation_gain}</Table.Cell>
+            rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((section) => (
+                <Table.Row key={section.id}>
+                    <Table.Cell>{section.start_location}</Table.Cell>
+                    <Table.Cell>{section.end_location}</Table.Cell>
+                    <Table.Cell>{section.score}</Table.Cell>
+                    <Table.Cell>{section.length}</Table.Cell>
+                    <Table.Cell>{section.elevation_gain}</Table.Cell>
                     <Table.Cell>
                         <Button circular primary icon='pencil alternate'/>
                     </Table.Cell>

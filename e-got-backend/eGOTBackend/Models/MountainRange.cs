@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace eGOTBackend.Models
 {
+    [Serializable]
+    [DataContract(IsReference = true)]
     public partial class MountainRange : IEntity
     {
         public MountainRange()
@@ -10,8 +14,11 @@ namespace eGOTBackend.Models
             Section = new HashSet<Section>();
         }
 
+        [DataMember(Name = "id")]
         public int Id { get; set; }
+        [DataMember(Name = "name")]
         public string Name { get; set; }
+        [DataMember(Name = "mountainSystemId")]
         public int MountainSystemId { get; set; }
 
         public virtual MountainSystem MountainSystem { get; set; }

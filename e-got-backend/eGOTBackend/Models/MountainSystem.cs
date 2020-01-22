@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace eGOTBackend.Models
 {
-    [DataContract]
+    [Serializable]
+    [DataContract(IsReference = true)]
     public partial class MountainSystem : IEntity
     {
         public MountainSystem()

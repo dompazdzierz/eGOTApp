@@ -15,7 +15,7 @@ namespace eGOTBackend.Controllers
 
         [HttpGet]
         [ActionName("getAll")]
-        public virtual IEnumerable<TEntity> Get()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return _dbContext.Set<TEntity>();
         }
