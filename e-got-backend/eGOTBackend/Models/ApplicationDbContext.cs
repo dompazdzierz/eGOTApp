@@ -292,7 +292,7 @@ namespace eGOTBackend.Models
                 entity.Property(e => e.PositionInTrip).HasColumnName("position_in_trip");
 
                 entity.HasOne(d => d.IdSectionNavigation)
-                    .WithMany(p => p.Route)
+                    .WithMany(p => p.Routes)
                     .HasForeignKey(d => d.IdSection)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKRoute598500");
@@ -313,33 +313,33 @@ namespace eGOTBackend.Models
 
                 entity.Property(e => e.ElevationGain).HasColumnName("elevation_gain");
 
-                entity.Property(e => e.EndLocation).HasColumnName("end_location");
+                entity.Property(e => e.EndLocationId).HasColumnName("end_location");
 
                 entity.Property(e => e.Length).HasColumnName("length");
 
-                entity.Property(e => e.MountainRange).HasColumnName("mountain_range");
+                entity.Property(e => e.MountainRangeId).HasColumnName("mountain_range");
 
                 entity.Property(e => e.Score).HasColumnName("score");
 
-                entity.Property(e => e.StartLocation).HasColumnName("start_location");
+                entity.Property(e => e.StartLocationId).HasColumnName("start_location");
 
                 entity.Property(e => e.Status).HasColumnName("status");
 
-                entity.HasOne(d => d.EndLocationNavigation)
+                entity.HasOne(d => d.EndLocation)
                     .WithMany(p => p.SectionEndLocationNavigation)
-                    .HasForeignKey(d => d.EndLocation)
+                    .HasForeignKey(d => d.EndLocationId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKSection74604");
 
-                entity.HasOne(d => d.MountainRangeNavigation)
+                entity.HasOne(d => d.MountainRange)
                     .WithMany(p => p.Section)
-                    .HasForeignKey(d => d.MountainRange)
+                    .HasForeignKey(d => d.MountainRangeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKSection521241");
 
-                entity.HasOne(d => d.StartLocationNavigation)
+                entity.HasOne(d => d.StartLocation)
                     .WithMany(p => p.SectionStartLocationNavigation)
-                    .HasForeignKey(d => d.StartLocation)
+                    .HasForeignKey(d => d.StartLocationId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKSection198858");
             });

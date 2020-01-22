@@ -9,15 +9,15 @@ namespace eGOTBackend.Models
     {
         public Section()
         {
-            Route = new HashSet<Route>();
+            Routes = new HashSet<Route>();
         }
 
         [DataMember(Name = "id")]
         public int Id { get; set; }
-        [DataMember(Name = "startLocation")]
-        public int StartLocation { get; set; }
-        [DataMember(Name = "endLocation")]
-        public int EndLocation { get; set; }
+        [DataMember(Name = "startLocationId")]
+        public int StartLocationId { get; set; }
+        [DataMember(Name = "endLocationId")]
+        public int EndLocationId { get; set; }
         [DataMember(Name = "length")]
         public float Length { get; set; }
         [DataMember(Name = "elevationGain")]
@@ -26,12 +26,12 @@ namespace eGOTBackend.Models
         public int Score { get; set; }
         [DataMember(Name = "status")]
         public bool Status { get; set; }
-        [DataMember(Name = "mountainRange")]
-        public int MountainRange { get; set; }
+        [DataMember(Name = "mountainRangeId")]
+        public int MountainRangeId { get; set; }
 
-        public virtual Location EndLocationNavigation { get; set; }
-        public virtual MountainRange MountainRangeNavigation { get; set; }
-        public virtual Location StartLocationNavigation { get; set; }
-        public virtual ICollection<Route> Route { get; set; }
+        public virtual Location EndLocation { get; set; }
+        public virtual MountainRange MountainRange { get; set; }
+        public virtual Location StartLocation { get; set; }
+        public virtual ICollection<Route> Routes { get; set; }
     }
 }

@@ -22,7 +22,7 @@ class MountainRange extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axiosInstance({
             method: 'get',
             url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + this.getRangeId()
@@ -36,7 +36,7 @@ class MountainRange extends React.Component {
 
         axiosInstance({
             method: 'get',
-            url: apiPaths.SECTION + apiPaths.GET_ALL + this.getRangeId()
+            url: apiPaths.SECTIONS + apiPaths.GET_ALL + this.getRangeId()
         })
         .then(response => {
             this.setState({sectionsData: response.data});
@@ -44,9 +44,7 @@ class MountainRange extends React.Component {
         .catch(error => {
             console.log(error);
         })
-    }
 
-    componentDidMount() {
         document.getElementById('left-btn-sec').style.width = '200px';
     }
 
