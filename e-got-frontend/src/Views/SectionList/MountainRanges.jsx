@@ -33,18 +33,6 @@ class MountainRanges extends React.Component {
         .catch(error => {
             console.log(error);
         })
-
-        axiosInstance({
-            method: 'get',
-            url: apiPaths.MOUNTAIN_SYSTEMS + apiPaths.GET_ALL
-        })
-        .then(response => {
-            console.log(response.data)
-            this.setState({rows: response.data});
-        })
-        .catch(error => {
-            console.log(error);
-        })
     }
 
     handlePaginationChange = (_, data) =>  {

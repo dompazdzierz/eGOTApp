@@ -19,5 +19,10 @@ namespace eGOTBackend.Models
         public string Name { get; set; }
         [DataMember(Name = "mountainRanges")]
         public virtual ICollection<MountainRange> MountainRanges { get; set; }
+
+        internal object Include(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

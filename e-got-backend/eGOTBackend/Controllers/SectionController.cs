@@ -23,9 +23,9 @@ namespace eGOTBackend.Controllers
 
         [HttpGet]
         [ActionName("getAll")]
-        public virtual IEnumerable<ApiSection> Get(string mountain_range)
+        public virtual IEnumerable<ApiSection> Get(int id)
         {
-            int mountain_range_id = _dbContext.Set<MountainRange>().Where(x => x.Name == mountain_range).Select(x => x.Id).FirstOrDefault();
+            int mountain_range_id = _dbContext.Set<MountainRange>().Where(x => x.Id == id).Select(x => x.Id).FirstOrDefault();
 
             IEnumerable<Section> entities = _dbContext.Set<Section>().Where(x => x.MountainRange == mountain_range_id);
             IEnumerable<ApiSection> api_entities = new List<ApiSection>();

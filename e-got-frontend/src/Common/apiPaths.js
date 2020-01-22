@@ -8,7 +8,7 @@ export const LOCATION = "/location";
 export const POPULATE_ALL = "/populate/all"
 
 // Actions paths
+export const GET = "/get"
 export const GET_ALL = "/getAll"
-export const GET_ALL_WITH = "/getAllWithRanges"
 export const ADD_ELEMENT = "/addElement"
 export const ADD_ELEMENTS = "/addElements"

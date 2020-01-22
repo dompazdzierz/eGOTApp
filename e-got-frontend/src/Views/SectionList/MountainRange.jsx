@@ -17,23 +17,42 @@ class MountainRange extends React.Component {
         super(props)
         this.state = {
             currentPage: 1,
-            rows: []
+            rangeName: '',
+            sectionsData: []
         }
+    }
+
+    componentWillMount() {
+        axiosInstance({
+            method: 'get',
+            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + this.getRangeId()
+        })
+        .then(response => {
+            this.setState({rangeName: response.data.name});
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        axiosInstance({
+            method: 'get',
+            url: apiPaths.SECTION + apiPaths.GET_ALL + this.getRangeId()
+        })
+        .then(response => {
+            this.setState({sectionsData: response.data});
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     componentDidMount() {
         document.getElementById('left-btn-sec').style.width = '200px';
+    }
 
-        axiosInstance({
-            method: 'get',
-            url: apiPaths.SECTION + apiPaths.GET_ALL + "?mountain_range=" + this.props.location.data
-        })
-        .then(response => {
-            this.setState({rows: response.data});
-        })
-        .catch(error => {
-            console.log(error.response.data);
-        })
+    getRangeId = () => {
+        var url = window.location.pathname;
+        return url.substring(url.lastIndexOf('/'));
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -41,8 +60,8 @@ class MountainRange extends React.Component {
     }
 
     render() {
-        let { rows } = this.state
-
+        let { sectionsData } = this.state
+        console.log(sectionsData)
         const rowsPerPage = 6
 
         let tableHeaderContent =
@@ -57,7 +76,7 @@ class MountainRange extends React.Component {
             </Table.Row>
 
         let tableBodyContent =
-            rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((section) => (
+            sectionsData.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((section) => (
                 <Table.Row key={section.id}>
                     <Table.Cell>{section.start_location}</Table.Cell>
                     <Table.Cell>{section.end_location}</Table.Cell>
@@ -73,18 +92,16 @@ class MountainRange extends React.Component {
                 </Table.Row>
             ))
 
-            let content =
-            rows.length > 0 ?
-            <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
+        let content =
+            sectionsData.length > 0 ?
+            <ListWithPagination rowsNumber={sectionsData.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                 handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
                 handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
             :
             <NoDataSegment noDataMessage="Nie ma jeszcze dodanych odcinków dla tego pasma górskiego." />
 
-
         return(
-
-            <SegmentContainer headerContent={this.props.location.data} iconName='map'
+            <SegmentContainer headerContent={this.state.rangeName} iconName='map'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
                 rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
                 rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >

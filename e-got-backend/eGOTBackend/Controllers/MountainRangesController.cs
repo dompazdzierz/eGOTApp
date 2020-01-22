@@ -11,38 +11,21 @@ namespace eGOTBackend.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class MountainRangesController : ApiController
     {
+        private readonly MountainRangesRepostiory _mountainsRangeRepository = new MountainRangesRepostiory();
+
         [HttpGet]
         [ActionName("getAll")]
-        public List<MountainRangeViewModel> Test()
+        public List<MountainRangeViewModel> GetAll()
         {
-            using (var dbContext = new ApplicationDbContext())
-            {
-                List<MountainRange> mountainRanges = new List<MountainRange>();
-                mountainRanges = dbContext.MountainRange.AsNoTracking()
-                    .Include(x => x.MountainSystem)
-                    .ToList();
-
-                if (mountainRanges == null)
-                {
-                    return null;
-                }
-
-                mountainRanges.Sort((a, b) => a.MountainSystem.Id.CompareTo(b.MountainSystem.Id));
-
-                List<MountainRangeViewModel> mountainRangeViewModels = new List<MountainRangeViewModel>();
-                foreach (var x in mountainRanges)
-                {
-                    var mountainRangeViewModel = new MountainRangeViewModel()
-                    {
-                        Id = x.Id,
-                        Name = x.Name,
-                        MountainSystemName = x.MountainSystem.Name
-                    };
-                    mountainRangeViewModels.Add(mountainRangeViewModel);
-                }
-
-                return mountainRangeViewModels;
-            }
+            return _mountainsRangeRepository.GetAll();
         }
+
+        [HttpGet]
+        [ActionName("get")]
+        public MountainRangeViewModel Get(int id)
+        {
+            return _mountainsRangeRepository.Get(id);
+        }
+
     }
 }
