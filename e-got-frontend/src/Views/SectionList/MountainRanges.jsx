@@ -27,7 +27,7 @@ class MountainRanges extends React.Component {
             url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET_ALL
         })
         .then(response => {
-            console.log(response);
+            console.log(response.data)
             this.setState({rows: response.data});
         })
         .catch(error => {

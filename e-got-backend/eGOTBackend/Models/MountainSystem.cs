@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace eGOTBackend.Models
 {
-    [DataContract]
+    [Serializable]
+    [DataContract(IsReference = true)]
     public partial class MountainSystem : IEntity
     {
         public MountainSystem()
@@ -17,5 +19,10 @@ namespace eGOTBackend.Models
         public string Name { get; set; }
         [DataMember(Name = "mountainRanges")]
         public virtual ICollection<MountainRange> MountainRanges { get; set; }
+
+        internal object Include(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

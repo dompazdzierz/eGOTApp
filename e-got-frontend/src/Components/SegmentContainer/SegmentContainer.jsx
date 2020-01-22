@@ -13,9 +13,6 @@ class SegmentContainer extends React.Component {
         const { leftButtonContent, leftSecButtonContent, rightButtonContent, rightSecButtonContent,
             leftButtonOnClick, leftSecButtonOnClick, rightButtonOnClick, rightSecButtonOnClick, headerContent, iconName} = this.props
 
-            console.log(leftButtonContent)
-
-
         const leftBtnStyle = {
             visibility: leftButtonContent == null ? 'hidden' : 'visible'
         }

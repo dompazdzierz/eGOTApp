@@ -13,13 +13,6 @@ namespace eGOTBackend.Controllers
     {
         protected readonly ApplicationDbContext _dbContext = new ApplicationDbContext();
 
-        [HttpGet]
-        [ActionName("getAll")]
-        public virtual IEnumerable<TEntity> Get()
-        {
-            return _dbContext.Set<TEntity>();
-        }
-
         [HttpPost]
         [ActionName("addElement")]
         public virtual IHttpActionResult Post(TEntity entity)
@@ -39,6 +32,5 @@ namespace eGOTBackend.Controllers
 
             return Ok(entities);
         }
-
     }
 }
