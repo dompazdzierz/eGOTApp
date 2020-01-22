@@ -1,9 +1,7 @@
 ﻿using eGOTBackend.Models.ViewModels;
 using eGOTBackend.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Microsoft.EntityFrameworkCore;
 
 namespace eGOTBackend.Repostiories
@@ -15,7 +13,7 @@ namespace eGOTBackend.Repostiories
             var sections = new List<Section>();
             sections = dbContext.Section
                 .Where(x => x.MountainRangeId == mountainRangeId && x.Status == status)
-                .Include(x => new { x.EndLocation, x.StartLocation, x.MountainRange })
+                .Include(x => x.EndLocation).Include(x => x.StartLocation).Include(x => x.MountainRange)
                 .ToList();
 
             if (sections == null)

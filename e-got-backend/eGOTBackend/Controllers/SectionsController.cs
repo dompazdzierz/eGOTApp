@@ -16,7 +16,7 @@ namespace eGOTBackend.Controllers
         [ActionName("getAll")]
         public virtual IEnumerable<SectionViewModel> GetAll(int mountainRangeId, bool status)
         {
-            return _sectionsRangeRepository.GetAll(mountainRangeId, isActive);
+            return _sectionsRangeRepository.GetAll(mountainRangeId, status);
         }
     }
 }

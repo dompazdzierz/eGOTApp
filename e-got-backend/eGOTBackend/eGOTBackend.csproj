@@ -198,7 +198,7 @@
     <Compile Include="Controllers\BaseCrudController.cs" />
     <Compile Include="Controllers\MountainRangesController.cs" />
     <Compile Include="Controllers\PopulateController.cs" />
-    <Compile Include="Controllers\SectionController.cs" />
+    <Compile Include="Controllers\SectionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -233,10 +233,6 @@
     <Compile Include="Migrations\20200121162334_make_strings_unicode.cs" />
     <Compile Include="Migrations\20200121162334_make_strings_unicode.designer.cs">
       <DependentUpon>20200121162334_make_strings_unicode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20200122194354_renames_22_01.cs" />
-    <Compile Include="Migrations\20200122194354_renames_22_01.designer.cs">
-      <DependentUpon>20200122194354_renames_22_01.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />

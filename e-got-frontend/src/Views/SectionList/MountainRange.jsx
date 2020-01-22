@@ -25,7 +25,7 @@ class MountainRange extends React.Component {
     componentDidMount() {
         axiosInstance({
             method: 'get',
-            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + this.getRangeId()
+            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + '/' + this.getRangeId()
         })
         .then(response => {
             this.setState({rangeName: response.data.name});
@@ -36,7 +36,7 @@ class MountainRange extends React.Component {
 
         axiosInstance({
             method: 'get',
-            url: apiPaths.SECTIONS + apiPaths.GET_ALL + this.getRangeId()
+            url: apiPaths.SECTIONS + apiPaths.GET_ALL + '?mountainRangeId=' + this.getRangeId() + '&status=' + true
         })
         .then(response => {
             this.setState({sectionsData: response.data});
@@ -50,7 +50,7 @@ class MountainRange extends React.Component {
 
     getRangeId = () => {
         var url = window.location.pathname;
-        return url.substring(url.lastIndexOf('/'));
+        return url.substring(url.lastIndexOf('/') + 1);
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -76,11 +76,11 @@ class MountainRange extends React.Component {
         let tableBodyContent =
             sectionsData.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((section) => (
                 <Table.Row key={section.id}>
-                    <Table.Cell>{section.start_location}</Table.Cell>
-                    <Table.Cell>{section.end_location}</Table.Cell>
+                    <Table.Cell>{section.startLocation}</Table.Cell>
+                    <Table.Cell>{section.endLocation}</Table.Cell>
                     <Table.Cell>{section.score}</Table.Cell>
                     <Table.Cell>{section.length}</Table.Cell>
-                    <Table.Cell>{section.elevation_gain}</Table.Cell>
+                    <Table.Cell>{section.elevationGain}</Table.Cell>
                     <Table.Cell>
                         <Button circular primary icon='pencil alternate'/>
                     </Table.Cell>
