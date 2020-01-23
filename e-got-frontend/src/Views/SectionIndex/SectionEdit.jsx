@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Button, Confirm } from 'semantic-ui-react';
+import { Divider, Button, Confirm, Label } from 'semantic-ui-react';
 import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
 import '../TripVerification/TripVerification.css'
 import * as apiPaths from '../../Common/apiPaths'
@@ -23,6 +23,7 @@ class SectionEdit extends React.Component {
             locationsData: [],
             mountainRangesData: [],
             changes: false,
+            saved: false,
             open: false,
             content: ""
         }
@@ -133,7 +134,7 @@ class SectionEdit extends React.Component {
                         history.goBack()
                     }
                 }}
-                 >
+            >
 
                 <Divider />
 
@@ -180,12 +181,17 @@ class SectionEdit extends React.Component {
 
                 <Button
                     primary
+                    disabled={!this.state.changes}
                     content={'Zapisz odcinek'}
                     onClick={() => {
                         this.saveSection()
+                        this.setState({saved: true, changes: false})
                         // history.goBack() TODO
                     }}
                 />
+
+                {this.state.saved && !this.state.changes &&
+                <Label>Zapisano!</Label>}
 
                 <Route render={({ history }) => (
                     <Confirm        
@@ -197,7 +203,7 @@ class SectionEdit extends React.Component {
                         }}
                         cancelButton='Nie'
                         confirmButton='Tak'
-                    />    
+                    />
                 )} />
             </SegmentContainer>
         )
