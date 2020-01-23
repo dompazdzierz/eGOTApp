@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Button } from 'semantic-ui-react';
+import { Divider, Button, Confirm } from 'semantic-ui-react';
 import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
 import '../TripVerification/TripVerification.css'
 import * as apiPaths from '../../Common/apiPaths'
@@ -7,6 +7,7 @@ import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer
 import TextInput from '../../Components/Inputs/TextInput'
 import CustomDropdown from '../../Components/Dropdown/CustomDropdown'
 import axios from '../../Common/axios'
+import { Route } from 'react-router';
 
 class SectionEdit extends React.Component {
     constructor(props) {
@@ -20,7 +21,10 @@ class SectionEdit extends React.Component {
             status: false,
             mountainRangeId: 0,
             locationsData: [],
-            mountainRangesData: []
+            mountainRangesData: [],
+            changes: false,
+            open: false,
+            content: ""
         }
     }
 
@@ -88,7 +92,7 @@ class SectionEdit extends React.Component {
         return url.substring(url.lastIndexOf('/') + 1);
     }
 
-    onChange = e => this.setState({ [e.target.name]: e.target.value })
+    onChange = e => this.setState({ [e.target.name]: e.target.value, changes: true })
 
     saveSection() {
         axios() ({
@@ -110,10 +114,25 @@ class SectionEdit extends React.Component {
         })
     }
 
+    openConfirm = () =>  {
+        this.setState({
+            open: true,
+            content: "Czy chcesz anulować zmiany?"
+        })
+    }
+
+    close = () => this.setState({ open: false })
+
     render() {
         return(
             <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => {
+                    if(this.state.changes) {
+                        this.openConfirm()
+                    } else {
+                        history.goBack()
+                    }
+                }}
                  >
 
                 <Divider />
@@ -126,7 +145,7 @@ class SectionEdit extends React.Component {
                             options={this.state.locationsData}
                             initialValue={this.state.startLocationId}
                             onChange={value => {
-                                this.setState({startLocationId: value})
+                                this.setState({startLocationId: value, changes: true})
                             }}
                         />
                         <CustomDropdown
@@ -135,7 +154,7 @@ class SectionEdit extends React.Component {
                             options={this.state.locationsData}
                             initialValue={this.state.endLocationId}
                             onChange={value => {
-                                this.setState({endLocationId: value})
+                                this.setState({endLocationId: value, changes: true})
                             }}
                         />
                         <CustomDropdown
@@ -144,7 +163,7 @@ class SectionEdit extends React.Component {
                             options={this.state.mountainRangesData}
                             initialValue={this.state.mountainRangeId}
                             onChange={value => {
-                                this.setState({mountainRangeId: value})
+                                this.setState({mountainRangeId: value, changes: true})
                             }}
                         />
                     </div>
@@ -168,6 +187,18 @@ class SectionEdit extends React.Component {
                     }}
                 />
 
+                <Route render={({ history }) => (
+                    <Confirm        
+                        open={this.state.open}
+                        content={this.state.content}
+                        onCancel={this.close}
+                        onConfirm={() => {
+                            history.goBack()
+                        }}
+                        cancelButton='Nie'
+                        confirmButton='Tak'
+                    />    
+                )} />
             </SegmentContainer>
         )
     }
