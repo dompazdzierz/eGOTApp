@@ -13,6 +13,7 @@ import SectionEdit from './Views/SectionIndex/SectionEdit';
 import MountainRange from './Views/SectionIndex/MountainRange';
 import MountainRanges from './Views/SectionIndex/MountainRanges';
 import ProposedSections from './Views/SectionIndex/ProposedSections';
+import EditTrip from './Views/UntraveledTrips/EditTrip';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
         <Route path={paths.SECTION_EDIT} component={SectionEdit} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
+        <Route path={paths.EDIT_TRIP} component={EditTrip} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView} />
         <Route exact path={paths.TRIP_VERIFICATION + paths.PROOFS} component={TripVerificationProofsView} />

@@ -1,8 +1,9 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button } from 'semantic-ui-react';
+import { Table, Button, Segment } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
+import { Route } from 'react-router';
 
 class UntraveledTripsView extends React.Component {
     constructor(props) {
@@ -46,7 +47,9 @@ class UntraveledTripsView extends React.Component {
                     <Table.Cell>{trip.date}</Table.Cell>
                     <Table.Cell>{trip.points}</Table.Cell>
                     <Table.Cell>
-                        <Button circular primary icon='pencil alternate'/>
+                        <Route render={({ history }) => (
+                            <Button circular primary icon='pencil alternate' onClick={() => history.push(paths.EDIT_TRIP + '/' + trip.id)}/>
+                        )} />
                     </Table.Cell>
                     <Table.Cell>
                         <Button circular negative icon='trash alternate'/>

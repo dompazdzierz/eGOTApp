@@ -61,7 +61,7 @@ class MountainRanges extends React.Component {
 
         return(
             <SegmentContainer headerContent="Spis odcinków punktowanych" iconName='map'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.MOUNTAIN_RANGE)} >
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                         handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={3}
