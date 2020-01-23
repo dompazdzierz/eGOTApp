@@ -53,7 +53,7 @@ class MountainRanges extends React.Component {
                     <Table.Cell>{trip.name}</Table.Cell>
                     <Table.Cell>
                         <Route render={({ history }) => (
-                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.MOUNTAIN_RANGE + '/' + trip.id)}/>
+                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.SCORED_SECTIONS + '/' + trip.id)}/>
                         )} />
                     </Table.Cell>
                 </Table.Row>

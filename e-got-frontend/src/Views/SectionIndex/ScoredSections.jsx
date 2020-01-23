@@ -8,7 +8,7 @@ import NoDataSegment from '../../Components/NoDataSegment/NoDataSegment';
 import axios from '../../Common/axios';
 import { Route } from 'react-router';
 
-class MountainRange extends React.Component {
+class ScoredSections extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -108,4 +108,4 @@ class MountainRange extends React.Component {
         )
     }
 }
-export default MountainRange;
+export default ScoredSections;

@@ -41,11 +41,10 @@ namespace eGOTBackend.Repostiories
             return sectionViewModels;           
         }
 
-        public SectionViewModel Get(int id)
+        public Section Get(int id)
         {
             var section = dbContext.Section
                 .Where(x => x.Id == id)
-                .Include(x => x.EndLocation).Include(x => x.StartLocation).Include(x => x.MountainRange)
                 .Single();
 
             if (section == null)
@@ -53,19 +52,7 @@ namespace eGOTBackend.Repostiories
                 return null;
             }
 
-            var sectionViewModel = new SectionViewModel
-            {
-                Id = section.Id,
-                StartLocation = section.StartLocation.Name,
-                EndLocation = section.EndLocation.Name,
-                Length = section.Length,
-                ElevationGain = section.ElevationGain,
-                Score = section.Score,
-                Status = section.Status,
-                MountainRange = section.MountainRange.Name
-            };
-
-            return sectionViewModel;
+            return section;
         }
     }
 }

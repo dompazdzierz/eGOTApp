@@ -1,7 +1,7 @@
 // Main paths:
 export const HOME_VIEW = "/";
-export const MOUNTAIN_SYSTEMS = '/mountain-systems';
-export const MOUNTAIN_RANGE = "/mountain-range";
+export const MOUNTAIN_RANGES = '/mountain-ranges';
+export const SCORED_SECTIONS = "/scored-sections";
 export const PROPOSED_SECTIONS = "/proposed-sections";
 export const SECTION_EDIT = "/section-edit";
 export const UNTRAVELED_TRIPS = "/untraveled-trips";
