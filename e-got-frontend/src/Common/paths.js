@@ -5,6 +5,7 @@ export const SCORED_SECTIONS = "/scored-sections";
 export const PROPOSED_SECTIONS = "/proposed-sections";
 export const SECTION_EDIT = "/section-edit";
 export const UNTRAVELED_TRIPS = "/untraveled-trips";
+export const EDIT_TRIP="/edit-trip"
 export const UNVERIFIED_TRIPS = "/unverified-trips";
 export const TRIP_VERIFICATION = "/trip-verification";
 export const PREPOPULATE_DATABASE = '/dev'

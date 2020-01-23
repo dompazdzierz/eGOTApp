@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Button, Confirm, Label, Form } from 'semantic-ui-react';
+import { Divider, Button, Confirm, Label } from 'semantic-ui-react';
 import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
 import '../TripVerification/TripVerification.css'
 import * as apiPaths from '../../Common/apiPaths'
@@ -123,43 +123,6 @@ class SectionEdit extends React.Component {
         .catch(error => {
             console.log(error);
         })
-
-    }
-
-    openConfirm = () =>  {
-        this.setState({
-            open: true,
-            content: "Czy chcesz anulować zmiany?"
-        })
-    }
-
-    close = () => this.setState({ open: false })
-
-    onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
-    }
-
-    saveSection() {
-        axios() ({
-            method: 'post',
-            url: apiPaths.SECTIONS + apiPaths.SET +
-                '?id=' + this.getSectionId() +
-                '&startLocationId=' + this.state.startLocationId +
-                '&endLocationId=' + this.state.endLocationId +
-                '&length=' + this.state.length +
-                '&elevationGain=' + this.state.elevationGain +
-                '&score=' + this.state.score +
-                '&mountainRangeId=' + this.state.mountainRangeId
-        })
-        .then(response => {
-            console.log(response)
-        })
-        .catch(error => {
-            console.log(error);
-        })
     }
 
     openConfirm = () =>  {
@@ -224,17 +187,18 @@ class SectionEdit extends React.Component {
                             value={this.state.elevationGain} name='elevationGain' label='m' />
                         <TextInput header='Punktacja' value={this.state.score} />
                     </div>
-
-                    <Button
-                        primary
-                        disabled={!this.state.changes}
-                        content={'Zapisz odcinek'}
-                        onClick={() => {
-                            this.saveSection()
-                            this.setState({saved: true, changes: false})
-                        }}
-                    />
                 </div>
+
+                <Button
+                    primary
+                    disabled={!this.state.changes}
+                    content={'Zapisz odcinek'}
+                    onClick={() => {
+                        this.saveSection()
+                        this.setState({saved: true, changes: false})
+                        // history.goBack() TODO
+                    }}
+                />
 
                 {this.state.saved && !this.state.changes &&
                 <Label>Zapisano!</Label>}
