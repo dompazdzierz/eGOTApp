@@ -15,12 +15,13 @@ function TextInput(props) {
             <React.Fragment>
                 <p className='inputs--label'>{props.header}</p>
                 <Input className='inputs--input' name={props.name} onChange={props.onChange} type={props.type} min={props.min} max={props.max}
-                    value={props.value} label={label} labelPosition={labelPosition} />
+                    value={props.value} label={label} labelPosition={labelPosition} required={props.required} maxLength={props.maxLength}/>
             </React.Fragment>
             :
             <React.Fragment>
                 <p className='inputs--label'>{props.header}</p>
-                <Input disabled className='inputs--input' value={props.value} label={label} labelPosition={labelPosition} name={props.name}/>
+                <Input disabled className='inputs--input' value={props.value} label={label} labelPosition={labelPosition} name={props.name}
+                required={props.required} maxLength={props.maxLength}/>
             </React.Fragment>
     )
 }
