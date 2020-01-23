@@ -1,39 +1,81 @@
 import React from 'react';
-import { Divider, TextArea, Form } from 'semantic-ui-react';
+import { Divider, Button } from 'semantic-ui-react';
+import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
+import '../TripVerification/TripVerification.css'
 import * as apiPaths from '../../Common/apiPaths'
-import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
-import TextInput from '../../Components/Inputs/TextInput';
-import axios from '../../Common/axios';
+import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer'
+import TextInput from '../../Components/Inputs/TextInput'
+import CustomDropdown from '../../Components/Dropdown/CustomDropdown'
+import axios from '../../Common/axios'
 
 class SectionEdit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startLocation: '',
-            endLocation: '',
+            startLocationId: 2,
+            endLocationId: 0,
             length: 0,
             elevationGain: 0,
             score: 0,
             status: false,
-            mountainRange: ''
+            mountainRangeId: 0,
+            locationsData: [],
+            mountainRangesData: []
         }
     }
 
     componentDidMount() {
         axios() ({
             method: 'get',
-            url: apiPaths.SECTIONS + apiPaths.GET + '/' + this.getRangeId()
+            url: apiPaths.SECTIONS + apiPaths.GET + '/' + this.getSectionId()
         })
         .then(response => {
-            console.log(response)
             this.setState({
-                startLocation: response.data.startLocation,
-                endLocation: response.data.endLocation,
+                startLocationId: response.data.startLocationId,
+                endLocationId: response.data.endLocationId,
                 length: response.data.length,
                 elevationGain: response.data.elevationGain,
                 score: response.data.score,
                 status: response.data.status,
-                mountainRange: response.data.mountainRange
+                mountainRangeId: response.data.mountainRangeId
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        axios() ({
+            method: 'get',
+            url: apiPaths.LOCATIONS + apiPaths.GET_ALL
+        })
+        .then(response => {
+            this.setState({
+                locationsData: response.data.map(location => {
+                    return {
+                        key: location.Id,
+                        value: location.Id,
+                        text: location.Name
+                    }
+                })
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        axios() ({
+            method: 'get',
+            url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET_ALL
+        })
+        .then(response => {
+            this.setState({
+                mountainRangesData: response.data.map(mountainRange => {
+                    return {
+                        key: mountainRange.id,
+                        value: mountainRange.id,
+                        text: mountainRange.name
+                    }
+                })
             });
         })
         .catch(error => {
@@ -41,17 +83,36 @@ class SectionEdit extends React.Component {
         })
     }
 
-    getRangeId = () => {
+    getSectionId() {
         var url = window.location.pathname;
         return url.substring(url.lastIndexOf('/') + 1);
     }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value })
 
-    render() {
+    saveSection() {
+        axios() ({
+            method: 'post',
+            url: apiPaths.SECTIONS + apiPaths.SET +
+                '?id=' + this.getSectionId() +
+                '&startLocationId=' + this.state.startLocationId +
+                '&endLocationId=' + this.state.endLocationId +
+                '&length=' + this.state.length +
+                '&elevationGain=' + this.state.elevationGain +
+                '&score=' + this.state.score +
+                '&mountainRangeId=' + this.state.mountainRangeId
+        })
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
 
+    render() {
         return(
-            <SegmentContainer headerContent="Edycja wycieczki" iconName='edit'
+            <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
                  >
 
@@ -59,14 +120,33 @@ class SectionEdit extends React.Component {
 
                 <div className="trip-verification-data--segment-half">
                     <div className="trip-verification-data--input-wrapper">
-                        <TextInput header='Data rozpoczęcia' />
-                        <TextInput header='Czas trwania' label='dni' />
-
-                        <p className="trip-verification--label">Trasa wycieczki</p>
-                        <Form>
-                            <TextArea disabled className="trip-verification-data--input"
-                                />
-                        </Form>
+                        <CustomDropdown
+                            header='Punkt początkowy'
+                            placeholder='Wybierz punkt początkowy'
+                            options={this.state.locationsData}
+                            initialValue={this.state.startLocationId}
+                            onChange={value => {
+                                this.setState({startLocationId: value})
+                            }}
+                        />
+                        <CustomDropdown
+                            header='Punkt końcowy'
+                            placeholder='Wybierz punkt końcowy'
+                            options={this.state.locationsData}
+                            initialValue={this.state.endLocationId}
+                            onChange={value => {
+                                this.setState({endLocationId: value})
+                            }}
+                        />
+                        <CustomDropdown
+                            header='Grupa górska'
+                            placeholder='Wybierz grupę górską'
+                            options={this.state.mountainRangesData}
+                            initialValue={this.state.mountainRangeId}
+                            onChange={value => {
+                                this.setState({mountainRangeId: value})
+                            }}
+                        />
                     </div>
                 </div>
                 <div className="trip-verification-data--segment-half">
@@ -78,6 +158,15 @@ class SectionEdit extends React.Component {
                         <TextInput header='Punktacja' value={this.state.score} />
                     </div>
                 </div>
+
+                <Button
+                    primary
+                    content={'Zapisz odcinek'}
+                    onClick={() => {
+                        this.saveSection()
+                        // history.goBack() TODO
+                    }}
+                />
 
             </SegmentContainer>
         )
