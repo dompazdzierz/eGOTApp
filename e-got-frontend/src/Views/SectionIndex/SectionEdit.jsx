@@ -93,7 +93,17 @@ class SectionEdit extends React.Component {
         return url.substring(url.lastIndexOf('/') + 1);
     }
 
-    onChange = e => this.setState({ [e.target.name]: e.target.value, changes: true })
+    calculateScore() {
+        let score = Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
+        this.setState({ score: score })
+    }
+
+    onSectionDimensionsChange = e => {
+        this.setState(
+            { [e.target.name]: e.target.value, changes: true },
+            () => this.calculateScore()
+        )
+    }
 
     saveSection() {
         axios() ({
@@ -171,9 +181,9 @@ class SectionEdit extends React.Component {
                 </div>
                 <div className="trip-verification-data--segment-half">
                     <div className="trip-verification-data--input-wrapper">
-                        <TextInput onChange={this.onChange} type="number" min={1} max={20000} header='Długość' 
+                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={20000} header='Długość' 
                             value={this.state.length} name='length' label='m' />
-                        <TextInput onChange={this.onChange} type="number" min={1} max={1000} header='Przewyższenie' 
+                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={1000} header='Przewyższenie' 
                             value={this.state.elevationGain} name='elevationGain' label='m' />
                         <TextInput header='Punktacja' value={this.state.score} />
                     </div>
