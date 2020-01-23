@@ -11,13 +11,13 @@ class UntraveledTripsView extends React.Component {
         this.state = {
             currentPage: 1,
             rows: [
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' },
-                { id: 1, route: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', date: '17.08.2019', points: '18' }
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 },
+                { id: 1, name: 'Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza', startDate: '17.08.2019', duration: 2, points: 18 }
             ]
         }
     }
@@ -35,6 +35,7 @@ class UntraveledTripsView extends React.Component {
             <Table.Row>
                 <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
                 <Table.HeaderCell>Data</Table.HeaderCell>
+                <Table.HeaderCell>Czas trwania</Table.HeaderCell>
                 <Table.HeaderCell>Punktacja</Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
@@ -43,8 +44,9 @@ class UntraveledTripsView extends React.Component {
         let tableBodyContent =
             rows.slice(0 + (this.state.currentPage - 1) * rowsPerPage, rowsPerPage + (this.state.currentPage - 1) * rowsPerPage).map((trip) => (
                 <Table.Row key={trip.id}>
-                    <Table.Cell>{trip.route}</Table.Cell>
-                    <Table.Cell>{trip.date}</Table.Cell>
+                    <Table.Cell>{trip.name}</Table.Cell>
+                    <Table.Cell>{trip.startDate}</Table.Cell>
+                    <Table.Cell>{trip.duration}</Table.Cell>
                     <Table.Cell>{trip.points}</Table.Cell>
                     <Table.Cell>
                         <Route render={({ history }) => (
@@ -62,7 +64,7 @@ class UntraveledTripsView extends React.Component {
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
-                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={5}
+                        handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={6}
                         handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
 
             </SegmentContainer>
