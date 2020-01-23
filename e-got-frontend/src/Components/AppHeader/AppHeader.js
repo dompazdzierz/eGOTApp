@@ -45,7 +45,7 @@ class AppHeader extends React.Component {
                     </Dropdown.Item>
                 )} />
                 <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push(paths.MOUNTAIN_SYSTEMS) }>
+                    <Dropdown.Item onClick={() => history.push(paths.MOUNTAIN_RANGES) }>
                         Spis odcinków punktowanych
                     </Dropdown.Item>
                 )} />

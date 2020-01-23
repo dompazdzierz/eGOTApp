@@ -53,7 +53,7 @@ class MountainRanges extends React.Component {
                     <Table.Cell>{trip.name}</Table.Cell>
                     <Table.Cell>
                         <Route render={({ history }) => (
-                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.MOUNTAIN_RANGE + '/' + trip.id)}/>
+                            <Button circular primary icon='arrow right' onClick={() => history.push(paths.SCORED_SECTIONS + '/' + trip.id)}/>
                         )} />
                     </Table.Cell>
                 </Table.Row>
@@ -61,7 +61,7 @@ class MountainRanges extends React.Component {
 
         return(
             <SegmentContainer headerContent="Spis odcinków punktowanych" iconName='map'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.MOUNTAIN_RANGE)} >
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.SCORED_SECTIONS)} >
 
                     <ListWithPagination rowsNumber={rows.length} rowsPerPage={6} tableHeaderContent={tableHeaderContent}
                         handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={3}

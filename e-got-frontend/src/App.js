@@ -10,7 +10,7 @@ import TripVerificationDecisionView from './Views/TripVerification/TripVerificat
 import UnverifiedTripsView from './Views/TripVerification/UnverifiedTripsView/UnverifiedTripsView';
 import PrepopulateDatabaseView from './Views/PrepopulateDatabase/PrepopulateDatabaseView';
 import SectionEdit from './Views/SectionIndex/SectionEdit';
-import MountainRange from './Views/SectionIndex/MountainRange';
+import ScoredSections from './Views/SectionIndex/ScoredSections';
 import MountainRanges from './Views/SectionIndex/MountainRanges';
 import ProposedSections from './Views/SectionIndex/ProposedSections';
 
@@ -20,8 +20,8 @@ function App() {
       <Switch>
         <Route exact path={paths.PREPOPULATE_DATABASE} component={PrepopulateDatabaseView} />
         <Route exact path={paths.HOME_VIEW} component={HomeView} />
-        <Route path={paths.MOUNTAIN_RANGE} component={MountainRange} />
-        <Route exact path={paths.MOUNTAIN_SYSTEMS} component={MountainRanges} />
+        <Route path={paths.SCORED_SECTIONS} component={ScoredSections} />
+        <Route exact path={paths.MOUNTAIN_RANGES} component={MountainRanges} />
         <Route exact path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
         <Route path={paths.SECTION_EDIT} component={SectionEdit} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />

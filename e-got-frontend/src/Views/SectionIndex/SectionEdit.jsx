@@ -1,6 +1,5 @@
 import React from 'react';
 import { Divider, TextArea, Form } from 'semantic-ui-react';
-import * as paths from '../../Common/paths'
 import * as apiPaths from '../../Common/apiPaths'
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import TextInput from '../../Components/Inputs/TextInput';

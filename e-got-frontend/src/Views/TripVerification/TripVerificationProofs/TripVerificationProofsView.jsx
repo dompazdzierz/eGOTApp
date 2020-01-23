@@ -29,14 +29,14 @@ class TripVerificationProofsView extends React.Component {
         let { currentPhotoIndex, photos } = this.state
 
         let leftContent =
-                photos.filter((x, i) => i % 2 == 0).map((photo, i) =>
+                photos.filter((x, i) => i % 2 === 0).map((photo, i) =>
                     <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex:  i * 2})}>
                         <Image src={photo} className="trip-verification-data--image-thumbnail"/>
                     </Button>
                 )
 
         let rightContnent =
-                photos.filter((x, i) => i % 2 == 1).map((photo, i) =>
+                photos.filter((x, i) => i % 2 === 1).map((photo, i) =>
                     <Button className="trip-verification-data--image-button" onClick={() => this.setState({currentPhotoIndex:  1 + i * 2})}>
                         <Image src={photo} className="trip-verification-data--image-thumbnail"/>
                     </Button>
