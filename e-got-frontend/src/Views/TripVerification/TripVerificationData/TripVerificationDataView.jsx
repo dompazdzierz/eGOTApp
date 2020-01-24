@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../../../App.css';
 import '../TripVerification.css'
-import { Divider, TextArea, Form } from 'semantic-ui-react';
+import { Divider, Form } from 'semantic-ui-react';
 import * as paths from '../../../Common/paths'
 import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 import TextInput from '../../../Components/Inputs/TextInput';
@@ -30,23 +30,22 @@ class TripVerificationDataView extends React.Component {
                 rightButtonContent="Dalej" rightButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.PROOFS)} >
 
                 <Divider />
-
-                <div className="common--segment-half">
-                    <div className="common--input-wrapper">
-                        <TextInput header='Data rozpoczęcia' value={startDate} />
-                        <TextInput header='Czas trwania' label='dni' value={duration} />
-                        <Form>
-                            <CustomTextArea header='Trasa wycieczki' placeholder={route}/>
-                        </Form>
+                <Form>
+                    <div className="common--segment-half">
+                        <div className="common--input-wrapper">
+                            <TextInput header='Data rozpoczęcia' value={startDate} />
+                            <TextInput header='Czas trwania' label='dni' value={duration} />
+                                <CustomTextArea header='Trasa wycieczki' placeholder={route}/>
+                        </div>
                     </div>
-                </div>
-                <div className="common--segment-half">
-                    <div className="common--input-wrapper">
-                        <TextInput header='Długość' value={length} label='m' />
-                        <TextInput header='Przewyższenie' value={elevationGain} label='m' />
-                        <TextInput header='Punktacja' value={points} />
+                    <div className="common--segment-half">
+                        <div className="common--input-wrapper">
+                            <TextInput header='Długość' value={length} label='m' />
+                            <TextInput header='Przewyższenie' value={elevationGain} label='m' />
+                            <TextInput header='Punktacja' value={points} />
+                        </div>
                     </div>
-                </div>
+                </Form>
 
             </SegmentContainer>
         )
