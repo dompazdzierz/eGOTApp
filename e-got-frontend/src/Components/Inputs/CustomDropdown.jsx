@@ -8,7 +8,7 @@ class CustomDropdown extends React.Component {
         let { header, placeholder, options, initialValue, onChange } = this.props
 
         return(
-            <div>
+            <React.Fragment>
                 <p className="inputs--label">{header}</p>
                 <Dropdown
                     className="inputs--input"
@@ -21,7 +21,7 @@ class CustomDropdown extends React.Component {
                         onChange(data.value)
                     }}
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }

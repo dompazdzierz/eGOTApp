@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../../../App.css';
 import '../TripVerification.css'
 import { Divider, TextArea, Form } from 'semantic-ui-react';
 import * as paths from '../../../Common/paths'
 import SegmentContainer from '../../../Components/SegmentContainer/SegmentContainer';
 import TextInput from '../../../Components/Inputs/TextInput';
+import CustomTextArea from '../../../Components/Inputs/CustomTextArea';
 
 class TripVerificationDataView extends React.Component {
     constructor(props) {
@@ -34,10 +35,8 @@ class TripVerificationDataView extends React.Component {
                     <div className="common--input-wrapper">
                         <TextInput header='Data rozpoczęcia' value={startDate} />
                         <TextInput header='Czas trwania' label='dni' value={duration} />
-                        <p className="trip-verification--label">Trasa wycieczki</p>
                         <Form>
-                            <TextArea disabled className="common--input"
-                                placeholder={route}/>
+                            <CustomTextArea header='Trasa wycieczki' placeholder={route}/>
                         </Form>
                     </div>
                 </div>

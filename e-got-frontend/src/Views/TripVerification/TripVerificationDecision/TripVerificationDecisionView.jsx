@@ -11,7 +11,8 @@ class TripVerificationDecisionView extends React.Component {
         this.state = {
             value: "",
             open: false,
-            content: ""
+            content: "",
+            verified: null
         }
     }
 
