@@ -134,5 +134,31 @@ namespace eGOTBackend.Controllers
                 _dbContext.SaveChanges();
             }
         }
+
+        private void _populateUsers()
+        {
+            using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/PopulateData/users.json"))
+            {
+                string json_string = sr.ReadToEnd();
+                JsonValue json = JsonValue.Parse(json_string);
+
+                ICollection<Users> users = new List<Users>();
+
+                foreach (JsonValue value in json)
+                {
+                    users.Add(new Users
+                    {
+                        FirstName = value["firstName"],
+                        LastName = value["lastName"],
+                        Email = value["email"],
+                        Password = value["password"],
+                        LastSeen = DateTime.Parse(value["lastSeen"])
+                    });
+                }
+
+                _dbContext.Users.AddRange(users);
+                _dbContext.SaveChanges();
+            }
+        }
     }
 }

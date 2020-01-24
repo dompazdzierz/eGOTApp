@@ -1,6 +1,6 @@
 import React from 'react';
 import * as values from '../../Common/values'
-import { Table, Button, Segment, Form, Input, TextArea } from 'semantic-ui-react';
+import { Segment, Form } from 'semantic-ui-react';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 
 class EditTrip extends React.Component {
@@ -59,7 +59,7 @@ class EditTrip extends React.Component {
                         <Form.TextArea label='Nazwa wycieczki' placeholder="Wycieczka 1: Palenica Białczańska - Wodogrzmoty Mickiewicza"
                             error={this.state.errorName} value={this.state.name} name="name" onChange={e => this.onChange(e)} />
 
-                        <Form.Input label='Data rozpoczęcia wycieczki' placeholder="19.07.2008" error={this.state.errorStartDate}
+                        <Form.Input label='Data rozpoczęcia wycieczki' placeholder="DD.MM.RRRR" error={this.state.errorStartDate}
                             value={this.state.startDate} name="startDate" onChange={e => this.onChange(e)} />
 
                         <Form.Input label='Czas trwania wycieczki' placeholder="2" error={this.state.errorDuration}

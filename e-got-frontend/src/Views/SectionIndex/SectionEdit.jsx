@@ -1,31 +1,36 @@
 import React from 'react';
-import { Divider, Button, Confirm, Label, Form } from 'semantic-ui-react';
-import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
-import '../TripVerification/TripVerification.css'
+import { Divider, Confirm, Form, Message } from 'semantic-ui-react';
 import * as apiPaths from '../../Common/apiPaths'
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer'
 import TextInput from '../../Components/Inputs/TextInput'
 import axios from '../../Common/axios'
 import { Route } from 'react-router';
 import CustomDropdown from '../../Components/Inputs/CustomDropdown';
+import * as values from '../../Common/values'
 
 class SectionEdit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startLocationId: 2,
-            endLocationId: 0,
-            length: 0,
-            elevationGain: 0,
+            startLocationId: null,
+            endLocationId: null,
+            length: null,
+            elevationGain: null,
             score: 0,
             status: false,
-            mountainRangeId: 0,
-            locationsData: [],
-            mountainRangesData: [],
+            mountainRangeId: null,
+            locationsData: null,
+            mountainRangesData: null,
             changes: false,
             saved: false,
             open: false,
-            content: ""
+            content: "",
+            errorStartLocation: null,
+            errorEndLocation: null,
+            errorMountainRange: null,
+            errorLength: null,
+            errorElevationGain: null,
+            isValid: true
         }
     }
 
@@ -105,27 +110,6 @@ class SectionEdit extends React.Component {
         )
     }
 
-    saveSection() {
-        axios() ({
-            method: 'post',
-            url: apiPaths.SECTIONS + apiPaths.SET +
-                '?id=' + this.getSectionId() +
-                '&startLocationId=' + this.state.startLocationId +
-                '&endLocationId=' + this.state.endLocationId +
-                '&length=' + this.state.length +
-                '&elevationGain=' + this.state.elevationGain +
-                '&score=' + this.state.score +
-                '&mountainRangeId=' + this.state.mountainRangeId
-        })
-        .then(response => {
-            console.log(response)
-        })
-        .catch(error => {
-            console.log(error);
-        })
-
-    }
-
     openConfirm = () =>  {
         this.setState({
             open: true,
@@ -171,6 +155,56 @@ class SectionEdit extends React.Component {
 
     close = () => this.setState({ open: false })
 
+    onSubmit = () => {
+        let isValid = true
+
+        if(!this.state.startLocationId) {
+            this.setState({ errorStartLocation: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorStartLocation: null })
+        }
+
+        if(!this.state.endLocationId) {
+            this.setState({ errorEndLocation: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorEndLocation: null })
+        }
+
+        if(!this.state.mountainRangeId) {
+            this.setState({ errorMountainRange: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorMountainRange: null })
+        }
+
+        if(!this.state.length) {
+            this.setState({ errorLength: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else if(this.state.length <= 0) {
+            this.setState({ errorLength: values.ERROR_FIELD_INVALID_NUMBER })
+            isValid = false
+        } else {
+            this.setState({ errorLength: null })
+        }
+
+        if(!this.state.elevationGain) {
+            this.setState({ errorElevationGain: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else if(this.state.elevationGain <= 0) {
+            this.setState({ errorElevationGain: values.ERROR_FIELD_INVALID_NUMBER })
+            isValid = false
+        } else {
+            this.setState({ errorElevationGain: null })
+        }
+
+        if(isValid) {
+            this.saveSection()
+            this.setState({saved: true, changes: false})
+        }
+    }
+
     render() {
         return(
             <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
@@ -182,12 +216,11 @@ class SectionEdit extends React.Component {
                     }
                 }}
             >
-
                 <Divider />
-
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
-                        <CustomDropdown
+                <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
+                    <Form.Group widths='equal'>
+                        <Form.Field
+                            control={CustomDropdown}
                             header='Punkt początkowy'
                             placeholder='Wybierz punkt początkowy'
                             options={this.state.locationsData}
@@ -195,8 +228,22 @@ class SectionEdit extends React.Component {
                             onChange={value => {
                                 this.setState({startLocationId: value, changes: true})
                             }}
+                            error={this.state.errorStartLocation}
                         />
-                        <CustomDropdown
+                        <Form.Field
+                            control={TextInput}
+                            onChange={this.onSectionDimensionsChange}
+                            type="number"
+                            header='Długość' 
+                            value={this.state.length}
+                            name='length'
+                            //label='m' TODO: nie działa
+                            error={this.state.errorLength}
+                        />
+                    </Form.Group>
+                    <Form.Group widths='equal'>
+                        <Form.Field 
+                            control={CustomDropdown}
                             header='Punkt końcowy'
                             placeholder='Wybierz punkt końcowy'
                             options={this.state.locationsData}
@@ -204,8 +251,22 @@ class SectionEdit extends React.Component {
                             onChange={value => {
                                 this.setState({endLocationId: value, changes: true})
                             }}
+                            error={this.state.errorEndLocation}
                         />
-                        <CustomDropdown
+                        <Form.Field
+                            control={TextInput}
+                            onChange={this.onSectionDimensionsChange}
+                            type="number"
+                            header='Przewyższenie' 
+                            value={this.state.elevationGain}
+                            name='elevationGain'
+                            //label='m'
+                            error={this.state.errorElevationGain}
+                        />
+                    </Form.Group>
+                    <Form.Group widths='equal'>
+                        <Form.Field 
+                            control={CustomDropdown}
                             header='Grupa górska'
                             placeholder='Wybierz grupę górską'
                             options={this.state.mountainRangesData}
@@ -213,31 +274,29 @@ class SectionEdit extends React.Component {
                             onChange={value => {
                                 this.setState({mountainRangeId: value, changes: true})
                             }}
+                            error={this.state.errorMountainRange}
                         />
-                    </div>
-                </div>
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
-                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={20000} header='Długość' 
-                            value={this.state.length} name='length' label='m' />
-                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={1000} header='Przewyższenie' 
-                            value={this.state.elevationGain} name='elevationGain' label='m' />
-                        <TextInput header='Punktacja' value={this.state.score} />
-                    </div>
+                        <Form.Field
+                            control={TextInput}
+                            header='Punktacja'
+                            value={this.state.score}
+                        />
+                    </Form.Group>
 
-                    <Button
+                    <Form.Button
                         primary
+                        type="submit"
                         disabled={!this.state.changes}
+                        onClick={this.onSubmit}
                         content={'Zapisz odcinek'}
-                        onClick={() => {
-                            this.saveSection()
-                            this.setState({saved: true, changes: false})
-                        }}
                     />
-                </div>
+                </Form>
 
                 {this.state.saved && !this.state.changes &&
-                <Label>Zapisano!</Label>}
+                <Message
+                    success
+                    header='Zapisano odcinek'
+                />}
 
                 <Route render={({ history }) => (
                     <Confirm        
