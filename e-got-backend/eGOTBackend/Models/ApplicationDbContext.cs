@@ -349,7 +349,12 @@ namespace eGOTBackend.Models
                 entity.HasIndex(e => e.Id)
                     .HasName("Trip_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .HasMaxLength(50)
+                    .IsUnicode(true);
+
+                entity.Property(e => e.Title).HasColumnName("title");
 
                 entity.Property(e => e.ElevationGain).HasColumnName("elevation_gain");
 
