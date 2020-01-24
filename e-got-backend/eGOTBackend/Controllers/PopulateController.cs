@@ -23,6 +23,8 @@ namespace eGOTBackend.Controllers
             _populateMountainRanges();
             _populateLocations();
             _populateSections();
+            _populateTourist();
+            _populateTrips();
             return Ok();
         }
 
@@ -131,6 +133,73 @@ namespace eGOTBackend.Controllers
                 }
 
                 _dbContext.Section.AddRange(sections);
+                _dbContext.SaveChanges();
+            }
+        }
+
+        private void _populateTourist()
+        {
+            _dbContext.Users.Add(new Users
+            {
+                FirstName = "Jan",
+                LastName = "Kowalski",
+                Email = "jankowalski@gmail.com",
+                Password = "zmn7MQS^YfGfPBN@fCkPb5^qHy55@@UT"
+            });
+            _dbContext.SaveChanges();
+
+            _dbContext.BadgeLevel.Add(new BadgeLevel
+            {
+                Name = "Super odznaka",
+                RequiredPoints = 69
+            });
+
+            int userId = _dbContext.Users
+                .Where(x => x.Email == "jankowalski@gmail.com")
+                .Select(x => x.Id)
+                .FirstOrDefault();
+
+            int badgeLevelId = _dbContext.BadgeLevel
+                .Where(x => x.Name == "Super odznaka")
+                .Select(x => x.Id)
+                .FirstOrDefault();
+
+            _dbContext.Tourist.Add(new Tourist
+            {
+                IdUser = userId,
+                DateOfBirth = DateTime.Now,
+                IsDisabled = false,
+                AllPoints = 689,
+                ConfirmedPoints = 676,
+                IdBadgeLevel = badgeLevelId
+            });
+        }
+
+        private void _populateTrips()
+        {
+            using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/PopulateData/trips.json"))
+            {
+                string json_string = sr.ReadToEnd();
+                JsonValue json = JsonValue.Parse(json_string);
+
+                ICollection<Trip> trips = new List<Trip>();
+
+                foreach (JsonValue value in json)
+                {
+                    trips.Add(new Trip
+                    {
+                        Title = value["title"],
+                        StartDate = DateTime.Parse(value["startDate"]),
+                        EndDate = DateTime.Parse(value["endDate"]),
+                        Status = value["status"],
+                        Score = value["score"],
+                        Length = value["length"],
+                        ElevationGain = value["elevationGain"],
+                        IdTourist = value["touristId"]
+                    });
+                }
+
+                _dbContext.Trip.AddRange(trips);
                 _dbContext.SaveChanges();
             }
         }
