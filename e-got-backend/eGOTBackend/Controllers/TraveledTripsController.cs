@@ -17,5 +17,12 @@ namespace eGOTBackend.Controllers
         {
             return _traveledTripsRepository.GetAll();
         }
+
+        [HttpGet]
+        [ActionName("get")]
+        public virtual TripViewModel Get()
+        {
+            return null;
+        }
     }
 }

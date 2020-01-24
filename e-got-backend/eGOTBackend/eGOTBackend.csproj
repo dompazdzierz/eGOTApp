@@ -191,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="img\0.jpg" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +244,10 @@
     <Compile Include="Migrations\20200124065831_add_trip_title.designer.cs">
       <DependentUpon>20200124065831_add_trip_title.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200124111906_change_photo_type.cs" />
+    <Compile Include="Migrations\20200124111906_change_photo_type.designer.cs">
+      <DependentUpon>20200124111906_change_photo_type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />
     <Compile Include="Models\CommissionWorker.cs" />
@@ -278,6 +285,7 @@
     <Content Include="PopulateData\mountainSystems.json" />
     <Content Include="PopulateData\sections.json" />
     <Content Include="PopulateData\trips.json" />
+    <Content Include="PopulateData\photoProofs.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

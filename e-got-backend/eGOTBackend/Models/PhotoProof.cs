@@ -7,7 +7,7 @@ namespace eGOTBackend.Models
     {
         public int Id { get; set; }
         public int IdTrip { get; set; }
-        public byte[] Photo { get; set; }
+        public string PhotoUrl { get; set; }
 
         public virtual Trip IdTripNavigation { get; set; }
     }

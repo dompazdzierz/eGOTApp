@@ -115,9 +115,11 @@ namespace eGOTBackend.Models
                     .HasColumnName("id_trip")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.GpsData)
-                    .HasColumnName("GPS_data")
-                    .HasColumnType("image");
+                entity.Property(e => e.GpsDataUrl)
+                    .IsRequired()
+                    .HasColumnName("GPS_data_url")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.IdTripNavigation)
                     .WithOne(p => p.GpsProof)
@@ -268,10 +270,11 @@ namespace eGOTBackend.Models
                     .HasColumnName("id_trip")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Photo)
+                entity.Property(e => e.PhotoUrl)
                     .IsRequired()
-                    .HasColumnName("photo")
-                    .HasColumnType("image");
+                    .HasColumnName("photo_url")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.IdTripNavigation)
                     .WithOne(p => p.PhotoProof)

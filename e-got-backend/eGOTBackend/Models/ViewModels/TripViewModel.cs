@@ -1,5 +1,5 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Collections.Generic;
 
 namespace eGOTBackend.Models.ViewModels
 {
@@ -20,5 +20,7 @@ namespace eGOTBackend.Models.ViewModels
         public float Length { get; set; }
         [DataMember(Name = "elevationGain")]
         public float ElevationGain { get; set; }
+        [DataMember(Name = "photos")]
+        public ICollection<string> Photos { get; set; }
     }
 }
