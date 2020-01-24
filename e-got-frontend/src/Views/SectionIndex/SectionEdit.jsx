@@ -213,8 +213,8 @@ class SectionEdit extends React.Component {
             >
             <Divider />
             <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
                         <Form.Field>
                             <CustomDropdown
                                 header='Punkt początkowy'
@@ -253,8 +253,8 @@ class SectionEdit extends React.Component {
                         </Form.Field>
                     </div>
                 </div>
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
                         <Form.Field>
                             <TextInput
                                 style={{float: 'right'}}

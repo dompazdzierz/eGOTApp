@@ -99,7 +99,7 @@ class ScoredSections extends React.Component {
         return(
             <SegmentContainer headerContent={this.state.rangeName} iconName='map'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
-                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.SECTION_ADD)}
                 rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
 
                 {content}
