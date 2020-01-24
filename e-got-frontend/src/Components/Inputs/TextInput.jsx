@@ -1,6 +1,6 @@
 import React from 'react';
 import './Inputs.css'
-import { Input } from 'semantic-ui-react';
+import { Input, Form } from 'semantic-ui-react';
 
 function TextInput(props) {
     // Jeżeli textInput ma być modyfikowalny należy przekazać do niego metodę onChange.
@@ -14,14 +14,15 @@ function TextInput(props) {
         props.onChange ?
             <React.Fragment style={props.style}>
                 <p className='inputs--label'>{props.header}</p>
-                <Input className='inputs--input' name={props.name} onChange={props.onChange} type={props.type} min={props.min} max={props.max}
-                    value={props.value} label={label} labelPosition={labelPosition} required={props.required} maxLength={props.maxLength}/>
+                <Form.Input className='inputs--input' name={props.name} onChange={props.onChange} type={props.type} min={props.min} max={props.max}
+                    value={props.value}  labelPosition={labelPosition} required={props.required} maxLength={props.maxLength}
+                    error={props.error} />
             </React.Fragment>
             :
             <React.Fragment>
                 <p className='inputs--label'>{props.header}</p>
-                <Input disabled className='inputs--input' value={props.value} label={label} labelPosition={labelPosition} name={props.name}
-                required={props.required} maxLength={props.maxLength}/>
+                <Form.Input disabled className='inputs--input' value={props.value} labelPosition={labelPosition} name={props.name}
+                required={props.required} maxLength={props.maxLength} error={props.error}/>
             </React.Fragment>
     )
 }

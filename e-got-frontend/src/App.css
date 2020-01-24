@@ -29,3 +29,11 @@
     padding-top: 30px;
     margin: auto;
 }
+
+.common--form-field {
+    margin-bottom: 0px !important;
+}
+
+.ui.form .field .prompt.label {
+    display: inline;
+}

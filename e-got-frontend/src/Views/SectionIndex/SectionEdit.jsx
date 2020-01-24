@@ -95,21 +95,13 @@ class SectionEdit extends React.Component {
         })
     }
 
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     getSectionId() {
         var url = window.location.pathname;
         return url.substring(url.lastIndexOf('/') + 1);
-    }
-
-    calculateScore() {
-        let score = Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
-        this.setState({ score: score })
-    }
-
-    onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
     }
 
     openConfirm = () =>  {
@@ -122,10 +114,14 @@ class SectionEdit extends React.Component {
     close = () => this.setState({ open: false })
 
     onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
+
+
+        this.setState({
+            ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
+            [e.target.name]: e.target.value,
+            changes: true,
+            score: Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
+        })
     }
 
     handleDismiss = () => {
@@ -206,7 +202,7 @@ class SectionEdit extends React.Component {
         let labelStyle = this.state.successVisible ? {} : {visibility: 'hidden'}
 
         return(
-            <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
+            <SegmentContainer headerContent="Nowy odcinek" iconName='edit'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => {
                     this.state.changes ? this.openConfirm() : history.goBack()
                 }}
@@ -215,38 +211,38 @@ class SectionEdit extends React.Component {
             <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
                 <div className="common--segment-half">
                     <div className="common--input-wrapper">
-                        <Form.Field>
+                        <Form.Field className="common--form-field">
                             <CustomDropdown
                                 header='Punkt początkowy'
                                 placeholder='Wybierz punkt początkowy'
                                 options={this.state.locationsData}
                                 initialValue={this.state.startLocationId}
                                 onChange={value => {
-                                    this.setState({startLocationId: value, changes: true})
+                                    this.setState({startLocationId: value, changes: true, errorStartLocation: null})
                                 }}
                                 error={this.state.errorStartLocation}
                             />
                         </Form.Field>
-                        <Form.Field>
+                        <Form.Field className="common--form-field">
                             <CustomDropdown
                                 header='Punkt końcowy'
                                 placeholder='Wybierz punkt końcowy'
                                 options={this.state.locationsData}
                                 initialValue={this.state.endLocationId}
                                 onChange={value => {
-                                    this.setState({endLocationId: value, changes: true})
+                                    this.setState({endLocationId: value, changes: true, errorEndLocation: null})
                                 }}
                                 error={this.state.errorEndLocation}
                             />
                         </Form.Field>
-                        <Form.Field>
+                        <Form.Field className="common--form-field">
                             <CustomDropdown
                                 header='Grupa górska'
                                 placeholder='Wybierz grupę górską'
                                 options={this.state.mountainRangesData}
                                 initialValue={this.state.mountainRangeId}
                                 onChange={value => {
-                                    this.setState({mountainRangeId: value, changes: true})
+                                    this.setState({mountainRangeId: value, changes: true, errorMountainRange: null})
                                 }}
                                 error={this.state.errorMountainRange}
                             />
@@ -255,7 +251,7 @@ class SectionEdit extends React.Component {
                 </div>
                 <div className="common--segment-half">
                     <div className="common--input-wrapper">
-                        <Form.Field>
+                        <Form.Field className="common--form-field">
                             <TextInput
                                 style={{float: 'right'}}
                                 control={TextInput}
@@ -264,11 +260,10 @@ class SectionEdit extends React.Component {
                                 header='Długość'
                                 value={this.state.length}
                                 name='length'
-                                label='m'
                                 error={this.state.errorLength}
                             />
                         </Form.Field>
-                        <Form.Field>
+                        <Form.Field className="common--form-field">
                             <TextInput
                                 control={TextInput}
                                 onChange={this.onSectionDimensionsChange}
@@ -276,11 +271,11 @@ class SectionEdit extends React.Component {
                                 header='Przewyższenie'
                                 value={this.state.elevationGain}
                                 name='elevationGain'
-                                label='m'
                                 error={this.state.errorElevationGain}
                             />
                         </Form.Field>
                         <Form.Field
+                            className="common--form-field"
                             control={TextInput}
                             header='Punktacja'
                             value={this.state.score}
