@@ -13,3 +13,19 @@
     min-width: 100px;
     height: 38px;
 }
+
+.common--segment-half {
+    width: 46%;
+    height: 60vh;
+    display: inline-block;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 0px !important;
+}
+
+.common--input-wrapper {
+    display: table;
+    width: 80%;
+    padding-top: 30px;
+    margin: auto;
+}
