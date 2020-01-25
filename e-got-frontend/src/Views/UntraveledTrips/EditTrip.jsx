@@ -1,6 +1,6 @@
 import React from 'react';
 import * as values from '../../Common/values'
-import { Segment, Form, Label, Confirm } from 'semantic-ui-react';
+import { Segment, Form, Label, Confirm, Button } from 'semantic-ui-react';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import axios from '../../Common/axios';
 import * as apiPaths from '../../Common/apiPaths';
@@ -21,11 +21,13 @@ class EditTrip extends React.Component {
             errorStartDate: null,
             errorEndDate: null,
             isValid: true,
-            successVisible: false
+            successVisible: false,
+            loading: false
         }
     }
 
     componentDidMount() {
+        this.setState({loading: true})
         axios() ({
             method: 'get',
             url: apiPaths.UNTRAVELED_TRIPS + apiPaths.GET + '/' + this.getTripId()
@@ -40,6 +42,7 @@ class EditTrip extends React.Component {
         .catch(error => {
             console.log(error);
         })
+        this.setState({loading: false})
     }
 
     capitalizeFirstLetter(string) {
@@ -82,7 +85,6 @@ class EditTrip extends React.Component {
                 '&endDate=' + this.state.endDate
         })
         .then(response => {
-            console.log(response)
         })
         .catch(error => {
             console.log(error);
@@ -92,6 +94,8 @@ class EditTrip extends React.Component {
     onSubmit = () => {
         let isValid = true
         const dateRegexp = /^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$/;
+
+        console.log(this.state.startDate)
 
         if(this.state.startDate === '') {
             this.setState({ errorStartDate: values.ERROR_FIELD_EMPTY })
@@ -105,20 +109,24 @@ class EditTrip extends React.Component {
             this.setState({ errorStartDate: null })
         }
 
-        if(this.state.duration === '') {
-            this.setState({ errorDuration: values.ERROR_FIELD_EMPTY })
+        if(this.state.endDate === '') {
+            this.setState({ errorEndDate: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        }
+        else if (!this.state.endDate.match(dateRegexp)) {
+            this.setState({ errorEndDate: values.ERROR_FIELD_DATE })
             isValid = false
         }
         else {
-            this.setState({ errorDuration: null })
+            this.setState({ errorEndDate: null })
         }
 
-        if(this.state.name === '') {
-            this.setState({ errorName: values.ERROR_FIELD_EMPTY })
+        if(!this.state.title || this.state.title === '') {
+            this.setState({ errorTitle: values.ERROR_FIELD_EMPTY })
             isValid = false
         }
         else {
-            this.setState({ errorName: null })
+            this.setState({ errorTitle: null })
         }
 
         if(isValid) {
@@ -138,18 +146,18 @@ class EditTrip extends React.Component {
             >
 
                 <Segment style={{height: '60vh', width: '40vw', margin: 'auto', marginTop: '30px', backgroundColor: '#F8FCFF'}}>
-                    <Form loading={!(this.state.title && this.state.startDate && this.state.endDate)}>
+                    <Form loading={this.state.loading}>
                         <Form.TextArea label='Nazwa wycieczki'
                             error={this.state.errorTitle} value={this.state.title} name="title" onChange={e => this.onChange(e)} />
 
                         <Form.Input label='Data rozpoczęcia wycieczki' placeholder="DD.MM.RRRR" error={this.state.errorStartDate}
                             value={this.state.startDate} name="startDate" onChange={e => this.onChange(e)} />
 
-                        <Form.Input label='Czas trwania wycieczki' placeholder="DD.MM.RRRR" error={this.state.errorEndDate}
+                        <Form.Input label='Data zakończenia wycieczki' placeholder="DD.MM.RRRR" error={this.state.errorEndDate}
                             value={this.state.endDate} name="endDate" onChange={e => this.onChange(e)} />
 
-                        <Form.Field style={{paddingLeft: '160px'}} inline>
-                            <Form.Button primary type="submit" disabled={!this.state.changes} onClick={this.onSubmit}>Zapisz wycieczkę</Form.Button>
+                        <Form.Field style={{paddingLeft: '175px', paddingTop: '20px'}} inline>
+                            <Button primary type="submit" disabled={!this.state.changes} onClick={this.onSubmit}>Zapisz wycieczkę</Button>
                             <Label
                                 style={labelStyle}
                                 pointing='left'

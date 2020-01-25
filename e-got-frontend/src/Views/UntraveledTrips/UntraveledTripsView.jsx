@@ -69,8 +69,8 @@ class UntraveledTripsView extends React.Component {
         let tableHeaderContent =
             <Table.Row>
                 <Table.HeaderCell>Nazwa wycieczki</Table.HeaderCell>
-                <Table.HeaderCell>Data</Table.HeaderCell>
-                <Table.HeaderCell>Czas trwania</Table.HeaderCell>
+                <Table.HeaderCell>Data rozpoczęcia</Table.HeaderCell>
+                <Table.HeaderCell>Data zakończenia</Table.HeaderCell>
                 <Table.HeaderCell>Punktacja</Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>

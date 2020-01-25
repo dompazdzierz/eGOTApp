@@ -19,21 +19,16 @@ class AppHeader extends React.Component {
 
         let barsMenu =
             <Dropdown.Menu style={menuStyle}>
-                <Dropdown.Item>
+                <Dropdown.Item disabled>
                     Ustawienia
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item disabled>
                     O aplikacji
                 </Dropdown.Item>
             </Dropdown.Menu>
 
         let avatarMenu =
             <Dropdown.Menu style={menuStyle}>
-                <Route render={({ history }) => (
-                    <Dropdown.Item onClick={() => history.push(paths.TRIP_VERIFICATION + paths.DATA) }>
-                        Widok weryfikacji wycieczki
-                    </Dropdown.Item>
-                )} />
                 <Route render={({ history }) => (
                     <Dropdown.Item onClick={() => history.push(paths.UNTRAVELED_TRIPS) }>
                         Nieprzebyte wycieczki

@@ -56,7 +56,7 @@ class TripVerificationDataView extends React.Component {
 
         return(
             <SegmentContainer headerContent="Dane wycieczki" iconName='list alternate outline'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.UNVERIFIED_TRIPS)}
                 rightButtonContent="Dalej" rightButtonOnClick={(history) => history.push(paths.TRIP_VERIFICATION + paths.PROOFS + '/' + this.getTripId())} >
 
                 <Divider />

@@ -74,7 +74,7 @@ class UnverifiedTripsView extends React.Component {
 
         return(
             <SegmentContainer headerContent="Niezweryfikowane wycieczki" iconName='list alternate outline'
-                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()} >
+                leftButtonContent="Powrót" leftButtonOnClick={(history) => history.push(paths.HOME_VIEW)} >
 
                 {content}
 
