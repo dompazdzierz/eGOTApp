@@ -25,6 +25,7 @@ namespace eGOTBackend.Controllers
             _populateSections();
             _populateTourist();
             _populateTrips();
+            _populatePhotos();
             return Ok();
         }
 
@@ -153,6 +154,7 @@ namespace eGOTBackend.Controllers
                 Name = "Super odznaka",
                 RequiredPoints = 69
             });
+            _dbContext.SaveChanges();
 
             int userId = _dbContext.Users
                 .Where(x => x.Email == "jankowalski@gmail.com")
@@ -173,6 +175,7 @@ namespace eGOTBackend.Controllers
                 ConfirmedPoints = 676,
                 IdBadgeLevel = badgeLevelId
             });
+            _dbContext.SaveChanges();
         }
 
         private void _populateTrips()
@@ -181,6 +184,10 @@ namespace eGOTBackend.Controllers
             {
                 string json_string = sr.ReadToEnd();
                 JsonValue json = JsonValue.Parse(json_string);
+
+                int touristId = _dbContext.Tourist
+                    .Select(x => x.IdUser)
+                    .FirstOrDefault();
 
                 ICollection<Trip> trips = new List<Trip>();
 
@@ -195,11 +202,37 @@ namespace eGOTBackend.Controllers
                         Score = value["score"],
                         Length = value["length"],
                         ElevationGain = value["elevationGain"],
-                        IdTourist = value["touristId"]
+                        IdTourist = touristId
                     });
                 }
 
                 _dbContext.Trip.AddRange(trips);
+                _dbContext.SaveChanges();
+            }
+        }
+
+        private void _populatePhotos()
+        {
+            using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/PopulateData/photoProofs.json"))
+            {
+                string json_string = sr.ReadToEnd();
+                JsonValue json = JsonValue.Parse(json_string);
+
+                ICollection<PhotoProof> photo_proofs = new List<PhotoProof>();
+
+                foreach (JsonValue value in json)
+                {
+                    photo_proofs.Add(new PhotoProof
+                    {
+                        IdTrip = _dbContext.Trip
+                            .Where(x => x.Title == value["title"])
+                            .Select(x => x.Id)
+                            .FirstOrDefault(),
+                        PhotoUrl = value["path"]
+                    });
+                }
+
+                _dbContext.PhotoProof.AddRange(photo_proofs);
                 _dbContext.SaveChanges();
             }
         }

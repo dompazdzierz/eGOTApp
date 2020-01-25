@@ -261,14 +261,15 @@ namespace eGOTBackend.Models
 
             modelBuilder.Entity<PhotoProof>(entity =>
             {
-                entity.HasKey(e => e.IdTrip)
-                    .HasName("PK__Photo_pr__F5F2277824A7906D");
-
                 entity.ToTable("Photo_proof");
 
+                entity.HasIndex(e => e.Id)
+                    .HasName("Photo_proof_id");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
                 entity.Property(e => e.IdTrip)
-                    .HasColumnName("id_trip")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id_trip");
 
                 entity.Property(e => e.PhotoUrl)
                     .IsRequired()
@@ -277,10 +278,10 @@ namespace eGOTBackend.Models
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdTripNavigation)
-                    .WithOne(p => p.PhotoProof)
-                    .HasForeignKey<PhotoProof>(d => d.IdTrip)
+                    .WithMany(p => p.PhotoProof)
+                    .HasForeignKey(d => d.IdTrip)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FKPhoto_proof12437");
+                    .HasConstraintName("FKSection199844");
             });
 
             modelBuilder.Entity<Route>(entity =>

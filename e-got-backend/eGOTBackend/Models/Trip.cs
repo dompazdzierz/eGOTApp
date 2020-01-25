@@ -22,7 +22,7 @@ namespace eGOTBackend.Models
 
         public virtual Tourist IdTouristNavigation { get; set; }
         public virtual GpsProof GpsProof { get; set; }
-        public virtual PhotoProof PhotoProof { get; set; }
+        public virtual ICollection<PhotoProof> PhotoProof { get; set; }
         public virtual ICollection<Route> Route { get; set; }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class eGOTContextModelSnapshot : ModelSnapshot
+    [Migration("20200125015031_remove_photoproof")]
+    partial class remove_photoproof
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -256,35 +258,6 @@ namespace eGOTBackend.Migrations
                     b.HasIndex("IdMountainRange");
 
                     b.ToTable("Permission");
-                });
-
-            modelBuilder.Entity("eGOTBackend.Models.PhotoProof", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("IdTrip")
-                        .HasColumnName("id_trip")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PhotoUrl")
-                        .IsRequired()
-                        .HasColumnName("photo_url")
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Id")
-                        .HasName("Photo_proof_id");
-
-                    b.HasIndex("IdTrip");
-
-                    b.ToTable("Photo_proof");
                 });
 
             modelBuilder.Entity("eGOTBackend.Models.Route", b =>
@@ -575,15 +548,6 @@ namespace eGOTBackend.Migrations
                         .WithMany("Permission")
                         .HasForeignKey("IdUser")
                         .HasConstraintName("FKPermission277937")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("eGOTBackend.Models.PhotoProof", b =>
-                {
-                    b.HasOne("eGOTBackend.Models.Trip", "IdTripNavigation")
-                        .WithMany("PhotoProof")
-                        .HasForeignKey("IdTrip")
-                        .HasConstraintName("FKSection199844")
                         .IsRequired();
                 });
 

@@ -6,8 +6,7 @@
     "status": 1,
     "score": 6,
     "length": 4890,
-    "elevationGain": 104,
-    "touristId": 0
+    "elevationGain": 104
   },
   {
     "title": "Wycieczka na Morskie Oko",
@@ -16,8 +15,7 @@
     "status": 1,
     "score": 24,
     "length": 20170,
-    "elevationGain": 367,
-    "touristId": 1
+    "elevationGain": 367
   },
   {
     "title": "Czarny Staw pod Rysami",
@@ -26,8 +24,7 @@
     "status": 1,
     "score": 11,
     "length": 8960,
-    "elevationGain": 230,
-    "touristId": 2
+    "elevationGain": 230
   },
   {
     "title": "Na przełęcz Zawrat, nocleg w schronisku",
@@ -36,8 +33,7 @@
     "status": 1,
     "score": 20,
     "length": 14010,
-    "elevationGain": 590,
-    "touristId": 3
+    "elevationGain": 590
   },
   {
     "title": "Moja wycieczka 2",
@@ -46,8 +42,7 @@
     "status": 0,
     "score": 12,
     "length": 8120,
-    "elevationGain": 410,
-    "touristId": 0
+    "elevationGain": 410
   },
   {
     "title": "Zimowa wycieczka",
@@ -56,7 +51,6 @@
     "status": 0,
     "score": 14,
     "length": 8930,
-    "elevationGain": 480,
-    "touristId": 0
+    "elevationGain": 480
   }
 ]

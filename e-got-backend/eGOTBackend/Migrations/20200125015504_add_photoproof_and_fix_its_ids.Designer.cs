@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eGOTBackend.Models;
 
 namespace eGOTBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class eGOTContextModelSnapshot : ModelSnapshot
+    [Migration("20200125015504_add_photoproof_and_fix_its_ids")]
+    partial class add_photoproof_and_fix_its_ids
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -282,7 +284,8 @@ namespace eGOTBackend.Migrations
                     b.HasIndex("Id")
                         .HasName("Photo_proof_id");
 
-                    b.HasIndex("IdTrip");
+                    b.HasIndex("IdTrip")
+                        .IsUnique();
 
                     b.ToTable("Photo_proof");
                 });
@@ -581,9 +584,9 @@ namespace eGOTBackend.Migrations
             modelBuilder.Entity("eGOTBackend.Models.PhotoProof", b =>
                 {
                     b.HasOne("eGOTBackend.Models.Trip", "IdTripNavigation")
-                        .WithMany("PhotoProof")
-                        .HasForeignKey("IdTrip")
-                        .HasConstraintName("FKSection199844")
+                        .WithOne("PhotoProof")
+                        .HasForeignKey("eGOTBackend.Models.PhotoProof", "IdTrip")
+                        .HasConstraintName("FKPhoto_proof12437")
                         .IsRequired();
                 });
 

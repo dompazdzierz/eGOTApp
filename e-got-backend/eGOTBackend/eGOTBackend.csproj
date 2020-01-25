@@ -248,6 +248,18 @@
     <Compile Include="Migrations\20200124111906_change_photo_type.designer.cs">
       <DependentUpon>20200124111906_change_photo_type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200125015031_remove_photoproof.cs" />
+    <Compile Include="Migrations\20200125015031_remove_photoproof.designer.cs">
+      <DependentUpon>20200125015031_remove_photoproof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200125015504_add_photoproof_and_fix_its_ids.cs" />
+    <Compile Include="Migrations\20200125015504_add_photoproof_and_fix_its_ids.designer.cs">
+      <DependentUpon>20200125015504_add_photoproof_and_fix_its_ids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200125021845_fix_photoproof.cs" />
+    <Compile Include="Migrations\20200125021845_fix_photoproof.designer.cs">
+      <DependentUpon>20200125021845_fix_photoproof.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\eGOTContextModelSnapshot.cs" />
     <Compile Include="Models\BadgeLevel.cs" />
     <Compile Include="Models\CommissionWorker.cs" />
