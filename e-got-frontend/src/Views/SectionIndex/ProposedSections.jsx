@@ -30,8 +30,6 @@ class ProposedSections extends React.Component {
         .catch(error => {
             console.log(error);
         })
-
-        document.getElementById('left-btn-sec').style.width = '200px';
     }
 
     handlePaginationChange = (_, data) =>  {
@@ -126,7 +124,7 @@ class ProposedSections extends React.Component {
                 handleDropdownChange={this.handleDropdownChange} tableBodyContent={tableBodyContent} colSpan={7}
                 handlePaginationChange={this.handlePaginationChange} currentPage={this.state.currentPage} />
             :
-            <NoDataSegment noDataMessage="Nie ma jeszcze dodanych odcinków dla tego pasma górskiego." />
+            <NoDataSegment noDataMessage="W tej chwili nie ma żadnych zaproponowanych odcinków." />
 
 
         return(

@@ -15,6 +15,7 @@ import MountainRanges from './Views/SectionIndex/MountainRanges';
 import ProposedSections from './Views/SectionIndex/ProposedSections';
 import EditTrip from './Views/UntraveledTrips/EditTrip';
 import SectionAdd from './Views/SectionIndex/SectionAdd';
+import SectionPropose from './Views/SectionIndex/SectionPropose';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
         <Route path={paths.SECTION_EDIT} component={SectionEdit} />
         <Route path={paths.SECTION_ADD} component={SectionAdd} />
+        <Route path={paths.SECTION_PROPOSE} component={SectionPropose} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
         <Route path={paths.EDIT_TRIP} component={EditTrip} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />

@@ -50,7 +50,7 @@ namespace eGOTBackend.Controllers
         [HttpPost]
         [ActionName("addElement")]
         public virtual IHttpActionResult AddElement(int startLocationId, int endLocationId,
-            float length, float elevationGain, int score, int mountainRangeId)
+            float length, float elevationGain, int score, int mountainRangeId, bool status = true)
         {
             _dbContext.Section.Add(new Section
             {
@@ -59,7 +59,7 @@ namespace eGOTBackend.Controllers
                 Length = length,
                 ElevationGain = elevationGain,
                 Score = score,
-                Status = true,
+                Status = status,
                 MountainRangeId = mountainRangeId
             });
             _dbContext.SaveChanges();

@@ -44,6 +44,11 @@ class AppHeader extends React.Component {
                         Spis odcinków punktowanych
                     </Dropdown.Item>
                 )} />
+                <Route render={({ history }) => (
+                    <Dropdown.Item onClick={() => history.push(paths.SECTION_PROPOSE) }>
+                        Zaproponuj odcinek
+                    </Dropdown.Item>
+                )} />
             </Dropdown.Menu>
 
 
