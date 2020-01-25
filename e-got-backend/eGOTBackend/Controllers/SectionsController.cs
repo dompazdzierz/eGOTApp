@@ -8,7 +8,7 @@ using eGOTBackend.Repostiories;
 namespace eGOTBackend.Controllers
 {
     [EnableCors(origins: "*", headers:"*" , methods:"*")]
-    public class SectionsController : BaseCrudController<Section>
+    public class SectionsController : ApiController
     {
         private readonly SectionsRepository _sectionsRangeRepository = new SectionsRepository();
 
@@ -31,18 +31,8 @@ namespace eGOTBackend.Controllers
         public virtual IHttpActionResult Set(int id, int startLocationId, int endLocationId,
             float length, float elevationGain, int score, int mountainRangeId)
         {
-            _dbContext.Section.Update(new Section
-            {
-                Id = id,
-                StartLocationId = startLocationId,
-                EndLocationId = endLocationId,
-                Length = length,
-                ElevationGain = elevationGain,
-                Score = score,
-                Status = true,
-                MountainRangeId = mountainRangeId
-            });
-            _dbContext.SaveChanges();
+            _sectionsRangeRepository.Set(id, startLocationId, endLocationId, length,
+                elevationGain, score, mountainRangeId);
 
             return Ok();
         }
@@ -52,17 +42,8 @@ namespace eGOTBackend.Controllers
         public virtual IHttpActionResult AddElement(int startLocationId, int endLocationId,
             float length, float elevationGain, int score, int mountainRangeId, bool status = true)
         {
-            _dbContext.Section.Add(new Section
-            {
-                StartLocationId = startLocationId,
-                EndLocationId = endLocationId,
-                Length = length,
-                ElevationGain = elevationGain,
-                Score = score,
-                Status = status,
-                MountainRangeId = mountainRangeId
-            });
-            _dbContext.SaveChanges();
+            _sectionsRangeRepository.AddElement(startLocationId, endLocationId, length,
+                elevationGain, score, mountainRangeId, status);
 
             return Ok();
         }
@@ -71,11 +52,7 @@ namespace eGOTBackend.Controllers
         [ActionName("removeElement")]
         public virtual IHttpActionResult RemoveElement(int id)
         {
-            _dbContext.Section.Remove(new Section
-            {
-                Id = id
-            });
-            _dbContext.SaveChanges();
+            _sectionsRangeRepository.RemoveElement(id);
 
             return Ok();
         }
@@ -84,15 +61,7 @@ namespace eGOTBackend.Controllers
         [ActionName("accept")]
         public virtual IHttpActionResult Accept(int id)
         {
-            Section section = new Section
-            {
-                Id = id,
-                Status = true,
-            };
-
-            _dbContext.Section.Attach(section);
-            _dbContext.Entry(section).Property(x => x.Status).IsModified = true;
-            _dbContext.SaveChanges();
+            _sectionsRangeRepository.Accept(id);
 
             return Ok();
         }

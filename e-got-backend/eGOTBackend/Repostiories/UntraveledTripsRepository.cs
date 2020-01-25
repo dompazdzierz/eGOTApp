@@ -1,4 +1,5 @@
-﻿using eGOTBackend.Models.ViewModels;
+﻿using eGOTBackend.Models;
+using eGOTBackend.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,37 @@ namespace eGOTBackend.Repostiories
                 Length = trip.Length,
                 ElevationGain = trip.ElevationGain
             };
+        }
+
+        public void RemoveElement(int id)
+        {
+            var proofsToDelete = dbContext.PhotoProof.Where(x => x.IdTrip == id);
+
+            dbContext.PhotoProof.RemoveRange(proofsToDelete);
+            dbContext.SaveChanges();
+
+            dbContext.Trip.Remove(new Trip
+            {
+                Id = id
+            });
+            dbContext.SaveChanges();
+        }
+
+        public void Set(int id, string title, string startDate, string endDate)
+        {
+            Trip trip = new Trip
+            {
+                Id = id,
+                Title = title,
+                StartDate = DateTime.Parse(startDate),
+                EndDate = DateTime.Parse(endDate)
+            };
+
+            dbContext.Trip.Attach(trip);
+            dbContext.Entry(trip).Property(x => x.Title).IsModified = true;
+            dbContext.Entry(trip).Property(x => x.StartDate).IsModified = true;
+            dbContext.Entry(trip).Property(x => x.EndDate).IsModified = true;
+            dbContext.SaveChanges();
         }
     }
 }

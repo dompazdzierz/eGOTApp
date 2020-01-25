@@ -67,5 +67,31 @@ namespace eGOTBackend.Repostiories
                 Photos = photos
             };
         }
+
+        public void Accept(int id)
+        {
+            Trip trip = new Trip
+            {
+                Id = id,
+                Status = 0,
+            };
+
+            dbContext.Trip.Attach(trip);
+            dbContext.Entry(trip).Property(x => x.Status).IsModified = true;
+            dbContext.SaveChanges();
+        }
+
+        public void Reject(int id)
+        {
+            Trip trip = new Trip
+            {
+                Id = id,
+                Status = -1,
+            };
+
+            dbContext.Trip.Attach(trip);
+            dbContext.Entry(trip).Property(x => x.Status).IsModified = true;
+            dbContext.SaveChanges();
+        }
     }
 }

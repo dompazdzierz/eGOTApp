@@ -10,7 +10,7 @@ using eGOTBackend.Repostiories;
 namespace eGOTBackend.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class UntraveledTripsController : BaseCrudController<TripViewModel>
+    public class UntraveledTripsController : ApiController
     {
         private readonly UntraveledTripsRepository _untraveledTripsRepository = new UntraveledTripsRepository();
 
@@ -32,16 +32,7 @@ namespace eGOTBackend.Controllers
         [ActionName("removeElement")]
         public virtual IHttpActionResult RemoveElement(int id)
         {
-            var proofsToDelete = _dbContext.PhotoProof.Where(x => x.IdTrip == id);
-
-            _dbContext.PhotoProof.RemoveRange(proofsToDelete);
-            _dbContext.SaveChanges();
-
-            _dbContext.Trip.Remove(new Trip
-            {
-                Id = id
-            });
-            _dbContext.SaveChanges();
+            _untraveledTripsRepository.RemoveElement(id);
 
             return Ok();
         }
@@ -50,19 +41,7 @@ namespace eGOTBackend.Controllers
         [ActionName("set")]
         public virtual IHttpActionResult Set(int id, string title, string startDate, string endDate)
         {
-            Trip trip = new Trip
-            {
-                Id = id,
-                Title = title,
-                StartDate = DateTime.Parse(startDate),
-                EndDate = DateTime.Parse(endDate)
-            };
-
-            _dbContext.Trip.Attach(trip);
-            _dbContext.Entry(trip).Property(x => x.Title).IsModified = true;
-            _dbContext.Entry(trip).Property(x => x.StartDate).IsModified = true;
-            _dbContext.Entry(trip).Property(x => x.EndDate).IsModified = true;
-            _dbContext.SaveChanges();
+            _untraveledTripsRepository.Set(id, title, startDate, endDate);
 
             return Ok();
         }

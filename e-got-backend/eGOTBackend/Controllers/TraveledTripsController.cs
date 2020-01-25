@@ -8,7 +8,7 @@ using eGOTBackend.Repostiories;
 namespace eGOTBackend.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class TraveledTripsController : BaseCrudController<TripViewModel>
+    public class TraveledTripsController : ApiController
     {
         private readonly TraveledTripsRepository _traveledTripsRepository = new TraveledTripsRepository();
 
@@ -30,15 +30,7 @@ namespace eGOTBackend.Controllers
         [ActionName("accept")]
         public virtual IHttpActionResult Accept(int id)
         {
-            Trip trip = new Trip
-            {
-                Id = id,
-                Status = 0,
-            };
-
-            _dbContext.Trip.Attach(trip);
-            _dbContext.Entry(trip).Property(x => x.Status).IsModified = true;
-            _dbContext.SaveChanges();
+            _traveledTripsRepository.Accept(id);
 
             return Ok();
         }
@@ -47,15 +39,7 @@ namespace eGOTBackend.Controllers
         [ActionName("reject")]
         public virtual IHttpActionResult Reject(int id)
         {
-            Trip trip = new Trip
-            {
-                Id = id,
-                Status = -1,
-            };
-
-            _dbContext.Trip.Attach(trip);
-            _dbContext.Entry(trip).Property(x => x.Status).IsModified = true;
-            _dbContext.SaveChanges();
+            _traveledTripsRepository.Reject(id);
 
             return Ok();
         }

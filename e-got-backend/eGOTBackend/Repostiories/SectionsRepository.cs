@@ -54,5 +54,60 @@ namespace eGOTBackend.Repostiories
 
             return section;
         }
+
+        public void Set(int id, int startLocationId, int endLocationId,
+            float length, float elevationGain, int score, int mountainRangeId)
+        {
+            dbContext.Section.Update(new Section
+            {
+                Id = id,
+                StartLocationId = startLocationId,
+                EndLocationId = endLocationId,
+                Length = length,
+                ElevationGain = elevationGain,
+                Score = score,
+                Status = true,
+                MountainRangeId = mountainRangeId
+            });
+            dbContext.SaveChanges();
+        }
+
+        public void AddElement(int startLocationId, int endLocationId,
+            float length, float elevationGain, int score, int mountainRangeId, bool status = true)
+        {
+            dbContext.Section.Add(new Section
+            {
+                StartLocationId = startLocationId,
+                EndLocationId = endLocationId,
+                Length = length,
+                ElevationGain = elevationGain,
+                Score = score,
+                Status = status,
+                MountainRangeId = mountainRangeId
+            });
+            dbContext.SaveChanges();
+        }
+
+        public void RemoveElement(int id)
+        {
+            dbContext.Section.Remove(new Section
+            {
+                Id = id
+            });
+            dbContext.SaveChanges();
+        }
+
+        public void Accept(int id)
+        {
+            Section section = new Section
+            {
+                Id = id,
+                Status = true,
+            };
+
+            dbContext.Section.Attach(section);
+            dbContext.Entry(section).Property(x => x.Status).IsModified = true;
+            dbContext.SaveChanges();
+        }
     }
 }
