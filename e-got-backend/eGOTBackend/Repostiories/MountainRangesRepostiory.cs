@@ -55,7 +55,7 @@ namespace eGOTBackend.Repostiories
                 MountainSystemName = mountainRange.MountainSystem.Name
             };
                 
-            return mountainRangeViewModel;                   
+            return mountainRangeViewModel;
         }
     }
 }

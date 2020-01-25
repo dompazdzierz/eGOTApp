@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -15,7 +16,14 @@ namespace eGOTBackend.Controllers
 
         [HttpGet]
         [ActionName("getTourist")]
-        public virtual IEnumerable<TripViewModel> Get(int id)
+        public virtual IEnumerable<TripViewModel> GetTourist(int id)
+        {
+            return _untraveledTripsRepository.GetTourist(id);
+        }
+
+        [HttpGet]
+        [ActionName("get")]
+        public virtual TripViewModel Get(int id)
         {
             return _untraveledTripsRepository.Get(id);
         }
@@ -33,6 +41,27 @@ namespace eGOTBackend.Controllers
             {
                 Id = id
             });
+            _dbContext.SaveChanges();
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [ActionName("set")]
+        public virtual IHttpActionResult Set(int id, string title, string startDate, string endDate)
+        {
+            Trip trip = new Trip
+            {
+                Id = id,
+                Title = title,
+                StartDate = DateTime.Parse(startDate),
+                EndDate = DateTime.Parse(endDate)
+            };
+
+            _dbContext.Trip.Attach(trip);
+            _dbContext.Entry(trip).Property(x => x.Title).IsModified = true;
+            _dbContext.Entry(trip).Property(x => x.StartDate).IsModified = true;
+            _dbContext.Entry(trip).Property(x => x.EndDate).IsModified = true;
             _dbContext.SaveChanges();
 
             return Ok();

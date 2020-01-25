@@ -9,7 +9,7 @@ namespace eGOTBackend.Repostiories
 {
     public class UntraveledTripsRepository : BaseRepository
     {
-        public List<TripViewModel> Get(int touristId)
+        public List<TripViewModel> GetTourist(int id)
         {
             // the touristId variable actually doesn't even matter
             int actualTouristId = dbContext.Tourist
@@ -38,12 +38,35 @@ namespace eGOTBackend.Repostiories
                     EndDate = x.EndDate.ToString("dd.MM.yyyy"),
                     Score = x.Score,
                     Length = x.Length,
-                    ElevationGain = x.ElevationGain,
+                    ElevationGain = x.ElevationGain
                 };
                 tripViewModels.Add(tripViewModel);
             }
 
             return tripViewModels;
+        }
+
+        public TripViewModel Get(int id)
+        {
+            var trip = dbContext.Trip
+                .Where(x => x.Id == id)
+                .Single();
+
+            if (trip == null)
+            {
+                return null;
+            }
+
+            return new TripViewModel
+            {
+                Id = trip.Id,
+                Title = trip.Title,
+                StartDate = trip.StartDate.ToString("dd.MM.yyyy"),
+                EndDate = trip.EndDate.ToString("dd.MM.yyyy"),
+                Score = trip.Score,
+                Length = trip.Length,
+                ElevationGain = trip.ElevationGain
+            };
         }
     }
 }
