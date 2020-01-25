@@ -15,7 +15,7 @@ namespace eGOTBackend.Repostiories
             int actualTouristId = dbContext.Tourist
                 .Include(x => x.IdUserNavigation)
                 .Where(x => x.IdUserNavigation.Email == "jankowalski@gmail.com")
-                .Select(x => x.Id)
+                .Select(x => x.IdUser)
                 .FirstOrDefault();
 
             var trips = dbContext.Trip

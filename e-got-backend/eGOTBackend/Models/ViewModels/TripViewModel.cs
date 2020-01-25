@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace eGOTBackend.Models.ViewModels
 {
     [DataContract]
-    public class TripViewModel
+    public class TripViewModel : IEntity
     {
         [DataMember(Name = "id")]
         public int Id { get; set; }

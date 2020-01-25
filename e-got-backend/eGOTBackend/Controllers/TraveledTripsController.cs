@@ -7,7 +7,7 @@ using eGOTBackend.Repostiories;
 namespace eGOTBackend.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class TraveledTripsController : ApiController
+    public class TraveledTripsController : BaseCrudController<TripViewModel>
     {
         private readonly TraveledTripsRepository _traveledTripsRepository = new TraveledTripsRepository();
 

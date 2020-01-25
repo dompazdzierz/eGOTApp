@@ -7,13 +7,18 @@ class EditTrip extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startDate: '',
-            duration: '',
-            name: '',
+            startDate: null,
+            duration: null,
+            name: null,
+            changes: false,
+            saved: false,
+            open: false,
+            content: "",
             errorName: null,
             errorStartDate: null,
             errorDuration: null,
-            isValid: true
+            isValid: true,
+            successVisible: false
         }
     }
 

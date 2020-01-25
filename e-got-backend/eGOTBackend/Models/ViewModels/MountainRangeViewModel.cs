@@ -3,7 +3,7 @@
 namespace eGOTBackend.Models
 {
     [DataContract]
-    public class MountainRangeViewModel
+    public class MountainRangeViewModel : IEntity
     {
         [DataMember(Name="id")]
         public int Id { get; set; }

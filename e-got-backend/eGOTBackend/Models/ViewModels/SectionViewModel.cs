@@ -3,7 +3,7 @@
 namespace eGOTBackend.Models.ViewModels
 {
     [DataContract]
-    public class SectionViewModel
+    public class SectionViewModel : IEntity
     {
         [DataMember(Name = "id")]
         public int Id { get; set; }
