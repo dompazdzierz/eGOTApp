@@ -1,6 +1,6 @@
 import React from 'react';
 import './Inputs.css'
-import { Dropdown, Form } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
 class CustomDropdown extends React.Component {
 

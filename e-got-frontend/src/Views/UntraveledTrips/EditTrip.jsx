@@ -24,7 +24,7 @@ class EditTrip extends React.Component {
     onSubmit = () => {
         const dateRegexp = /^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$/;
 
-        if(this.state.startDate == '') {
+        if(this.state.startDate === '') {
             this.setState({ errorStartDate: values.ERROR_FIELD_EMPTY })
         }
         else if (!this.state.startDate.match(dateRegexp)) {
@@ -34,14 +34,14 @@ class EditTrip extends React.Component {
             this.setState({ errorStartDate: null })
         }
 
-        if(this.state.duration == '') {
+        if(this.state.duration === '') {
             this.setState({ errorDuration: values.ERROR_FIELD_EMPTY })
         }
         else {
             this.setState({ errorDuration: null })
         }
 
-        if(this.state.name == '') {
+        if(this.state.name === '') {
             this.setState({ errorName: values.ERROR_FIELD_EMPTY })
         }
         else {

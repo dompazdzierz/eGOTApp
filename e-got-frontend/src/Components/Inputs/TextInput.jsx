@@ -1,13 +1,13 @@
 import React from 'react';
 import './Inputs.css'
-import { Input, Form } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
 function TextInput(props) {
     // Jeżeli textInput ma być modyfikowalny należy przekazać do niego metodę onChange.
     // onChange może być generyczny, należy wtedy przekazać 'name', którego wartość to nazwa zmienianego state'a
     // przykład generycznego onChange'a:   onChange = e => this.setState({ [e.target.name]: e.target.value })
 
-    const label = props.label ? { basic: true, content: props.label } : undefined;
+    // const label = props.label ? { basic: true, content: props.label } : undefined;
     const labelPosition = props.label ? 'right' : undefined;
 
     return (

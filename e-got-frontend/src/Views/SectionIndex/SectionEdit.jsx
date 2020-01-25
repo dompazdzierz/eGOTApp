@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css'
-import { Divider, Confirm, Form, Message, Label, Button } from 'semantic-ui-react';
+import { Divider, Confirm, Form, Label, Button } from 'semantic-ui-react';
 import * as apiPaths from '../../Common/apiPaths'
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer'
 import TextInput from '../../Components/Inputs/TextInput'

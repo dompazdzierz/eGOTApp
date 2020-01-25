@@ -1,6 +1,6 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button, Segment } from 'semantic-ui-react';
+import { Table, Button } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import { Route } from 'react-router';
