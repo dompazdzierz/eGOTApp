@@ -1,5 +1,6 @@
 import React from 'react';
-import { Divider, Confirm, Form, Message } from 'semantic-ui-react';
+import '../../App.css'
+import { Divider, Confirm, Form, Message, Label, Button } from 'semantic-ui-react';
 import * as apiPaths from '../../Common/apiPaths'
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer'
 import TextInput from '../../Components/Inputs/TextInput'
@@ -30,7 +31,8 @@ class SectionEdit extends React.Component {
             errorMountainRange: null,
             errorLength: null,
             errorElevationGain: null,
-            isValid: true
+            isValid: true,
+            successVisible: false
         }
     }
 
@@ -93,21 +95,13 @@ class SectionEdit extends React.Component {
         })
     }
 
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     getSectionId() {
         var url = window.location.pathname;
         return url.substring(url.lastIndexOf('/') + 1);
-    }
-
-    calculateScore() {
-        let score = Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
-        this.setState({ score: score })
-    }
-
-    onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
     }
 
     openConfirm = () =>  {
@@ -120,10 +114,18 @@ class SectionEdit extends React.Component {
     close = () => this.setState({ open: false })
 
     onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
+
+
+        this.setState({
+            ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
+            [e.target.name]: e.target.value,
+            changes: true,
+            score: Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
+        })
+    }
+
+    handleDismiss = () => {
+        this.setState({ successVisible: false })
     }
 
     saveSection() {
@@ -145,15 +147,6 @@ class SectionEdit extends React.Component {
             console.log(error);
         })
     }
-
-    openConfirm = () =>  {
-        this.setState({
-            open: true,
-            content: "Czy chcesz anulować zmiany?"
-        })
-    }
-
-    close = () => this.setState({ open: false })
 
     onSubmit = () => {
         let isValid = true
@@ -201,115 +194,127 @@ class SectionEdit extends React.Component {
 
         if(isValid) {
             this.saveSection()
-            this.setState({saved: true, changes: false})
+            this.setState({ saved: true, changes: false, successVisible: true })
         }
     }
 
     render() {
+        let labelStyle = this.state.successVisible ? {} : {visibility: 'hidden'}
+
         return(
-            <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
+            <SegmentContainer headerContent="Nowy odcinek" iconName='edit'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => {
-                    if(this.state.changes) {
-                        this.openConfirm()
-                    } else {
-                        history.goBack()
-                    }
+                    this.state.changes ? this.openConfirm() : history.goBack()
                 }}
             >
-                <Divider />
-                <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
-                    <Form.Group widths='equal'>
+            <Divider />
+            <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Punkt początkowy'
+                                placeholder='Wybierz punkt początkowy'
+                                options={this.state.locationsData}
+                                initialValue={this.state.startLocationId}
+                                onChange={value => {
+                                    this.setState({startLocationId: value, changes: true, errorStartLocation: null})
+                                }}
+                                error={this.state.errorStartLocation}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Punkt końcowy'
+                                placeholder='Wybierz punkt końcowy'
+                                options={this.state.locationsData}
+                                initialValue={this.state.endLocationId}
+                                onChange={value => {
+                                    this.setState({endLocationId: value, changes: true, errorEndLocation: null})
+                                }}
+                                error={this.state.errorEndLocation}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Grupa górska'
+                                placeholder='Wybierz grupę górską'
+                                options={this.state.mountainRangesData}
+                                initialValue={this.state.mountainRangeId}
+                                onChange={value => {
+                                    this.setState({mountainRangeId: value, changes: true, errorMountainRange: null})
+                                }}
+                                error={this.state.errorMountainRange}
+                            />
+                        </Form.Field>
+                    </div>
+                </div>
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
+                        <Form.Field className="common--form-field">
+                            <TextInput
+                                style={{float: 'right'}}
+                                control={TextInput}
+                                onChange={this.onSectionDimensionsChange}
+                                type="number"
+                                header='Długość'
+                                value={this.state.length}
+                                name='length'
+                                error={this.state.errorLength}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <TextInput
+                                control={TextInput}
+                                onChange={this.onSectionDimensionsChange}
+                                type="number"
+                                header='Przewyższenie'
+                                value={this.state.elevationGain}
+                                name='elevationGain'
+                                error={this.state.errorElevationGain}
+                            />
+                        </Form.Field>
                         <Form.Field
-                            control={CustomDropdown}
-                            header='Punkt początkowy'
-                            placeholder='Wybierz punkt początkowy'
-                            options={this.state.locationsData}
-                            initialValue={this.state.startLocationId}
-                            onChange={value => {
-                                this.setState({startLocationId: value, changes: true})
-                            }}
-                            error={this.state.errorStartLocation}
-                        />
-                        <Form.Field
-                            control={TextInput}
-                            onChange={this.onSectionDimensionsChange}
-                            type="number"
-                            header='Długość' 
-                            value={this.state.length}
-                            name='length'
-                            //label='m' TODO: nie działa
-                            error={this.state.errorLength}
-                        />
-                    </Form.Group>
-                    <Form.Group widths='equal'>
-                        <Form.Field 
-                            control={CustomDropdown}
-                            header='Punkt końcowy'
-                            placeholder='Wybierz punkt końcowy'
-                            options={this.state.locationsData}
-                            initialValue={this.state.endLocationId}
-                            onChange={value => {
-                                this.setState({endLocationId: value, changes: true})
-                            }}
-                            error={this.state.errorEndLocation}
-                        />
-                        <Form.Field
-                            control={TextInput}
-                            onChange={this.onSectionDimensionsChange}
-                            type="number"
-                            header='Przewyższenie' 
-                            value={this.state.elevationGain}
-                            name='elevationGain'
-                            //label='m'
-                            error={this.state.errorElevationGain}
-                        />
-                    </Form.Group>
-                    <Form.Group widths='equal'>
-                        <Form.Field 
-                            control={CustomDropdown}
-                            header='Grupa górska'
-                            placeholder='Wybierz grupę górską'
-                            options={this.state.mountainRangesData}
-                            initialValue={this.state.mountainRangeId}
-                            onChange={value => {
-                                this.setState({mountainRangeId: value, changes: true})
-                            }}
-                            error={this.state.errorMountainRange}
-                        />
-                        <Form.Field
+                            className="common--form-field"
                             control={TextInput}
                             header='Punktacja'
                             value={this.state.score}
                         />
-                    </Form.Group>
+                    </div>
+                </div>
 
-                    <Form.Button
+                <Form.Field style={{paddingLeft: '160px'}} inline>
+                    <Button
                         primary
                         type="submit"
                         disabled={!this.state.changes}
                         onClick={this.onSubmit}
                         content={'Zapisz odcinek'}
                     />
-                </Form>
-
-                {this.state.saved && !this.state.changes &&
-                <Message
-                    success
-                    header='Zapisano odcinek'
-                />}
-
-                <Route render={({ history }) => (
-                    <Confirm        
-                        open={this.state.open}
-                        content={this.state.content}
-                        onCancel={this.close}
-                        onConfirm={() => {
-                            history.goBack()
-                        }}
-                        cancelButton='Nie'
-                        confirmButton='Tak'
+                    <Label
+                        style={labelStyle}
+                        pointing='left'
+                        color='blue'
+                        onRemove={this.handleDismiss}
+                        content='Zapisano odcinek&nbsp;&nbsp;&nbsp;&nbsp;'
+                        basic
                     />
-                )} />
+
+                </Form.Field>
+
+            </Form>
+            <Route render={({ history }) => (
+                <Confirm
+                    open={this.state.open}
+                    content={this.state.content}
+                    onCancel={this.close}
+                    onConfirm={() => {
+                        history.goBack()
+                    }}
+                    cancelButton='Nie'
+                    confirmButton='Tak'
+                />
+            )} />
             </SegmentContainer>
         )
     }

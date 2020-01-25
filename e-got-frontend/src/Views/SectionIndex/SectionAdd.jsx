@@ -1,31 +1,38 @@
 import React from 'react';
-import { Divider, Button, Confirm, Label } from 'semantic-ui-react';
-import '../TripVerification/TripVerificationData/TripVerificationDataView.css'
-import '../TripVerification/TripVerification.css'
+import '../../App.css'
+import { Divider, Confirm, Form, Message, Label, Button } from 'semantic-ui-react';
 import * as apiPaths from '../../Common/apiPaths'
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer'
 import TextInput from '../../Components/Inputs/TextInput'
 import axios from '../../Common/axios'
 import { Route } from 'react-router';
 import CustomDropdown from '../../Components/Inputs/CustomDropdown';
+import * as values from '../../Common/values'
 
 class SectionEdit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startLocationId: 2,
-            endLocationId: 0,
-            length: 0,
-            elevationGain: 0,
+            startLocationId: null,
+            endLocationId: null,
+            length: null,
+            elevationGain: null,
             score: 0,
             status: false,
-            mountainRangeId: 0,
-            locationsData: [],
-            mountainRangesData: [],
+            mountainRangeId: null,
+            locationsData: null,
+            mountainRangesData: null,
             changes: false,
             saved: false,
             open: false,
-            content: ""
+            content: "",
+            errorStartLocation: null,
+            errorEndLocation: null,
+            errorMountainRange: null,
+            errorLength: null,
+            errorElevationGain: null,
+            isValid: true,
+            successVisible: false
         }
     }
 
@@ -88,21 +95,37 @@ class SectionEdit extends React.Component {
         })
     }
 
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     getSectionId() {
         var url = window.location.pathname;
         return url.substring(url.lastIndexOf('/') + 1);
     }
 
-    calculateScore() {
-        let score = Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
-        this.setState({ score: score })
+    openConfirm = () =>  {
+        this.setState({
+            open: true,
+            content: "Czy chcesz anulować zmiany?"
+        })
     }
 
+    close = () => this.setState({ open: false })
+
     onSectionDimensionsChange = e => {
-        this.setState(
-            { [e.target.name]: e.target.value, changes: true },
-            () => this.calculateScore()
-        )
+
+
+        this.setState({
+            ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
+            [e.target.name]: e.target.value,
+            changes: true,
+            score: Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
+        })
+    }
+
+    handleDismiss = () => {
+        this.setState({ successVisible: false })
     }
 
     saveSection() {
@@ -125,96 +148,172 @@ class SectionEdit extends React.Component {
         })
     }
 
-    openConfirm = () =>  {
-        this.setState({
-            open: true,
-            content: "Czy chcesz anulować zmiany?"
-        })
+    onSubmit = () => {
+        let isValid = true
+
+        if(!this.state.startLocationId) {
+            this.setState({ errorStartLocation: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorStartLocation: null })
+        }
+
+        if(!this.state.endLocationId) {
+            this.setState({ errorEndLocation: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorEndLocation: null })
+        }
+
+        if(!this.state.mountainRangeId) {
+            this.setState({ errorMountainRange: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else {
+            this.setState({ errorMountainRange: null })
+        }
+
+        if(!this.state.length) {
+            this.setState({ errorLength: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else if(this.state.length <= 0) {
+            this.setState({ errorLength: values.ERROR_FIELD_INVALID_NUMBER })
+            isValid = false
+        } else {
+            this.setState({ errorLength: null })
+        }
+
+        if(!this.state.elevationGain) {
+            this.setState({ errorElevationGain: values.ERROR_FIELD_EMPTY })
+            isValid = false
+        } else if(this.state.elevationGain <= 0) {
+            this.setState({ errorElevationGain: values.ERROR_FIELD_INVALID_NUMBER })
+            isValid = false
+        } else {
+            this.setState({ errorElevationGain: null })
+        }
+
+        if(isValid) {
+            // this.saveSection() TODO: AddSection
+            this.setState({ saved: true, changes: false, successVisible: true })
+        }
     }
 
-    close = () => this.setState({ open: false })
-
     render() {
+        let labelStyle = this.state.successVisible ? {} : {visibility: 'hidden'}
+
         return(
-            <SegmentContainer headerContent="Edycja odcinka" iconName='edit'
+            <SegmentContainer headerContent="Nowy odcinek" iconName='plus'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => {
-                    if(this.state.changes) {
-                        this.openConfirm()
-                    } else {
-                        history.goBack()
-                    }
+                    this.state.changes ? this.openConfirm() : history.goBack()
                 }}
             >
-
-                <Divider />
-
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
-                        <CustomDropdown
-                            header='Punkt początkowy'
-                            placeholder='Wybierz punkt początkowy'
-                            options={this.state.locationsData}
-                            initialValue={this.state.startLocationId}
-                            onChange={value => {
-                                this.setState({startLocationId: value, changes: true})
-                            }}
-                        />
-                        <CustomDropdown
-                            header='Punkt końcowy'
-                            placeholder='Wybierz punkt końcowy'
-                            options={this.state.locationsData}
-                            initialValue={this.state.endLocationId}
-                            onChange={value => {
-                                this.setState({endLocationId: value, changes: true})
-                            }}
-                        />
-                        <CustomDropdown
-                            header='Grupa górska'
-                            placeholder='Wybierz grupę górską'
-                            options={this.state.mountainRangesData}
-                            initialValue={this.state.mountainRangeId}
-                            onChange={value => {
-                                this.setState({mountainRangeId: value, changes: true})
-                            }}
+            <Divider />
+            <Form loading={!(this.state.locationsData && this.state.mountainRangesData)}>
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Punkt początkowy'
+                                placeholder='Wybierz punkt początkowy'
+                                options={this.state.locationsData}
+                                initialValue={this.state.startLocationId}
+                                onChange={value => {
+                                    this.setState({startLocationId: value, changes: true, errorStartLocation: null})
+                                }}
+                                error={this.state.errorStartLocation}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Punkt końcowy'
+                                placeholder='Wybierz punkt końcowy'
+                                options={this.state.locationsData}
+                                initialValue={this.state.endLocationId}
+                                onChange={value => {
+                                    this.setState({endLocationId: value, changes: true, errorEndLocation: null})
+                                }}
+                                error={this.state.errorEndLocation}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <CustomDropdown
+                                header='Grupa górska'
+                                placeholder='Wybierz grupę górską'
+                                options={this.state.mountainRangesData}
+                                initialValue={this.state.mountainRangeId}
+                                onChange={value => {
+                                    this.setState({mountainRangeId: value, changes: true, errorMountainRange: null})
+                                }}
+                                error={this.state.errorMountainRange}
+                            />
+                        </Form.Field>
+                    </div>
+                </div>
+                <div className="common--segment-half">
+                    <div className="common--input-wrapper">
+                        <Form.Field className="common--form-field">
+                            <TextInput
+                                style={{float: 'right'}}
+                                control={TextInput}
+                                onChange={this.onSectionDimensionsChange}
+                                type="number"
+                                header='Długość'
+                                value={this.state.length}
+                                name='length'
+                                error={this.state.errorLength}
+                            />
+                        </Form.Field>
+                        <Form.Field className="common--form-field">
+                            <TextInput
+                                control={TextInput}
+                                onChange={this.onSectionDimensionsChange}
+                                type="number"
+                                header='Przewyższenie'
+                                value={this.state.elevationGain}
+                                name='elevationGain'
+                                error={this.state.errorElevationGain}
+                            />
+                        </Form.Field>
+                        <Form.Field
+                            className="common--form-field"
+                            control={TextInput}
+                            header='Punktacja'
+                            value={this.state.score}
                         />
                     </div>
                 </div>
-                <div className="trip-verification-data--segment-half">
-                    <div className="trip-verification-data--input-wrapper">
-                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={20000} header='Długość' 
-                            value={this.state.length} name='length' label='m' />
-                        <TextInput onChange={this.onSectionDimensionsChange} type="number" min={1} max={1000} header='Przewyższenie' 
-                            value={this.state.elevationGain} name='elevationGain' label='m' />
-                        <TextInput header='Punktacja' value={this.state.score} />
-                    </div>
-                </div>
 
-                <Button
-                    primary
-                    disabled={!this.state.changes}
-                    content={'Zapisz odcinek'}
-                    onClick={() => {
-                        this.saveSection()
-                        this.setState({saved: true, changes: false})
-                        // history.goBack() TODO
-                    }}
-                />
-
-                {this.state.saved && !this.state.changes &&
-                <Label>Zapisano!</Label>}
-
-                <Route render={({ history }) => (
-                    <Confirm        
-                        open={this.state.open}
-                        content={this.state.content}
-                        onCancel={this.close}
-                        onConfirm={() => {
-                            history.goBack()
-                        }}
-                        cancelButton='Nie'
-                        confirmButton='Tak'
+                <Form.Field style={{paddingLeft: '160px'}} inline>
+                    <Button
+                        primary
+                        type="submit"
+                        onClick={this.onSubmit}
+                        content={'Dodaj odcinek'}
                     />
-                )} />
+                    <Label
+                        style={labelStyle}
+                        pointing='left'
+                        color='blue'
+                        onRemove={this.handleDismiss}
+                        content='Dodano odcinek&nbsp;&nbsp;&nbsp;&nbsp;'
+                        basic
+                    />
+
+                </Form.Field>
+
+            </Form>
+            <Route render={({ history }) => (
+                <Confirm
+                    open={this.state.open}
+                    content={this.state.content}
+                    onCancel={this.close}
+                    onConfirm={() => {
+                        history.goBack()
+                    }}
+                    cancelButton='Nie'
+                    confirmButton='Tak'
+                />
+            )} />
             </SegmentContainer>
         )
     }

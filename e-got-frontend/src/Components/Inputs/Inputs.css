@@ -1,5 +1,5 @@
 .inputs--input {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
     width: 100%;
     word-break: break-word;
     max-height: fit-content;

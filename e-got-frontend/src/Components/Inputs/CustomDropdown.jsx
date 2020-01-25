@@ -1,27 +1,28 @@
 import React from 'react';
 import './Inputs.css'
-import { Dropdown } from 'semantic-ui-react';
+import { Dropdown, Form } from 'semantic-ui-react';
 
 class CustomDropdown extends React.Component {
 
     render() {
-        let { header, placeholder, options, initialValue, onChange } = this.props
+        let { header, placeholder, options, initialValue, onChange, error } = this.props
 
         return(
-            <div>
+            <React.Fragment>
                 <p className="inputs--label">{header}</p>
-                <Dropdown
+                <Form.Dropdown
                     className="inputs--input"
                     placeholder={placeholder}
                     search
                     selection
                     options={options}
                     value={initialValue}
+                    error={error}
                     onChange={(_, data) => {
                         onChange(data.value)
                     }}
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }

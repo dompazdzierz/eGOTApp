@@ -1,6 +1,6 @@
 import React from 'react';
 import * as paths from '../../Common/paths';
-import { Table, Button } from 'semantic-ui-react';
+import { Table, Button, Confirm } from 'semantic-ui-react';
 import ListWithPagination from '../../Components/ListWithPagination/ListWithPagination';
 import SegmentContainer from '../../Components/SegmentContainer/SegmentContainer';
 import * as apiPaths from '../../Common/apiPaths';
@@ -14,7 +14,9 @@ class ScoredSections extends React.Component {
         this.state = {
             currentPage: 1,
             rangeName: '',
-            sectionsData: []
+            sectionsData: [],
+            confirmOpen: false,
+            idToDelete: null
         }
     }
 
@@ -24,7 +26,7 @@ class ScoredSections extends React.Component {
             url: apiPaths.MOUNTAIN_RANGES + apiPaths.GET + '/' + this.getRangeId()
         })
         .then(response => {
-            this.setState({rangeName: response.data.name});
+            this.setState({ rangeName: response.data.name });
         })
         .catch(error => {
             console.log(error);
@@ -35,7 +37,7 @@ class ScoredSections extends React.Component {
             url: apiPaths.SECTIONS + apiPaths.GET_ALL + '?mountainRangeId=' + this.getRangeId() + '&status=' + true
         })
         .then(response => {
-            this.setState({sectionsData: response.data});
+            this.setState({ sectionsData: response.data });
         })
         .catch(error => {
             console.log(error);
@@ -53,9 +55,26 @@ class ScoredSections extends React.Component {
         this.setState({ currentPage: data.activePage ? data.activePage : data.value})
     }
 
+    openConfirm = id => {
+        this.setState({ confirmOpen: true, idToDelete: id })
+    }
+
+    closeConfirm = () => {
+        this.setState({ confirmOpen: false })
+    }
+
+    deleteSection = () => {
+        var newData = [...this.state.sectionsData]
+        newData = newData.filter(x => x.id !== this.state.idToDelete);
+
+        //TODO: Powyżej w tej metodzie zostało zrealizowane usunięcie elementu z komponentu Reactowego. (Nowe dane przypisywane są poniżej w setState.)
+        //TODO: Brakuje zapytania do bazy danych delete(this.state.idToDelete).
+
+        this.setState({ confirmOpen: false, sectionsData: newData, idToDelete: null })
+    }
+
     render() {
         let { sectionsData } = this.state
-        console.log(sectionsData)
         const rowsPerPage = 6
 
         let tableHeaderContent =
@@ -83,7 +102,7 @@ class ScoredSections extends React.Component {
                         )} />
                     </Table.Cell>
                     <Table.Cell>
-                        <Button circular negative icon='trash alternate'/>
+                        <Button circular negative icon='trash alternate' onClick={() => this.openConfirm(section.id)}/>
                     </Table.Cell>
                 </Table.Row>
             ))
@@ -99,10 +118,14 @@ class ScoredSections extends React.Component {
         return(
             <SegmentContainer headerContent={this.state.rangeName} iconName='map'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
-                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.HOME_VIEW)}
+                rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.SECTION_ADD)}
                 rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
 
                 {content}
+
+                <Confirm open={this.state.confirmOpen} onCancel={this.closeConfirm} onConfirm={this.deleteSection}
+                    content="Czy na pewno chcesz usunąć odcinek?" cancelButton="Anuluj"
+                />
 
             </SegmentContainer>
         )
