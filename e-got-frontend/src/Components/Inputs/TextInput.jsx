@@ -12,7 +12,7 @@ function TextInput(props) {
 
     return (
         props.onChange ?
-            <React.Fragment style={props.style}>
+            <React.Fragment /*style={props.style}*/>
                 <p className='inputs--label'>{props.header}</p>
                 <Form.Input className='inputs--input' name={props.name} onChange={props.onChange} type={props.type} min={props.min} max={props.max}
                     value={props.value}  labelPosition={labelPosition} required={props.required} maxLength={props.maxLength}

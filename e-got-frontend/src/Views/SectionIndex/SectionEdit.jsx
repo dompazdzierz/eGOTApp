@@ -113,15 +113,20 @@ class SectionEdit extends React.Component {
 
     close = () => this.setState({ open: false })
 
+    calculateScore() {
+        let score = Math.round(this.state.length / 1000) + Math.round(this.state.elevationGain / 100)
+        this.setState({ score: score })
+    }
+
     onSectionDimensionsChange = e => {
-
-
-        this.setState({
-            ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
-            [e.target.name]: e.target.value,
-            changes: true,
-            score: Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
-        })
+        this.setState(
+            {
+                ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
+                [e.target.name]: e.target.value,
+                changes: true
+            },
+            () => this.calculateScore()
+        )
     }
 
     handleDismiss = () => {
@@ -202,7 +207,7 @@ class SectionEdit extends React.Component {
         let labelStyle = this.state.successVisible ? {} : {visibility: 'hidden'}
 
         return(
-            <SegmentContainer headerContent="Nowy odcinek" iconName='edit'
+            <SegmentContainer headerContent="Edytuj odcinek" iconName='edit'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => {
                     this.state.changes ? this.openConfirm() : history.goBack()
                 }}

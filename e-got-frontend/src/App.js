@@ -24,7 +24,7 @@ function App() {
         <Route exact path={paths.HOME_VIEW} component={HomeView} />
         <Route path={paths.SCORED_SECTIONS} component={ScoredSections} />
         <Route exact path={paths.MOUNTAIN_RANGES} component={MountainRanges} />
-        <Route exact path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
+        <Route path={paths.PROPOSED_SECTIONS} component={ProposedSections} />
         <Route path={paths.SECTION_EDIT} component={SectionEdit} />
         <Route path={paths.SECTION_ADD} component={SectionAdd} />
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />

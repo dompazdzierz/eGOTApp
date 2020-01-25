@@ -39,25 +39,6 @@ class SectionEdit extends React.Component {
     componentDidMount() {
         axios() ({
             method: 'get',
-            url: apiPaths.SECTIONS + apiPaths.GET + '/' + this.getSectionId()
-        })
-        .then(response => {
-            this.setState({
-                startLocationId: response.data.startLocationId,
-                endLocationId: response.data.endLocationId,
-                length: response.data.length,
-                elevationGain: response.data.elevationGain,
-                score: response.data.score,
-                status: response.data.status,
-                mountainRangeId: response.data.mountainRangeId
-            });
-        })
-        .catch(error => {
-            console.log(error);
-        })
-
-        axios() ({
-            method: 'get',
             url: apiPaths.LOCATIONS + apiPaths.GET_ALL
         })
         .then(response => {
@@ -99,11 +80,6 @@ class SectionEdit extends React.Component {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
-    getSectionId() {
-        var url = window.location.pathname;
-        return url.substring(url.lastIndexOf('/') + 1);
-    }
-
     openConfirm = () =>  {
         this.setState({
             open: true,
@@ -113,27 +89,31 @@ class SectionEdit extends React.Component {
 
     close = () => this.setState({ open: false })
 
+    calculateScore() {
+        let score = Math.round(this.state.length / 1000) + Math.round(this.state.elevationGain / 100)
+        this.setState({ score: score })
+    }
+
     onSectionDimensionsChange = e => {
-
-
-        this.setState({
-            ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
-            [e.target.name]: e.target.value,
-            changes: true,
-            score: Math.floor(this.state.length / 1000) + Math.floor(this.state.elevationGain / 100)
-        })
+        this.setState(
+            {
+                ['error' + this.capitalizeFirstLetter(e.target.name)]: null,
+                [e.target.name]: e.target.value,
+                changes: true
+            },
+            () => this.calculateScore()
+        )
     }
 
     handleDismiss = () => {
         this.setState({ successVisible: false })
     }
 
-    saveSection() {
+    addSection() {
         axios() ({
             method: 'post',
-            url: apiPaths.SECTIONS + apiPaths.SET +
-                '?id=' + this.getSectionId() +
-                '&startLocationId=' + this.state.startLocationId +
+            url: apiPaths.SECTIONS + apiPaths.ADD_ELEMENT +
+                '?startLocationId=' + this.state.startLocationId +
                 '&endLocationId=' + this.state.endLocationId +
                 '&length=' + this.state.length +
                 '&elevationGain=' + this.state.elevationGain +
@@ -193,7 +173,7 @@ class SectionEdit extends React.Component {
         }
 
         if(isValid) {
-            // this.saveSection() TODO: AddSection
+            this.addSection()
             this.setState({ saved: true, changes: false, successVisible: true })
         }
     }
@@ -202,7 +182,7 @@ class SectionEdit extends React.Component {
         let labelStyle = this.state.successVisible ? {} : {visibility: 'hidden'}
 
         return(
-            <SegmentContainer headerContent="Nowy odcinek" iconName='plus'
+            <SegmentContainer headerContent="Dodaj odcinek" iconName='plus'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => {
                     this.state.changes ? this.openConfirm() : history.goBack()
                 }}

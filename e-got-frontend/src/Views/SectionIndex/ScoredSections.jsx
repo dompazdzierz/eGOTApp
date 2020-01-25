@@ -67,10 +67,18 @@ class ScoredSections extends React.Component {
         var newData = [...this.state.sectionsData]
         newData = newData.filter(x => x.id !== this.state.idToDelete);
 
-        //TODO: Powyżej w tej metodzie zostało zrealizowane usunięcie elementu z komponentu Reactowego. (Nowe dane przypisywane są poniżej w setState.)
-        //TODO: Brakuje zapytania do bazy danych delete(this.state.idToDelete).
-
         this.setState({ confirmOpen: false, sectionsData: newData, idToDelete: null })
+
+        axios() ({
+            method: 'delete',
+            url: apiPaths.SECTIONS + apiPaths.REMOVE_ELEMENT + '/' + this.state.idToDelete
+        })
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     render() {
@@ -119,7 +127,7 @@ class ScoredSections extends React.Component {
             <SegmentContainer headerContent={this.state.rangeName} iconName='map'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()}
                 rightButtonContent="Dodaj odcinek" rightButtonOnClick={(history) => history.push(paths.SECTION_ADD)}
-                rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS)} >
+                rightSecButtonContent="Zaproponowane odcinki" rightSecButtonOnClick={(history) => history.push(paths.PROPOSED_SECTIONS + '/' + this.getRangeId())} >
 
                 {content}
 

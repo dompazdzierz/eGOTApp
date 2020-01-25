@@ -70630,5 +70630,32 @@
         "score": 4,
         "status": true,
         "mountainRange": "Wzgórza Niemczańsko-Strzelińskie, Przedgórze Paczkowskie"
+    },
+    {
+        "startLocation": "Łysa Polana",
+        "endLocation": "Kozi Wierch",
+        "length": 1684,
+        "elevationGain": 138,
+        "score": 3,
+        "status": false,
+        "mountainRange": "Tatry Wysokie"
+    },
+    {
+        "startLocation": "Rówień Waksmundzka",
+        "endLocation": "Żleb Kulczyńskiego",
+        "length": 6753,
+        "elevationGain": 538,
+        "score": 12,
+        "status": false,
+        "mountainRange": "Tatry Wysokie"
+    },
+    {
+        "startLocation": "Schronisko PTTK nad Morskim Okiem",
+        "endLocation": "Dolina za Mnichem",
+        "length": 2441,
+        "elevationGain": 269,
+        "score": 4,
+        "status": false,
+        "mountainRange": "Tatry Wysokie"
     }
 ]
