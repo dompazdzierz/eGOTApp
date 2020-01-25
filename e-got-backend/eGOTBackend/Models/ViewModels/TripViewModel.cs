@@ -20,6 +20,8 @@ namespace eGOTBackend.Models.ViewModels
         public float Length { get; set; }
         [DataMember(Name = "elevationGain")]
         public float ElevationGain { get; set; }
+        [DataMember(Name = "route")]
+        public string Route { get; set; }
         [DataMember(Name = "photos")]
         public ICollection<string> Photos { get; set; }
     }

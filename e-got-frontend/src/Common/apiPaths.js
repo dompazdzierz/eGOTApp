@@ -1,4 +1,5 @@
 export const API_ADRESS = "https://localhost:44323/api";
+export const IMG_ADRESS = "https://localhost:44323/img";
 
 // Controllers paths
 export const MOUNTAIN_RANGES = "/mountainranges";
@@ -17,4 +18,5 @@ export const ADD_ELEMENTS = "/addElements"
 export const SET = "/set"
 export const REMOVE_ELEMENT = "/removeElement"
 export const ACCEPT = "/accept"
+export const REJECT = "/reject"
 export const GET_TOURIST = "/getTourist"

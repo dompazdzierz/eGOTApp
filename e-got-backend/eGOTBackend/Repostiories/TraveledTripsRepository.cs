@@ -37,5 +37,35 @@ namespace eGOTBackend.Repostiories
 
             return tripViewModels;
         }
+
+        public TripViewModel Get(int id)
+        {
+            var trip = dbContext.Trip
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
+
+            if (trip == null)
+            {
+                return null;
+            }
+
+            var photos = dbContext.PhotoProof
+                .Where(x => x.IdTrip == id)
+                .Select(x => x.PhotoUrl)
+                .ToList();
+
+            return new TripViewModel
+            {
+                Id = trip.Id,
+                Title = trip.Title,
+                StartDate = trip.StartDate.ToString("dd.MM.yyyy"),
+                EndDate = trip.EndDate.ToString("dd.MM.yyyy"),
+                Score = trip.Score,
+                Length = trip.Length,
+                ElevationGain = trip.ElevationGain,
+                Route = "Palenica Białczańska - Wodogrzmoty Mickiewicza - Schronisko PTTK nad Morksim Okiem - Wodogrzmoty Mickiewicza - Palenica Białczańska",
+                Photos = photos
+            };
+        }
     }
 }

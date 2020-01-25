@@ -30,9 +30,9 @@ function App() {
         <Route exact path={paths.UNTRAVELED_TRIPS} component={UntraveledTripsView} />
         <Route path={paths.EDIT_TRIP} component={EditTrip} />
         <Route exact path={paths.UNVERIFIED_TRIPS} component={UnverifiedTripsView} />
-        <Route exact path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView} />
-        <Route exact path={paths.TRIP_VERIFICATION + paths.PROOFS} component={TripVerificationProofsView} />
-        <Route exact path={paths.TRIP_VERIFICATION + paths.DECISION} component={TripVerificationDecisionView} />
+        <Route path={paths.TRIP_VERIFICATION + paths.DATA} component={TripVerificationDataView} />
+        <Route path={paths.TRIP_VERIFICATION + paths.PROOFS} component={TripVerificationProofsView} />
+        <Route path={paths.TRIP_VERIFICATION + paths.DECISION} component={TripVerificationDecisionView} />
       </Switch>
     </BrowserRouter>
   );
