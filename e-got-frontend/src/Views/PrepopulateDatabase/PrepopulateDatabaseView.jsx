@@ -10,10 +10,10 @@ const axiosInstance = axios.create({
 
 class PrepopulateDatabaseView extends React.Component {
 
-    populateMountainSystems = () => {
+    populateAll = () => {
         axiosInstance({
             method: 'post',
-            url: apiPaths.POPULATE_ALL// + apiPaths.MOUNTAIN_SYSTEM
+            url: apiPaths.POPULATE_ALL
         })
         .then(response => {
             console.log(response);
@@ -23,50 +23,8 @@ class PrepopulateDatabaseView extends React.Component {
         })
     }
 
-    populateMountainRanges = () => {
-        // axiosInstance({
-        //     method: 'post',
-        //     url: apiPaths.POPULATE + apiPaths.MOUNTAIN_RANGE
-        // })
-        // .then(response => {
-        //     console.log(response);
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        // })
-    }
-
-    populateLocations = () => {
-        // axiosInstance({
-        //     method: 'post',
-        //     url: apiPaths.POPULATE + apiPaths.LOCATION
-        // })
-        // .then(response => {
-        //     console.log(response);
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        // })
-    }
-
-    populateSections = () => {
-        // axiosInstance({
-        //     method: 'post',
-        //     url: apiPaths.POPULATE + apiPaths.SECTION
-        // })
-        // .then(response => {
-        //     console.log(response);
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        // })
-    }
-
     populateDatabase = () => {
-        this.populateMountainSystems();
-        // this.populateMountainRanges();
-        //this.populateLocations();
-        // this.populateSections();
+        this.populateAll();
     }
 
     render() {

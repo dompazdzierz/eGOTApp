@@ -80,7 +80,7 @@ class SectionEdit extends React.Component {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
-    openConfirm = () =>  {
+    openConfirm = () => {
         this.setState({
             open: true,
             content: "Czy chcesz anulować zmiany?"

@@ -103,7 +103,7 @@ class UntraveledTripsView extends React.Component {
             <NoDataSegment noDataMessage="Brak nieprzebytych wycieczek." />
 
         return(
-            <SegmentContainer headerContent="Nieprzebyte wycieczki" iconName='list alternate outline'
+            <SegmentContainer data-testid="text-content" headerContent="Nieprzebyte wycieczki" iconName='list alternate outline'
                 leftButtonContent="Powrót" leftButtonOnClick={(history) => history.goBack()} >
 
                 {content}
