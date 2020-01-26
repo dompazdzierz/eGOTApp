@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "title": "Moja wycieczka 2",
     "path": "0.jpg"
@@ -18,5 +18,33 @@
   {
     "title": "Zimowa wycieczka",
     "path": "4.jpg"
+  },
+  {
+    "title": "Super przygoda",
+    "path": "5.jpg"
+  },
+  {
+    "title": "Super przygoda",
+    "path": "6.jpg"
+  },
+  {
+    "title": "Wycieczka z przyjaciółmi",
+    "path": "7.jpg"
+  },
+  {
+    "title": "Wycieczka z przyjaciółmi",
+    "path": "8.jpg"
+  },
+  {
+    "title": "Wycieczka z przyjaciółmi",
+    "path": "9.jpg"
+  },
+  {
+    "title": "Chodzenie po górach",
+    "path": "10.jpg"
+  },
+  {
+    "title": "Chodzenie po górach",
+    "path": "11.jpg"
   }
 ]
