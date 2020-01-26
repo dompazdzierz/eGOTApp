@@ -198,7 +198,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\BaseCrudController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\MountainRangesController.cs" />
     <Compile Include="Controllers\PopulateController.cs" />

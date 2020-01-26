@@ -52,5 +52,32 @@
     "score": 14,
     "length": 8930,
     "elevationGain": 480
+  },
+  {
+    "title": "Super przygoda",
+    "startDate": "19.06.2019",
+    "endDate": "19.06.2019",
+    "status": 1,
+    "score": 17,
+    "length": 15384,
+    "elevationGain": 619
+  },
+  {
+    "title": "Wycieczka z przyjaciółmi",
+    "startDate": "20.01.2020",
+    "endDate": "20.01.2020",
+    "status": 1,
+    "score": 24,
+    "length": 12964,
+    "elevationGain": 863
+  },
+  {
+    "title": "Chodzenie po górach",
+    "startDate": "19.09.2019",
+    "endDate": "19.09.2019",
+    "status": 1,
+    "score": 10,
+    "length": 9475,
+    "elevationGain": 248
   }
 ]
