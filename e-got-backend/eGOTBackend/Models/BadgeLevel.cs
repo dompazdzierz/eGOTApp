@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję stopnia odznaki.
+    /// </summary>
     public partial class BadgeLevel : IEntity
     {
         public BadgeLevel()

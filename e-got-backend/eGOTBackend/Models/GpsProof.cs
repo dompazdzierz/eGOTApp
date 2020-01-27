@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję dowodu GPS.
+    /// </summary>
     public partial class GpsProof : IEntity
     {
         public int Id { get; set; }

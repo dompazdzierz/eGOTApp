@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję turysty.
+    /// </summary>
     public partial class Tourist : IEntity
     {
         public Tourist()

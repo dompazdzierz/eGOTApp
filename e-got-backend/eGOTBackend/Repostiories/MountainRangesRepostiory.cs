@@ -5,8 +5,15 @@ using System.Linq;
 
 namespace eGOTBackend.Repostiories
 {
+    /// <summary>
+    /// Klasa repozytorium grup górskich służąca do łączenia się z bazą danych.
+    /// </summary>
     public class MountainRangesRepostiory : BaseRepository
     {
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych wszystkich grup górskich.
+        /// </summary>
+        /// <returns>Lista grup górskich reprezentowanych przez klasę MountainRangeViewModel</returns>
         public List<MountainRangeViewModel> GetAll()
         {
             List<MountainRange> mountainRanges = new List<MountainRange>();
@@ -36,6 +43,12 @@ namespace eGOTBackend.Repostiories
             return mountainRangeViewModels;               
         }
 
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych grupę górską o konkretnym identyfikatorze
+        /// przekazanym w parametrze.
+        /// </summary>
+        /// <param name="id">Identyfikator grupy górskiej</param>
+        /// <returns>Grupa górska reprezentowana przez klasę MountainRangeViewModel</returns>
         public MountainRangeViewModel Get(int id)
         {
             var mountainRange = dbContext.MountainRange.AsNoTracking()

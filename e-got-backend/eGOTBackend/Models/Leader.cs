@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję przodownika.
+    /// </summary>
     public partial class Leader : IEntity
     {
         public Leader()

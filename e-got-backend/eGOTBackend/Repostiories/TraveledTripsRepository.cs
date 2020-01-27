@@ -6,8 +6,15 @@ using System.Linq;
 
 namespace eGOTBackend.Repostiories
 {
+    /// <summary>
+    /// Klasa repozytorium prebytych wycieczek służąca do łączenia się z bazą danych.
+    /// </summary>
     public class TraveledTripsRepository : BaseRepository
     {
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych wszystkich wycieczkek.
+        /// </summary>
+        /// <returns>Lista wycieczek reprezentowanych przez klasę TripViewModel</returns>
         public List<TripViewModel> GetAll()
         {
             var trips = dbContext.Trip
@@ -38,6 +45,12 @@ namespace eGOTBackend.Repostiories
             return tripViewModels;
         }
 
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych wycieczkę o konkretnym identyfikatorze
+        /// przekazanym w parametrze metody.
+        /// </summary>
+        /// <param name="id">Identyfikator wycieczki</param>
+        /// <returns>Wycieczka reprezentowana przez klasę TripViewModel</returns>
         public TripViewModel Get(int id)
         {
             var trip = dbContext.Trip
@@ -68,6 +81,11 @@ namespace eGOTBackend.Repostiories
             };
         }
 
+        /// <summary>
+        /// Metoda obsługująca modyfikowanie w bazie danych statusu wycieczki o konkretnym
+        /// identyfikatorze na zaakceptowaną.
+        /// </summary>
+        /// <param name="id">Identyfikator wycieczki</param>
         public void Accept(int id)
         {
             Trip trip = new Trip
@@ -81,6 +99,11 @@ namespace eGOTBackend.Repostiories
             dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Metoda obsługująca modyfikowanie w bazie danych statusu wycieczki o konkretnym
+        /// identyfikatorze na odrzuconą.
+        /// </summary>
+        /// <param name="id">Identyfikator wycieczki</param>
         public void Reject(int id)
         {
             Trip trip = new Trip

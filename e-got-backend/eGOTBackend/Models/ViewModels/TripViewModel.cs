@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models.ViewModels
 {
+    /// <summary>
+    /// Klasa reprezentująca View Model wycieczki.
+    /// </summary>
     [DataContract]
     public class TripViewModel : IEntity
     {

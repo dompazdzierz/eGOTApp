@@ -8,8 +8,17 @@ using System.Web;
 
 namespace eGOTBackend.Repostiories
 {
+    /// <summary>
+    /// Klasa repozytorium nieprzebytych wycieczek służąca do łączenia się z bazą danych.
+    /// </summary>
     public class UntraveledTripsRepository : BaseRepository
     {
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych wszystkich wycieczek należących
+        /// do tursysty o konkretnym identyfikatorze przekazanym w parametrze.
+        /// </summary>
+        /// <param name="id">Identyfikator turysty</param>
+        /// <returns>Lista nieprzebytych wycieczek reprezentowanych przez klasę TripViewModel></returns>
         public List<TripViewModel> GetTourist(int id)
         {
             // the touristId variable actually doesn't even matter
@@ -47,6 +56,12 @@ namespace eGOTBackend.Repostiories
             return tripViewModels;
         }
 
+        /// <summary>
+        /// Metoda obsługująca pobieranie z bazy danych wycieczki o konkretnym
+        /// identyfikatorze przekazanym w parametrze.
+        /// </summary>
+        /// <param name="id">Identyfikator wycieczki</param>
+        /// <returns>Wycieczka reprezentowana przez klasę TripViewModel</returns>
         public TripViewModel Get(int id)
         {
             var trip = dbContext.Trip
@@ -70,6 +85,12 @@ namespace eGOTBackend.Repostiories
             };
         }
 
+        /// <summary>
+        /// Metoda obsługująca usuwanie z bazy danych wycieczki o konkretnym identyfikatorze
+        /// przezkazanym w parametrze.
+        /// </summary>
+        /// <param name="id">Identyfikator wycieczki</param>
+        /// <returns>Kod HTTP</returns>
         public void RemoveElement(int id)
         {
             var proofsToDelete = dbContext.PhotoProof.Where(x => x.IdTrip == id);
@@ -84,6 +105,14 @@ namespace eGOTBackend.Repostiories
             dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Metoda obsługująca modyfikowanie w bazie danych wycieczki o konkretnym
+        /// identyfikatorze o dane przekazane w parametrach metody.
+        /// </summary>
+        /// <param name="id">Identyfikator modyfikowanej wycieczki</param>
+        /// <param name="title">Tytuł wycieczki</param>
+        /// <param name="startDate">Data rozpoczęcia wycieczki</param>
+        /// <param name="endDate">Data zakończenia wycieczki</param>
         public void Set(int id, string title, string startDate, string endDate)
         {
             Trip trip = new Trip

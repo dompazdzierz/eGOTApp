@@ -4,6 +4,9 @@ using System.Runtime.Serialization;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję łańcucha górskiego.
+    /// </summary>
     [Serializable]
     [DataContract(IsReference = true)]
     public partial class MountainSystem : IEntity

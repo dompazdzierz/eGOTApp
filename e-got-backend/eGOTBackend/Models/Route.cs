@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję trasy.
+    /// </summary>
     public partial class Route : IEntity
     {
         public int Id { get; set; }

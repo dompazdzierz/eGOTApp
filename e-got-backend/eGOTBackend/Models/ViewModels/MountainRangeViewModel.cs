@@ -2,6 +2,10 @@
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentjąca View Model grupy górskiej oraz łańcucha górskiego,
+    /// w której ta grupa górska się znajduje.
+    /// </summary>
     [DataContract]
     public class MountainRangeViewModel : IEntity
     {

@@ -4,6 +4,9 @@ using System.Runtime.Serialization;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję odcinka.
+    /// </summary>
     [DataContract]
     public partial class Section : IEntity
     {

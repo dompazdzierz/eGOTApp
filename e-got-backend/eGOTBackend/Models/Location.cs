@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace eGOTBackend.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca encję punktu geograficznego.
+    /// </summary>
     public partial class Location : IEntity
     {
         public Location()

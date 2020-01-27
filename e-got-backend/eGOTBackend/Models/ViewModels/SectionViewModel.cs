@@ -2,6 +2,9 @@
 
 namespace eGOTBackend.Models.ViewModels
 {
+    /// <summary>
+    /// Klasa reprezentująca View Model odcinka.
+    /// </summary>
     [DataContract]
     public class SectionViewModel : IEntity
     {
