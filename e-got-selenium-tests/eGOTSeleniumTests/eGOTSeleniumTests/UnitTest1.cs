@@ -64,40 +64,40 @@ namespace eGOTSeleniumTests
             Assert.AreEqual(1, FindElements(By.XPath("//*[text()='Niezweryfikowane wycieczki'][@class='content']")).Count);
 
             // Upewnienie siê, ¿e s¹ jakiekolwiek wycieczki do zweryfikowania
-            if (FindElements(By.XPath("(//td[1])[1]")).Count > 0)
-            {
-                // Zapamiêtanie nazwy usuwanego odcinka
-                var nameOfTripToDelete = FindElement(By.XPath("(//td[1])[1]")).Text;
+            Assert.IsTrue(FindElements(By.XPath("(//td[1])[1]")).Count > 0);
+            
+            // Zapamiêtanie nazwy usuwanego odcinka
+            var nameOfTripToDelete = FindElement(By.XPath("(//td[1])[1]")).Text;
 
-                SafeClick(By.XPath("(//td/button)[1]"));
-                SafeClick(By.Id("right-btn"));
+            SafeClick(By.XPath("(//td/button)[1]"));
+            SafeClick(By.Id("right-btn"));
 
-                var source = FindElement(By.XPath("(//*[@class='three wide column']/button)[2]/img")).GetAttribute("src");
-                SafeClick(By.XPath("(//*[@class='three wide column']/button)[2]"));
+            var source = FindElement(By.XPath("(//*[@class='three wide column']/button)[2]/img")).GetAttribute("src");
+            SafeClick(By.XPath("(//*[@class='three wide column']/button)[2]"));
 
-                var mainPhotoSource = FindElement(By.XPath("//*[@class='ten wide column']/img")).GetAttribute("src");
+            var mainPhotoSource = FindElement(By.XPath("//*[@class='ten wide column']/img")).GetAttribute("src");
 
-                // Sprawdzenie, czy dzia³a prze³¹czanie zdjêæ
-                Assert.AreEqual(source, mainPhotoSource);
+            // Sprawdzenie, czy dzia³a prze³¹czanie zdjêæ
+            Assert.AreEqual(source, mainPhotoSource);
 
-                SafeClick(By.Id("right-btn"));
+            SafeClick(By.Id("right-btn"));
 
-                // Wype³nienie komentarza
-                SafeClick(By.TagName("textarea"));
-                FindElement(By.TagName("textarea")).SendKeys(commentText);
+            // Wype³nienie komentarza
+            SafeClick(By.TagName("textarea"));
+            FindElement(By.TagName("textarea")).SendKeys(commentText);
 
-                // Powrót do niezweryfikowanych wycieczek
-                SafeClick(By.XPath($"//button[text()='{decisionButtonText}']"));
-                SafeClick(By.XPath("//button[text()='Kontynuuj']"));
+            // Powrót do niezweryfikowanych wycieczek
+            SafeClick(By.XPath($"//button[text()='{decisionButtonText}']"));
+            SafeClick(By.XPath("//button[text()='Kontynuuj']"));
 
-                Thread.Sleep(1000);
-                driver.Navigate().Refresh();
-                Thread.Sleep(1000);
+            Thread.Sleep(1000);
+            driver.Navigate().Refresh();
+            Thread.Sleep(1000);
 
-                // Sprawdzenie czy, wycieczka zosta³a usuniêta z listy niezweryfikowanych
-                var trips = FindElements(By.XPath("//td[1]"));
-                Assert.AreEqual(0, trips.Where(x => x.Text == nameOfTripToDelete).Count());
-            }
+            // Sprawdzenie czy, wycieczka zosta³a usuniêta z listy niezweryfikowanych
+            var trips = FindElements(By.XPath("//td[1]"));
+            Assert.AreEqual(0, trips.Where(x => x.Text == nameOfTripToDelete).Count());
+            
         }
 
         private void SafeClick(By by)
@@ -108,6 +108,7 @@ namespace eGOTSeleniumTests
 
         private ReadOnlyCollection<IWebElement> FindElements(By by)
         {
+            Thread.Sleep(1000);
             return driver.FindElements(by);
         }
 
