@@ -122,7 +122,7 @@ class SectionPropose extends React.Component {
                 '&status=' + false
         })
         .then(response => {
-            console.log(response)
+            this.setState({successVisible: true})
         })
         .catch(error => {
             console.log(error);
@@ -175,7 +175,7 @@ class SectionPropose extends React.Component {
 
         if(isValid) {
             this.proposeSection()
-            this.setState({ saved: true, changes: false, successVisible: true })
+            this.setState({ saved: true, changes: false })
         }
     }
 
@@ -234,8 +234,6 @@ class SectionPropose extends React.Component {
                     <div className="common--input-wrapper">
                         <Form.Field className="common--form-field">
                             <TextInput
-                                style={{float: 'right'}}
-                                control={TextInput}
                                 onChange={(e) => this.onSectionDimensionsChange(e)}
                                 type="number"
                                 header='Długość'
@@ -246,7 +244,6 @@ class SectionPropose extends React.Component {
                         </Form.Field>
                         <Form.Field className="common--form-field">
                             <TextInput
-                                control={TextInput}
                                 onChange={(e) => this.onSectionDimensionsChange(e)}
                                 type="number"
                                 header='Przewyższenie'
